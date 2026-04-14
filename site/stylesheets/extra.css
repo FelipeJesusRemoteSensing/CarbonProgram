@@ -1,0 +1,28 @@
+/* 1. Barra Lateral em Cinza */
+.wy-nav-side {
+    background: #4a4a4a !important;
+    /* Um cinza médio/escuro */
+}
+
+/* 2. Bloco de Busca em Amarelo */
+.wy-side-nav-search {
+    background-color: #355db4 !important;
+    /* Amarelo vibrante */
+}
+
+/* 3. Ajuste do texto e links dentro do bloco amarelo para ficarem legíveis (pretos) */
+.wy-side-nav-search>a,
+.wy-side-nav-search .wy-dropdown>a,
+.wy-side-nav-search input[type="text"] {
+    color: #2c3e50 !important;
+}
+
+/* 4. Cor de fundo do conteúdo principal (Cinza bem clarinho para não cansar a vista) */
+.wy-nav-content-wrap {
+    background: #fdfdfd !important;
+}
+
+/* Opcional: Mudar a cor do cabeçalho da tabela de conteúdos quando selecionado */
+.wy-menu-vertical li.current {
+    background: #606060;
+}

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Guilherme Vaz" /><link rel="canonical" href="https://guilhermeramosvaz.github.io/Classificacao-Pastagem-SC/base_dados/aplicacao/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Index - Documentação - Classificação Pastagem Santa Catarina</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Index";
+        var mkdocs_page_input_path = "base_dados\\aplicacao\\README.md";
+        var mkdocs_page_url = "/Classificacao-Pastagem-SC/base_dados/aplicacao/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Documentação - Classificação Pastagem Santa Catarina
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../mds/01_visao_geral/">Visão Geral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../mds/02_integracao_dados/">Integração de Dados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../mds/03_desenho_amostral/">Desenho Amostral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../mds/04_processamento_classificacao/">Processamento da Classificação</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../mds/05_preparacao_refinamento/">Refinamento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../mds/06_analise_mapeamento/">Análise do Mapeamento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../mds/07_avaliacao_acuracia/">Avaliação de Acurácia</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../mds/08_passo_a_passo/">Passo a Passo (Scripts)</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Documentação - Classificação Pastagem Santa Catarina</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Index</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC/edit/master/docs/base_dados/aplicacao/README.md">Edit on Classificacao-Pastagem-SC</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 align="center"> Processos metodologicos</h2>
+
+<details>
+  <summary><b>Clique para ver o Sumário</b></summary>
+  <ol>
+      <li><a href="#definicao">Definição de Metodologia</a></li>
+      <li><a href="#desenho">Desenho Amostral</a></li>
+      <li><a href="#inspecao">Inspeção Visual de Pontos</a></li>
+      <li><a href="#classificacao">Classificação</a></li>
+      <li><a href="#Preparacao">Preparação de dados para análise</a></li>
+      <li><a href="#refinamento_e_auditoria">Refinamento e Auditoria</a></li>
+  </ol>
+</details>
+<hr>
+
+<h3 align="left" id="definicao">Definição de metodologia</h3>
+<div align="justify"> 
+    A metodologia de classificação utilizando o algoritmo Random Forest descrita no <a href="https://amazonia.mapbiomas.org/wp-content/uploads/sites/10/2024/09/Apendice-12-Pastos-Coleccion-6.0.pdf"> Documento Base Teórico de Algoritmos (ATBD) </a>, realizada pelo Mapbiomas (figura 1) foi base para projeto. Usar cartas do Instituto Brasileiro de Geografia e Estatística (IBGE) para delimitar regiões de classificação. Para cada carta, é utilizado as amostras da carta central e um buffer de 100 km da vizinhança para o treinamento do classificador. São 12 modelos no total.
+</div>
+<p><br></p>
+<div align="center">
+    <img src="../imgs/Metodologia_Pastagens_SC.png" width="85%" alt="Processo de Operacionalização">
+    <p><i>Figura 1: Procedimento metodologico do Mapbiomas para área de estudo.</i></p>
+</div>
+<p><br></p>
+<h3 align="left" id="desenho">Desenho amostral</h3>
+<div align="justify"> 
+    Foi realizado o Sorteio aleatório estratificado proporcionalmente pelos estratos secundários e uniforme para as 3 classes resultantes das máscaras de referência (Mapbiomas uso e cobertura e Global Pasture Watch) ambas contendo as classes de pastagem natural, cultivada e outros. especificamente a máscara do mapbiomas resumiu todas as classes que não fossem vegetação campestre, pastagem e mosaico de usos foram classificadas com "outros" para evitar confusão com todas as outras classes que não são o foco da pesquisa.
+</div>
+<p><br></p>
+<div align="center">
+    <img src="../imgs/interpretacao_pastagem.png" width="75%" alt="Chave de interpretação">
+    <p><i>Figura 2: Chave de interpretação realizada.</i></p>
+</div>
+<p><br></p>
+<div align="center">
+    <img src="../imgs/tvi.png" width="85%" alt="interface">
+    <p><i>Figura 3: Interface de login do programa TVI.</i></p>
+</div>
+<p><br></p>
+<h3 align="left" id="inspecao">Inspeção visual de pontos</h3>
+<div align="justify"> 
+    Utilizando as 12440 amostras de treinamento geradas para o estado de Santa Catarina, sendo elas 4146 amostras para cada classe, foi feita a inspeção dessas por meio da ferramenta <a href="https://tvi.lapig.iesa.ufg.br/#/login"> Temporal Visual Inspection (TVI) </a> (figura 2) com 8 interpretes realizando a tarefa, sendo 3 para cada ponto. Para guiar os interpretes e manter um padrão, os treinamentos foram feitos com base na <a href="../Resultados/Chave de Interpretação das Pastagens para o Estado de Santa Catarina.pdf"> chave de interpretação</a> costruída para o projeto.
+</div>
+<p><br></p>
+<div align="center">
+    <img src="../imgs/Classificacoes_realizadas.png" width="85%" alt="classificacoes">
+    <p><i>Figura 4: classificações testadas.</i></p>
+</div>
+<p><br></p>
+<h3 align="left" id="classificacao">Classificação</h3>
+<div align="justify"> 
+    A metodologia realizada pelo mapbiomas de classificação de áreas de pastagem foi adaptanda pois a possibilidade de classificar áreas de pastagem naturais e pastagens cultivadas foi explorada em testes (representados na figura 3). A classificação binária que separava as classes de todas as pastagens por outros foi a mais correspondente com a realidade, sendo essa feita em 2 etapas, sendo elas:
+     <ol>
+            <li><a href="./Scripts/Classificacao.js"> Classificação binária</a>;</li>
+            <li><a href="./Scripts/Filtro_moda_mediana.js"> Filtro de moda com kernel 5x5</a>.</li>
+        </ol>
+</div>
+<p><br></p>
+<h3 align="left" id="Preparacao">Preparação de dados para análise</h3>
+<div align="justify"> 
+    Após a classificação ser finalizada foram realizados uma serie de procedimentos para a etapa de refinamento. Sendo eles a <a href=".\Scripts\recorte_automatizado.sh"> separação dos tiles </a> de acordo com as regiões separadas para cada interprete. Conferir os dados separados e organizar uma planilha de controle e preparação dos demais processos, como o de <a href=".\Scripts\uniao_de_dados.sh"> união </a> dos dados ao finalizar as etapas de refinamento e auditoria. Os processos realizados nessa etapa, são os mesmos tanto em fase de refinamento quanto de auditoria.
+</div>
+<p><br></p>
+<div align="center">
+    <img src="../imgs/divisao_regioes.png" width="65%" alt="classificacoes">
+    <p><i>Figura 5: Início de divisões de regiões para refinamento e auditoria.</i></p>
+</div>
+<p><br></p>
+<h3 align="left" id="refinamento_e_auditoria">Refinamento e Auditoria</h3>
+<div align="justify"> 
+     Utilizando o software <a href="https://qgis.org/"> Qgis </a> juntamente com o plug-in <a href="https://github.com/SMByC/ThRasE"> thRasE </a> e imagens sentinel, possibilitaram a atividade de refinamento e auditoria dos dados recortados por regiões.
+</div>
+<p><br></p>
+<div align="center">
+    <img src="../imgs/fluxograma_codigos.png" width="85%" alt="classificacoes">
+    <p><i>Figura 6: Fluxograma de processamento de dados.</i></p>
+</div>
+<p><br></p>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC" class="fa fa-code-fork" style="color: #fcfcfc"> Classificacao-Pastagem-SC</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

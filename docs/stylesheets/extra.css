@@ -1,0 +1,98 @@
+/* 1. Barra Lateral em Cinza Escuro (Padrão Cerrado d-pat) */
+.wy-nav-side {
+    background: #343131 !important;
+}
+
+/* Base de Links da Barra Lateral: cinza claro e fundo azul ao passar o mouse */
+.wy-menu-vertical a {
+    color: #b3b3b3 !important;
+}
+.wy-menu-vertical a:hover {
+    background-color: #2980b9 !important;
+    color: #ffffff !important;
+}
+
+/* Divisões entre tópicos (Captions / Headers) no tom de azul */
+.wy-menu-vertical header,
+.wy-menu-vertical p.caption,
+.wy-menu-vertical p.caption span,
+.wy-nav .wy-menu-vertical header,
+.wy-nav .wy-menu-vertical p.caption {
+    color: #2980b9 !important;
+    height: 32px;
+    line-height: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 80%;
+    margin-bottom: 0px;
+    display: block;
+}
+
+/* Itens Selecionados e Menu Ativo (Fundo Claro) */
+.wy-menu-vertical li.current {
+    background: #e3e3e3 !important;
+}
+.wy-menu-vertical li.current > a,
+.wy-menu-vertical li.on > a {
+    color: #404040 !important;
+    background: #fcfcfc !important;
+    border-right: solid 1px #c9c9c9 !important;
+}
+.wy-menu-vertical li.toctree-l1.current > a {
+    border-bottom: solid 1px #c9c9c9 !important;
+    border-top: solid 1px #c9c9c9 !important;
+}
+.wy-menu-vertical li.current a:hover {
+    background: #d6d6d6 !important;
+    color: #404040 !important;
+}
+
+/* Ajustes de sub-menus de segundo/terceiro nível quando ativados */
+.wy-menu-vertical li.toctree-l2.current > a {
+    background: #c9c9c9 !important;
+}
+.wy-menu-vertical li.toctree-l3.current > a {
+    background: #bdbdbd !important;
+}
+.wy-menu-vertical li.current ul li a {
+    color: #404040 !important; /* Para que os não selecionados dentro de um ativo continuem com a mesma cor dos links da barra lateral caso tenham um fundo escuro... Mas espere, na versão d-pat o li.current ul tem fundo claro ou não tem fundo extra? */
+}
+
+/* 2. Bloco de Busca em Azul (Padrão Cerrado d-pat) */
+.wy-side-nav-search {
+    background-color: #2980b9 !important;
+}
+
+/* 3. Ajuste do texto e links dentro do bloco azul para ficarem legíveis (brancos) */
+.wy-side-nav-search > a,
+.wy-side-nav-search .wy-dropdown > a {
+    color: #ffffff !important;
+    font-weight: bold !important;
+}
+
+/* Cor escura para o texto de busca (input) */
+.wy-side-nav-search input[type="text"] {
+    color: #404040 !important;
+}
+
+/* 4. Cor de fundo do conteúdo principal */
+.wy-nav-content-wrap {
+    background: #fdfdfd !important;
+}
+
+/* 5. Justificar parágrafos de texto */
+.wy-nav-content p {
+    text-align: justify;
+}
+
+/* Garantir que containers centralizados, imagens e GIFs continuem centralizados */
+.wy-nav-content div[align="center"],
+.wy-nav-content div[align="center"] p,
+.wy-nav-content img[align="center"],
+.wy-nav-content .center-content {
+    text-align: center !important;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+}
+

@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="description" content="None" /><meta name="author" content="Guilherme Vaz" /><link rel="canonical" href="https://guilhermeramosvaz.github.io/Classificacao-Pastagem-SC/" />
+      <link rel="shortcut icon" href="img/favicon.ico" />
+    <title>Documentação - Classificação Pastagem Santa Catarina</title>
+    <link rel="stylesheet" href="css/theme.css" />
+    <link rel="stylesheet" href="css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Home";
+        var mkdocs_page_input_path = "index.md";
+        var mkdocs_page_url = "/Classificacao-Pastagem-SC/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="." class="icon icon-home"> Documentação - Classificação Pastagem Santa Catarina
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="./search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="mds/01_visao_geral/">Visão Geral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="mds/02_integracao_dados/">Integração de Dados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="mds/03_desenho_amostral/">Desenho Amostral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="mds/04_processamento_classificacao/">Processamento da Classificação</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="mds/05_preparacao_refinamento/">Refinamento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="mds/06_analise_mapeamento/">Análise do Mapeamento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="mds/07_avaliacao_acuracia/">Avaliação de Acurácia</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="mds/08_passo_a_passo/">Passo a Passo (Scripts)</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href=".">Documentação - Classificação Pastagem Santa Catarina</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Home</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC/edit/master/docs/index.md">Edit on Classificacao-Pastagem-SC</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 align="center"> Mapeamento da Pastagem no estado de Santa Catarina</h1>
+
+<p><br></p>
+<div align="center">
+    <img src="images/campo_DSC_0630_25_11_2025_15_23.jpg" width="100%" alt="Foto_pastagem_Vieira_Mesquita(11/2025)">
+    <p><i>Figura 1: Lapig(11/2025).</i></p>
+</div>
+
+<h2 align="Left">Introdução</h2>
+<div align="justify"> 
+    Trabalho de mapeamento das pastagens do estado de Santa Catarina para o ano de 2024 realizado pela parceria entre Lapig e Remapgeo. Utilizando imagens do satélite Sentinel 2A/B com 10 metros de resolução espacial, dados de referência do Mapbiomas e Global Pasture Watch, foi possível gerar uma classificação supervisionada para todo o estado, realizada com o Algorítmo Random Forest, descrita em <a href="mds/01_visao_geral.md">Visão Geral</a>.
+</div>
+
+<h2 align="Left">Bases de dados</h2>
+<div align="justify"> 
+    Foram utilizados como dados de referência os dados de pastagem <a href="https://brasil.mapbiomas.org/">Mapbiomas</a> e global pasture watch do <a href="https://landcarbonlab.org/about-global-pasture-watch/">Land & Carbon Lab</a> para gerar os pontos utilizados.
+</div>
+
+<h2 align="Left">Requisitos</h2>
+<div align="Left"> 
+    <ul>
+        <li>Python 3.12 ou superior</li>
+        <li>Numpy 2.2.4 python package</li>
+        <li>Gdal Binaries 3.10.3 </li>
+    </ul>    
+</div>
+<p><br></p>
+<h2 align="Left">Acknowledgements</h2>
+
+<table>
+<thead>
+<tr>
+<th style="text-align: center;"></th>
+<th style="text-align: center;"></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">This research was supported by Epagri</td>
+<td style="text-align: center;"><div align="center"> <img src="images/epagri.png" width="65%" alt="Processo de Operacionalização"> </div></td>
+</tr>
+<tr>
+<td style="text-align: center;">This research was supported by LAPIG/UFG</td>
+<td style="text-align: center;"><div align="center"> <img src="images/LAPIG Logo.png" width="25%" alt="Processo de Operacionalização"> </div></td>
+</tr>
+<tr>
+<td style="text-align: center;">This research was supported by Remapgeo</td>
+<td style="text-align: center;"><div align="center"> <img src="images/REMAPgeo.png" width="120%" alt="Processo de Operacionalização"> </div></td>
+</tr>
+</tbody>
+</table>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="mds/01_visao_geral/" class="btn btn-neutral float-right" title="Visão Geral">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC" class="fa fa-code-fork" style="color: #fcfcfc"> Classificacao-Pastagem-SC</a>
+        </span>
+    
+    
+    
+      <span><a href="mds/01_visao_geral/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = ".";</script>
+    <script src="js/theme_extra.js"></script>
+    <script src="js/theme.js"></script>
+      <script src="search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
+
+<!--
+MkDocs version : 1.6.1
+Build Date UTC : 2026-04-08 14:10:53.017242+00:00
+-->

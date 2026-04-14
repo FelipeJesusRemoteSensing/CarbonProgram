@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Guilherme Vaz" /><link rel="canonical" href="https://guilhermeramosvaz.github.io/Classificacao-Pastagem-SC/mds/05_preparacao_refinamento/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Refinamento - Documentação - Classificação Pastagem Santa Catarina</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Refinamento";
+        var mkdocs_page_input_path = "mds\\05_preparacao_refinamento.md";
+        var mkdocs_page_url = "/Classificacao-Pastagem-SC/mds/05_preparacao_refinamento/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Documentação - Classificação Pastagem Santa Catarina
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_visao_geral/">Visão Geral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_integracao_dados/">Integração de Dados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_desenho_amostral/">Desenho Amostral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_processamento_classificacao/">Processamento da Classificação</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Refinamento</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#51-divisao-em-tiles">5.1. Divisão em Tiles</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#52-preparacao-dos-dados-pipeline-via-shell">5.2. Preparação dos Dados (Pipeline via Shell)</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#53-plugin-thrase">5.3. Plugin ThRasE</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#54-controle-de-qualidade">5.4. Controle de Qualidade</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scripts-relacionados">Scripts Relacionados</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#requisitos">Requisitos</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_analise_mapeamento/">Análise do Mapeamento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_avaliacao_acuracia/">Avaliação de Acurácia</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_passo_a_passo/">Passo a Passo (Scripts)</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Documentação - Classificação Pastagem Santa Catarina</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Refinamento</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC/edit/master/docs/mds/05_preparacao_refinamento.md">Edit on Classificacao-Pastagem-SC</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="etapa-5-estrategias-de-refinamento">Etapa 5 — Estratégias de Refinamento</h1>
+<hr />
+<h2 id="51-divisao-em-tiles">5.1. Divisão em Tiles</h2>
+<p>Para garantir a qualidade orgânica do mapa, o estado de Santa Catarina não foi revisado como uma imagem massiva. O limite vetorial do estado foi matematicamente fragmentado formando uma grade (grid) analítica:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Parâmetro Geométrico</th>
+<th style="text-align: center;">Especificação</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Dimensões do Tile (Célula)</strong></td>
+<td style="text-align: center;">10 km x 10 km</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Total de Recortes (Tiles)</strong></td>
+<td style="text-align: center;">1.373 células</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Agrupamento de Gestão</strong></td>
+<td style="text-align: center;">Blocos de ≈ 25 tiles por intérprete</td>
+</tr>
+</tbody>
+</table>
+<p>Essa fragmentação sistemática permitiu que variações do perfil das pastagens regionais fossem inspecionadas individualmente por especialistas.</p>
+<hr />
+<h2 id="52-preparacao-dos-dados-pipeline-via-shell">5.2. Preparação dos Dados (Pipeline via Shell)</h2>
+<p>Após a classificação inicial, uma cadeia de automações baseada em linguagens OS (Shell e Python no padrão WSL/Linux) e bibliotecas espaciais (GDAL) atua em um fluxo de lote ("batch processing"). Esses processos, ilustrados no diagrama abaixo, viabilizam que o plugin no QGIS funcione sem corrupção dos dados de origem:</p>
+<pre><code class="language-mermaid">graph TD;
+    A[Classificação Bruta \n Google Earth Engine] --&gt; B;
+    B(recorte_automatizado.sh \n Distribuição por Intérprete) --&gt;|Recorte &amp; Reprojeção| C;
+    C((Plugin ThRasE \n Revisão Humana no QGIS)) --&gt;|Arquivo .yaml| D;
+    D(salvar_em_pastas_yamlTIF.sh / reclassificar_raster_yaml.sh) --&gt;|Gravação da Alteração em TIF| E;
+    E(listar.py / listar_nodata_tipo_p_lista_RASTER.sh) --&gt;|Auditoria de Metadados QA/QC| F;
+    F(gdal_calc_nodata.sh) --&gt;|Tratamento de NoData| G;
+    G(uniao_de_dados.sh) --&gt;|Mosaico Final e Reprojeção| H[Mapa Final de Pastagem];
+
+    classDef scripts fill:#2b2b2b,stroke:#00bcd4,stroke-width:2px,color:#fff;
+    class B,D,E,F,G scripts;
+</code></pre>
+<blockquote>
+<p><strong>Figura 5 (metodologia):</strong> Pipeline metodológico da preparação de dados para revisão em hardware local.</p>
+</blockquote>
+<hr />
+<h2 id="53-plugin-thrase">5.3. Plugin ThRasE</h2>
+<p>O plugin ThRasE (thematic raster editor) é uma ferramenta voltada para o processamento de imagens raster que utiliza a técnica de classificação e refinamento de dados espaciais. No contexto do refinamento da classe de pastagem em Santa Catarina, o seu uso foi da seguinte forma:</p>
+<ul>
+<li>Inclusão ou exclusão de pixel da classe de Pastagem e da classe Outros.</li>
+</ul>
+<p>O plugin permite "limpar" ruídos da classificação da pastagem, para aumentar a precisão do mapeamento em Santa Catarina. Ele automatiza a criação de máscaras, pixel a pixel, onde o intérprete analisa se uma área pertence ou não à classe de pastagem.</p>
+<p>Utilizando o software <a href="https://qgis.org/">QGIS</a> juntamente com o plug-in <a href="https://github.com/SMByC/ThRasE">ThRasE</a> e imagens Sentinel, possibilitaram a atividade de refinamento e auditoria dos dados recortados por regiões.</p>
+<hr />
+<h2 id="54-controle-de-qualidade">5.4. Controle de Qualidade</h2>
+<p>Após os refinamentos realizados através do ThRasE, os revisores retornam uma pasta contendo os arquivos raster matriciais e os diretivos de formato <code>.yaml</code> que "gravam" as alterações visuais de adição ou subtração de pixels.</p>
+<p>Para materializar estas alterações sem destruir o dado primitivo, o módulo Shell atua em lote (<em>batch</em>), lendo o <code>.yaml</code> e fundindo num novo raster <code>.tif</code>.</p>
+<p>Na etapa de <strong>Controle de Qualidade Analítico (QA/QC)</strong>:
+1. Listamos as extensões e tipos de dados via Python para evitar metadados nulos no processamento de mesclagem.
+2. Conferimos propriedades de NoData para alinhar matrizes vazias (células sem dados de fundo devem obrigatoriamente possuir um valor mascarado nulo).
+3. Após garantir a integridade dos 1.373 pedaços corrigidos, aciona-se o <code>uniao_de_dados.sh</code>, devolvendo assim o contorno do mapeamento final, revisado e consolidado para o formato único do estado de Santa Catarina.</p>
+<hr />
+<h2 id="scripts-relacionados">Scripts Relacionados</h2>
+<ul>
+<li><a href="../../base_dados/aplicacao/Scripts/recorte_automatizado.sh">recorte_automatizado.sh</a> — Shell (WSL/Linux) — Recorte e reprojeção dos tiles para distribuição por intérprete</li>
+<li><a href="../../base_dados/aplicacao/Scripts/salvar_em_pastas_yamlTIF.sh">salvar_em_pastas_yamlTIF.sh</a> — Shell (WSL/Linux) — Salvamento das alterações do ThRasE (YAML → TIF)</li>
+<li><a href="../../base_dados/aplicacao/Scripts/listar.py">listar.py</a> — Python — Listagem de metadados dos arquivos raster</li>
+<li><a href="../../base_dados/aplicacao/Scripts/listar_nodata_tipo_p_lista_RASTER_v2.sh">listar_nodata_tipo_p_lista_RASTER_v2.sh</a> — Shell (WSL/Linux) — Listagem de NoData, tipo e propriedades dos rasters</li>
+<li><a href="../../base_dados/aplicacao/Scripts/gdal_calc_nodata.sh">gdal_calc_nodata.sh</a> — Shell (WSL/Linux) — Cálculo e tratamento de valores NoData</li>
+<li><a href="../../base_dados/aplicacao/Scripts/reclassificar_raster_yaml.sh">reclassificar_raster_yaml.sh</a> — Shell (WSL/Linux) — Reclassificação de raster com base em YAML</li>
+<li><a href="../../base_dados/aplicacao/Scripts/uniao_de_dados.sh">uniao_de_dados.sh</a> — Shell (WSL/Linux) — União e alinhamento dos dados refinados/auditados</li>
+</ul>
+<h2 id="requisitos">Requisitos</h2>
+<ul>
+<li>Python 3.12 ou superior</li>
+<li>Numpy 2.2.4 python package</li>
+<li>GDAL Binaries 3.10.3</li>
+<li>QGIS com plugin ThRasE instalado</li>
+</ul>
+<hr />
+<p><strong>Etapa anterior:</strong> <a href="../04_processamento_classificacao/">Etapa 4 — Processamento e Classificação</a><br />
+<strong>Próxima etapa:</strong> <a href="../06_analise_mapeamento/">Etapa 6 — Análise do Mapeamento</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../04_processamento_classificacao/" class="btn btn-neutral float-left" title="Processamento da Classificação"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../06_analise_mapeamento/" class="btn btn-neutral float-right" title="Análise do Mapeamento">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC" class="fa fa-code-fork" style="color: #fcfcfc"> Classificacao-Pastagem-SC</a>
+        </span>
+    
+    
+      <span><a href="../04_processamento_classificacao/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../06_analise_mapeamento/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,250 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Guilherme Vaz" /><link rel="canonical" href="https://guilhermeramosvaz.github.io/Classificacao-Pastagem-SC/mds/06_analise_mapeamento/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Análise do Mapeamento - Documentação - Classificação Pastagem Santa Catarina</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "An\u00e1lise do Mapeamento";
+        var mkdocs_page_input_path = "mds\\06_analise_mapeamento.md";
+        var mkdocs_page_url = "/Classificacao-Pastagem-SC/mds/06_analise_mapeamento/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Documentação - Classificação Pastagem Santa Catarina
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_visao_geral/">Visão Geral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_integracao_dados/">Integração de Dados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../03_desenho_amostral/">Desenho Amostral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_processamento_classificacao/">Processamento da Classificação</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_preparacao_refinamento/">Refinamento</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Análise do Mapeamento</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#61-estimativas-de-area">6.1. Estimativas de Área</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dados-de-saida">Dados de Saída</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scripts-relacionados">Scripts Relacionados</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_avaliacao_acuracia/">Avaliação de Acurácia</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_passo_a_passo/">Passo a Passo (Scripts)</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Documentação - Classificação Pastagem Santa Catarina</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Análise do Mapeamento</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC/edit/master/docs/mds/06_analise_mapeamento.md">Edit on Classificacao-Pastagem-SC</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="etapa-6-analise-do-mapeamento">Etapa 6 — Análise do Mapeamento</h1>
+<hr />
+<h2 id="61-estimativas-de-area">6.1. Estimativas de Área</h2>
+<p>As estimativas de área de pastagem obtidas pelas diferentes fontes apresentaram resultados distintos para o estado de Santa Catarina. Enquanto o produto MapBiomas (que inclui a 'Classe Pastagem-15' e 'Classe Campestre-12') foi usado como <em>baseline</em>, o mapeamento final do LAPIG produziu as seguintes consolidações:</p>
+<table>
+<thead>
+<tr>
+<th style="text-align: left;">Produto Cartográfico</th>
+<th style="text-align: center;">Área Final Mapeada (Hectares)</th>
+<th style="text-align: center;">Diferença (%)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: left;"><strong>Mapeamento LAPIG (Total Final)</strong></td>
+<td style="text-align: center;"><strong>1.439.037 ha</strong></td>
+<td style="text-align: center;">Base</td>
+</tr>
+<tr>
+<td style="text-align: left;"><strong>Padrão MapBiomas (Classes 12 + 15)</strong></td>
+<td style="text-align: center;"><strong>1.433.668 ha</strong></td>
+<td style="text-align: center;"><strong>- 0,37% (- 5.369 ha)</strong></td>
+</tr>
+</tbody>
+</table>
+<p>Como a diferença absoluta foi de margem muito estreita (menos de 0,5%), isso valida estatisticamente o volume territorial de pastagens descoberto. Ambos os dados são espacializados nas frentes comparativas do <a href="#scripts-relacionados">script de visualização GEE no rodapé da página.</a></p>
+<hr />
+<h2 id="dados-de-saida">Dados de Saída</h2>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Variável</th>
+<th style="text-align: center;">Tipo de Dado</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;">Regiões de inspeção</td>
+<td style="text-align: center;">vetor</td>
+</tr>
+<tr>
+<td style="text-align: center;">Chave de Interpretação</td>
+<td style="text-align: center;">pdf</td>
+</tr>
+<tr>
+<td style="text-align: center;">Pontos de treino</td>
+<td style="text-align: center;">vetor</td>
+</tr>
+<tr>
+<td style="text-align: center;">Malha quadriculada da área de estudo</td>
+<td style="text-align: center;">vetor</td>
+</tr>
+<tr>
+<td style="text-align: center;">Arquivos refinados por semana</td>
+<td style="text-align: center;">raster</td>
+</tr>
+<tr>
+<td style="text-align: center;">Arquivos auditados por semana</td>
+<td style="text-align: center;">raster</td>
+</tr>
+<tr>
+<td style="text-align: center;">Classificação com filtro de moda 5x5</td>
+<td style="text-align: center;">raster</td>
+</tr>
+<tr>
+<td style="text-align: center;">Classificação Refinada</td>
+<td style="text-align: center;">raster</td>
+</tr>
+<tr>
+<td style="text-align: center;">Classificação Auditada</td>
+<td style="text-align: center;">raster</td>
+</tr>
+<tr>
+<td style="text-align: center;">Pontos visitados em campo</td>
+<td style="text-align: center;">tabela</td>
+</tr>
+</tbody>
+</table>
+<hr />
+<h2 id="scripts-relacionados">Scripts Relacionados</h2>
+<ul>
+<li><a href="../../base_dados/aplicacao/Scripts/split_panel.js">split_panel.js</a> — JavaScript (GEE) — Visualização de comparativo em paralelo de dados</li>
+<li><a href="../../base_dados/aplicacao/Scripts/mascara_estrato_amostral_Mapbiomas_GPW.js">mascara_estrato_amostral_Mapbiomas_GPW.js</a> — JavaScript (GEE) — Visualização de comparação entre resultado e bases</li>
+</ul>
+<p>Ao final dos processamentos os dados gerados são novamente inseridos no GEE para fins de visualização.</p>
+<hr />
+<p><strong>Etapa anterior:</strong> <a href="../05_preparacao_refinamento/">Etapa 5 — Preparação de Dados e Refinamento</a><br />
+<strong>Próxima etapa:</strong> <a href="../07_avaliacao_acuracia/">Etapa 7 — Avaliação de Acurácia</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../05_preparacao_refinamento/" class="btn btn-neutral float-left" title="Refinamento"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../07_avaliacao_acuracia/" class="btn btn-neutral float-right" title="Avaliação de Acurácia">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC" class="fa fa-code-fork" style="color: #fcfcfc"> Classificacao-Pastagem-SC</a>
+        </span>
+    
+    
+      <span><a href="../05_preparacao_refinamento/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../07_avaliacao_acuracia/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

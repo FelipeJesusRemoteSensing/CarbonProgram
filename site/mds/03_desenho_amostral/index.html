@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Guilherme Vaz" /><link rel="canonical" href="https://guilhermeramosvaz.github.io/Classificacao-Pastagem-SC/mds/03_desenho_amostral/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Desenho Amostral - Documentação - Classificação Pastagem Santa Catarina</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Desenho Amostral";
+        var mkdocs_page_input_path = "mds\\03_desenho_amostral.md";
+        var mkdocs_page_url = "/Classificacao-Pastagem-SC/mds/03_desenho_amostral/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Documentação - Classificação Pastagem Santa Catarina
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../01_visao_geral/">Visão Geral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../02_integracao_dados/">Integração de Dados</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Desenho Amostral</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#31-desenho-amostral">3.1. Desenho Amostral</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#resumo-do-esforco-amostral-balanceado">Resumo do Esforço Amostral Balanceado</a>
+    </li>
+        </ul>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#32-inspecao-visual">3.2. Inspeção Visual</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#scripts-relacionados">Scripts Relacionados</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#dados-de-saida">Dados de Saída</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../04_processamento_classificacao/">Processamento da Classificação</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../05_preparacao_refinamento/">Refinamento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../06_analise_mapeamento/">Análise do Mapeamento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../07_avaliacao_acuracia/">Avaliação de Acurácia</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../08_passo_a_passo/">Passo a Passo (Scripts)</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Documentação - Classificação Pastagem Santa Catarina</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Desenho Amostral</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC/edit/master/docs/mds/03_desenho_amostral.md">Edit on Classificacao-Pastagem-SC</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="etapa-3-desenho-amostral-e-inspecao-visual">Etapa 3 — Desenho Amostral e Inspeção Visual</h1>
+<hr />
+<h2 id="31-desenho-amostral">3.1. Desenho Amostral</h2>
+<p>O método utiliza amostragem probabilística estratificada, em que cada classe da máscara é tratada como um estrato, garantindo representatividade e controle do erro. As proporções das classes são estimadas a partir da contagem de pixels, servindo de base para o cálculo do tamanho amostral, considerando nível de confiança de 95%, erro de 8% e p = 0,5. </p>
+<p>As amostras são sorteadas aleatoriamente e, após a seleção, organizadas, georreferenciadas e identificadas para as opções de interpretação. Esse delineamento, orquestrado automatizadamente via <strong>Linguagem R</strong> (<a href="#scripts-relacionados">ver script no final da página</a>), segue uma abordagem estratificada por classes.</p>
+<h3 id="resumo-do-esforco-amostral-balanceado">Resumo do Esforço Amostral Balanceado</h3>
+<table>
+<thead>
+<tr>
+<th style="text-align: center;">Total de Amostras Geradas</th>
+<th style="text-align: center;">Distribuídas nas 3 Classes (Aprox.)</th>
+<th style="text-align: center;">Intérpretes Via TVI</th>
+<th style="text-align: center;">Revisões Exigidas</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td style="text-align: center;"><strong>12.440 pontos</strong></td>
+<td style="text-align: center;"><strong>4.146 amostras</strong> <em>(por classe)</em></td>
+<td style="text-align: center;"><strong>8 especialistas</strong></td>
+<td style="text-align: center;"><strong>3 checagens</strong> <em>(por ponto)</em></td>
+</tr>
+</tbody>
+</table>
+<p>O alto número amostral e as triplas inspeções cegas por ponto demonstram um esforço deliberado para reduzir viés no processo metodológico.</p>
+<blockquote>
+<p><strong>Figura 3:</strong> Distribuição espacial dos pontos de amostragem utilizados para validação do mapeamento de pastagens no estado de Santa Catarina.</p>
+</blockquote>
+<hr />
+<h2 id="32-inspecao-visual">3.2. Inspeção Visual</h2>
+<p>As amostras foram inspecionadas visualmente através da ferramenta <a href="https://tvi.lapig.iesa.ufg.br/#/login">TVI, Temporal Visual Inspection</a>, que possibilita a interpretação de séries históricas de imagens de satélite de forma independente. </p>
+<p>A série temporal assistida na tela do TVI compreendeu as janelas completas dos anos <strong>2020, 2021, 2022, 2023 e 2024</strong>, permitindo avaliar a integridade estável da classe e identificar mutações temporais. Para guiar os 8 intérpretes em um direcionamento visual rigoroso de padrão, toda a etapa foi alimentada pela respectiva <a href="../Resultados/Chave%20de%20Interpretação%20das%20Pastagens%20para%20o%20Estado%20de%20Santa%20Catarina.pdf">chave de interpretação</a> construída para o projeto.</p>
+<blockquote>
+<p><strong>Figura 4:</strong> Visual Temporal Inspection (TVI). Visualização da ferramenta de inspeção visual para as amostras de treinamento.</p>
+</blockquote>
+<hr />
+<h2 id="scripts-relacionados">Scripts Relacionados</h2>
+<ul>
+<li><a href="../../base_dados/aplicacao/Scripts/amostras_treinamento_sc_remap.R">amostras_treinamento_sc_remap.R</a> — R — Sorteio aleatório estratificado dos pontos de treinamento a partir da relação MapBiomas × GPW</li>
+</ul>
+<h2 id="dados-de-saida">Dados de Saída</h2>
+<ul>
+<li><a href="../Resultados/train_samples.geojson">train_samples.geojson</a> — Pontos de treinamento gerados</li>
+</ul>
+<hr />
+<p><strong>Etapa anterior:</strong> <a href="../02_integracao_dados/">Etapa 2 — Integração de Dados</a><br />
+<strong>Próxima etapa:</strong> <a href="../04_processamento_classificacao/">Etapa 4 — Processamento e Classificação</a></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../02_integracao_dados/" class="btn btn-neutral float-left" title="Integração de Dados"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../04_processamento_classificacao/" class="btn btn-neutral float-right" title="Processamento da Classificação">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC" class="fa fa-code-fork" style="color: #fcfcfc"> Classificacao-Pastagem-SC</a>
+        </span>
+    
+    
+      <span><a href="../02_integracao_dados/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../04_processamento_classificacao/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

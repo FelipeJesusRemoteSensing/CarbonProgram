@@ -1,0 +1,22 @@
+site_name: Documentação - Classificação Pastagem Santa Catarina
+site_author: Felipe Jesus
+site_url: 
+repo_url: 
+repo_name: 
+theme:
+  name: readthedocs
+
+extra_css:
+  - stylesheets/extra.css
+ 
+nav:
+  - 'Home': 'index.md'
+  - 'Contexto': 'mds/Contexto.md'
+  - 'Integração de Dados': 'mds/integracao_dados.md'
+  - 'Desenho Amostral': 'mds/desenho_amostral.md'
+  - 'Processamento da Classificação': 'mds/processamento_classificacao.md'
+  - 'Refinamento': 'mds/preparacao_refinamento.md'
+  - 'Trabalho de Campo': 'mds/trabalho_campo.md'
+  - 'Análise do Mapeamento': 'mds/analise_mapeamento.md'
+  - 'Avaliação de Acurácia': 'mds/avaliacao_acuracia.md'
+  - 'Processos (Scripts)': 'mds/passo_a_passo.md'

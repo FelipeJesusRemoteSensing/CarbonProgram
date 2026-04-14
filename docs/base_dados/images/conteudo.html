@@ -1,0 +1,267 @@
+<article style="
+    line-height: 1.8; 
+    font-family: 'Segoe UI', Roboto, Helvetica, Arial, sans-serif; 
+    color: #cfcfcf; 
+    max-width: 950px; 
+    margin: 40px auto; 
+    padding: 45px; 
+    background-color: #121212; 
+    border-radius: 20px; 
+    box-shadow: 0 20px 50px rgba(0,0,0,0.7);
+    text-align: justify;">
+
+    <p style="margin-bottom: 25px;">
+        Para subsidiar as simulações do modelo Century no contexto do projeto REVERTE®, foi realizado um extenso
+        processamento de dados geoespaciais e ambientais. Inicialmente, foi estruturado um banco de dados com
+        informações de uso e cobertura da terra provenientes da Coleção 10 do MapBiomas (Mapbiomas, 2025), abrangendo o
+        período de 1985 a 2024, com resolução espacial de 30 metros. Esses dados foram essenciais para caracterizar o
+        histórico de uso da terra nas 36 fazendas participantes localizadas no Cerrado entre os estados de Goiás, Mato
+        Grosso, Mato Grosso do Sul, Tocantins e Maranhão.
+    </p>
+
+    <p style="margin-bottom: 25px;">
+        Complementarmente, foram processadas séries temporais de NDVI mensais, com o objetivo de identificar padrões
+        sazonais de cobertura vegetal e atividades agrícolas ao longo dos anos. Também foram extraídas variáveis
+        climáticas essenciais ao funcionamento do modelo Century, como temperatura (máxima, mínima e média mensal) e
+        precipitação acumulada mensal. Esses dados foram obtidos a partir das bases globais CHELSA (Climatologies at
+        High Resolution for the Earth’s Land Surface Areas), NASA POWER (Prediction Of Worldwide Energy Resources),
+        TerraClimate and WorldClim e a base nacional BR-DWGD (Brazilian Daily Weather Gridded Data).
+    </p>
+
+    <p
+        style="margin-bottom: 25px; border-left: 4px solid #4CAF50; padding-left: 20px; background: rgba(76, 175, 80, 0.05); border-radius: 0 8px 8px 0; padding-top: 15px; padding-bottom: 15px;">
+        Com o intuito de verificar a compatibilidade entre as fontes de dados climáticos, foi conduzida uma análise
+        preliminar de consistência entre as séries históricas de todas as bases e comparação com dados de torres
+        meteorológicas. Concluímos que a base de dados TerraClimate se mostrou mais completa, com estimativas de
+        variáveis climáticas mais próximas aos dados das torres. Dessa forma, as variáveis climáticas foram extraídas e
+        organizadas individualmente para cada fazenda.
+    </p>
+
+    <p style="margin-bottom: 25px;">
+        Para garantir a acurácia na identificação do uso da terra atual e recente, foi elaborada uma rotina específica
+        no Google Earth Engine (Figura 1) que realiza a extração de todas as imagens disponíveis do sensor Sentinel-2A
+        para os polígonos dos talhões das fazendas. O script implementado permite a visualização otimizada das imagens
+        em composição colorida real, além da geração automática da série temporal de NDVI para o ponto central de cada
+        talhão. A frequência das imagens (a cada cinco dias) viabilizou a inspeção visual detalhada dos usos agrícolas
+        praticados em cada área, mesmo em cenários com elevada cobertura de nuvens. Além de identificação de cobertura e
+        cultivo sub-anual, permitiu identificar datas estimadas para manejos como revolvimento de solo ou distúrbios
+        como queimas.
+    </p>
+
+    <figure
+        style="margin: 40px auto; text-align: center; background: #1e1e1e; padding: 15px; border-radius: 12px; border: 1px solid #333;">
+        <img src="secoes/04_parametrizacao/codigo_inspec.png" alt="Figura 1"
+            style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
+        <figcaption style="font-size: 0.85rem; color: #888; margin-top: 12px; text-align: left; padding-left: 10px;">
+            <strong style="color: #4CAF50;">Figura 1.</strong> Código desenvolvido no Google Earth Engine para inspeção
+            visual de talhões e extração de séries temporais de NDVI.
+        </figcaption>
+    </figure>
+
+    <p style="margin-bottom: 25px;">
+        Para melhorar a variabilidade dos solos considerados e deixar nossa modelagem mais robusta, comparamos a
+        granulometria dos solos das talhões REVERTE® levantadas nos anos anteriores pela Syngenta com dados de
+        calibração e validação do modelo Century específica de áreas de pastagens e soja. A distância até pontos de
+        calibração e validação e a similaridade entre os solos foram identificados.
+    </p>
+
+    <div style="background: #1a1a1a; padding: 30px; border-radius: 15px; border: 1px solid #333; margin-bottom: 30px;">
+        <p style="margin-top: 0;">Como resultado dessa etapa, foi gerada uma planilha síntese contendo as principais
+            informações fenológicas e agronômicas observadas: tipo de cultivo, sistema de plantio, data estimada de
+            plantio e colheita, práticas de manejo (como pousio e rotação), e outras variáveis consideradas relevantes
+            para a parametrização do modelo Century:</p>
+        <ul style="font-size: 0.95rem; line-height: 1.6; color: #bbb;">
+            <li style="margin-bottom: 8px;">Uso sub-anual de ano 2021 - 2024 por meio de inspeção de imagens Sentinel-2
+            <li style="margin-bottom: 8px;">Datas estimadas de queima e revolvimento de solo a partir de 2021;</li>
+            <li style="margin-bottom: 8px;">Uso anual ano 1985-2024 seguindo a moda da classificação dentro de MapBiomas
+                Coleção 9 (<a href="https://code.earthengine.google.com/0d3186d3eea31a5f6788e703eb3d1184"
+                    style="color: #4CAF50; text-decoration: none;">Link MapBiomas</a>);</li>
+            <li style="margin-bottom: 8px;">Ano de abertura a partir de 1985;</li>
+            <li style="margin-bottom: 8px;">Temperatura mensal histórico e média (CHELSA e NASA POWER);</li>
+            <li style="margin-bottom: 8px;">Precipitação acumulada mensal histórico e média (CHELSA e NASA POWER);</li>
+            <li style="margin-bottom: 8px;">Propriedades do solo: granulometria, pH, densidade e carbono (Syngenta e
+                complemento EMBRAPA);</li>
+            <li style="margin-bottom: 8px;">Tendência NDVI a partir do Theropoda (<a
+                    href="https://github.com/lapig-ufg/TheroPoDa"
+                    style="color: #4CAF50; text-decoration: none;">GitHub</a>);</li>
+            <li style="margin-bottom: 8px;">Região Ecofisiológica (Sano et al., 2019);</li>
+            <li style="margin-bottom: 8px;">Distância até sítios de atual calibração/validação do Century com usos
+                “pastagem” e “soja”;</li>
+            <li style="margin-bottom: 8px;">Dissimilaridade entre textura de solo (Syngenta) e sítios de atual
+                calibração/validação do Century com usos “pastagem” e “soja”.</li>
+        </ul>
+    </div>
+
+    <p style="margin-bottom: 40px;">
+        Com base na planilha síntese, selecionamos fazendas e talhões específicos para amostragem de carbono no solo no
+        período de entressafra e os entregamos à TNC e Syngenta em 31 de março. Depois do contato prévio feito pela
+        Syngenta, entramos em contato com todas as fazendas para saber a data de colheita estimada e confirmar a
+        acessibilidade antes de finalizar o planejamento do campo.
+    </p>
+
+    <h2
+        style="color: #ffffff; text-align: center; font-size: 1.8rem; margin-bottom: 30px; border-top: 1px solid #333; padding-top: 40px;">
+        Preparação do Modelo Century</h2>
+
+    <p style="margin-bottom: 25px;">
+        Foi realizada uma revisão da literatura para obtenção de dados de referência de carbono orgânico no solo em
+        áreas com cultivo de cana de açúcar e milho no Cerrado na qual foram encontrados dados 25 de sítios sob cultivo
+        de Cana e 42 sob cultivo de milho. Os dados de cana de açúcar encontram-se concentrados na região centro-sul que
+        é a região com clima mais propício para esse cultivo (Oliveira et al., 2012) (Figura 2A) enquanto os dados de
+        milho encontram-se mais bem distribuídos pelo bioma (Figura 2B).
+    </p>
+
+    <figure
+        style="margin: 40px auto; text-align: center; background: #1e1e1e; padding: 15px; border-radius: 12px; border: 1px solid #333;">
+        <img src="secoes/04_parametrizacao/calval.png" alt="Figura 2"
+            style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
+        <figcaption style="font-size: 0.85rem; color: #888; margin-top: 12px; text-align: left; padding-left: 10px;">
+            <strong style="color: #4CAF50;">Figura 2 A/B.</strong> Mapa da área de estudo (bioma Cerrado), com a
+            localização
+            dos sítios de calibração (0-20 cm) para os cultivos de: A) cana de açúcar e B) milho.
+        </figcaption>
+    </figure>
+
+    <p style="margin-bottom: 25px;">
+        A revisão bibliográfica para obtenção de dados de carbono na biomassa da cana de açúcar (Figura 3) e biomassa e
+        grãos do milho (Figura 4) precisou incluir dados amostrados em outras regiões do Brasil, uma vez que o número de
+        referências encontradas considerando somente o Cerrado foi muito baixa. Para trabalhos que apresentavam apenas
+        dados de matéria seca a conversão para carbono foi realizada considerando o fator de conversão de 50% (IPCC,
+        2006).
+    </p>
+
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 20px; margin: 30px 0;">
+        <figure style="background: #1e1e1e; padding: 10px; border-radius: 8px; margin: 0; border: 1px solid #333;">
+            <img src="secoes/04_parametrizacao/referencia1.png" alt="Figura 3"
+                style="width: 100%; height: auto; border-radius: 4px; display: block; margin: 0 auto;">
+            <figcaption style="font-size: 0.75rem; color: #777; margin-top: 8px;"><strong style="color: #4CAF50;">Figura
+                    3.</strong> Valores de referência de carbono na biomassa aérea e radicular da cana de açúcar no
+                Brasil.
+        </figure>
+        <figure style="background: #1e1e1e; padding: 10px; border-radius: 8px; margin: 0; border: 1px solid #333;">
+            <img src="secoes/04_parametrizacao/referencia2.png" alt="Figura 4"
+                style="width: 100%; height: auto; border-radius: 4px; display: block; margin: 0 auto;">
+            <figcaption style="font-size: 0.75rem; color: #777; margin-top: 8px;"><strong style="color: #4CAF50;">Figura
+                    4.</strong> Valores de referência de carbono na biomassa aérea, radicular e grão de milho no Brasil.
+            </figcaption>
+        </figure>
+    </div>
+
+    <p style="margin-bottom: 25px;">
+        Também foi realizada uma revisão dos trabalhos que utilizaram o modelo CENTURY para simular os estoques e a
+        dinâmica de carbono em áreas com ambos os cultivos. Nesta revisão foram encontrados e testados, 4 trabalhos com
+        parâmetros pré-ajustados para simular a cana-de-açúcar (Brandani et al., 2015; Carvalho, 2014; Galdos et al.,
+        2010; Wendling, 2007)  e 5 parâmetros pré-ajustados para o cultivo de milho
+        (Barbosa, 2021; Dias, 2010; Metherell et al., 1993; Rosendo, 2010; Vogado, 2020) 
+    </p>
+
+    <p style="margin-bottom: 25px;">
+        Informações sobre manejo nos dois cultivos, incluindo a prática de queima da cana-de-açúcar até o ano 2007, e
+        adubação também foram levantados. No preparo do solo para o plantio da cana de açúcar utilizamos parâmetros
+        (CULT) do trabalho de Wendling (2007), no plantio simulamos a adubação (FERT) com 140 kg/ha de P2O5
+        (Rein et al., 2022) e 120 kg/ha* de N (valor médio dos trabalhos de Galdos et al., 2010; Franco et al., 2015;
+        Oliveira et al., 2017; Zani et al., 2018). Nos sítios com adição de torta de filtro e vinhaça
+        utilizamos parâmetros de adição de matéria orgânica (OMAD) do trabalho de Brandani et al., 2015 com alguns
+        ajustes adicionais. A inserção ou não da queima da cana na preparação para colheita foi inserida de
+        acordo com as informações disponibilizadas para cada sítio de forma individual. Para os sítios onde houve queima
+        da palha utilizamos os parâmetros de colheita (HARV) do trabalho de Wendling (2007) e para os que não tiveram
+        queima utilizamos os parâmetros disponibilizados em Galdos et al., (2010)
+    </p>
+
+    <p style="margin-bottom: 25px;">
+        No preparo do solo para o plantio do milho foram utilizados dois conjuntos de parâmetros (CULT) um para plantio
+        direto e outro para sítios sob plantio convencional . Posteriormente, simulamos dois eventos de
+        adubação (FERT), um no plantio e outro referente a cobertura (30 dias após o plantio). No plantio simulamos a
+        adubação com 30 Kg ha de N, 80 kg ha de P2O5 e 20 kg ha de S e na cobertura 100 Kg ha de N . No
+        campo, a determinação da necessidade de nutrientes deve ser feita através da análise de solo, no entanto, nem
+        todos os trabalhos utilizados como referência disponibilizam esta informação. A necessidade de criar parâmetros
+        gerais para um cultivo ou região apontou para utilizar valores médios. Os valores médios de N, P e S utilizados
+        nas simulações foram calculados considerando uma produtividade média de 6 a 8 t/ha de grãos, em solos com teor
+        médio de argila e com disponibilidade média desses nutrientes (Alves et al., 2000; Coelho, 2006; Gianluppi et
+        al., 2002; Sousa & Lobato, 2004).
+    </p>
+
+    <figure
+        style="margin: 40px auto; text-align: center; background: #1e1e1e; padding: 15px; border-radius: 12px; border: 1px solid #333;">
+        <img src="secoes/04_parametrizacao/ref3.png" alt="Figura 5"
+            style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
+        <figcaption style="font-size: 0.85rem; color: #888; margin-top: 12px; text-align: left; padding-left: 10px;">
+            <strong style="color: #4CAF50;">Figura 5.</strong> Representação esquemática dos períodos de cultivos
+            simulados em: A) cana de açúcar; B) áreas com soja como safra principal e milho na entressafra e C) milho
+            como safra principal.
+        </figcaption>
+    </figure>
+
+    <p style="margin-bottom: 25px;">
+        Entre os parâmetros encontrados e testados para o cultivo de Cana os que apresentaram resultados mais
+        compatíveis com os dados de referência foram os de Wendling (2007). Entretanto, subestimaram os valores de
+        carbono na biomassa aérea, logo, foi necessária a realização de ajustes adicionais para atingir valores mais
+        próximos aos observados na literatura (Figuras 6A e 6B). Apesar dos resultados próximos aos observados para
+        solo e biomassa aérea, o conjunto de parâmetros atuais superestima os valores de carbono das raízes e novos
+        ajustes estão em andamento para corrigir as superestimativas nesse compartimento.
+    </p>
+
+    <figure
+        style="margin: 40px auto; text-align: center; background: #1e1e1e; padding: 15px; border-radius: 12px; border: 1px solid #333;">
+        <img src="secoes/04_parametrizacao/ref4.png" alt="Figura 6"
+            style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
+        <figcaption style="font-size: 0.85rem; color: #888; margin-top: 12px; text-align: left; padding-left: 10px;">
+            <strong style="color: #4CAF50;">Figura 6.</strong> Comparação entre valores publicados de carbono orgânico
+            (A) na biomassa aérea e (B) no solo (0-20 cm) em áreas de cana-de-açúcar e valores estimados pelo modelo
+            CENTURY 4.5.
+        </figcaption>
+    </figure>
+
+    <p style="margin-bottom: 25px;">
+        Entre os parâmetros encontrados e testados para o cultivo de milho os que apresentaram resultados mais
+        compatíveis com os dados de referência foram os parâmetros default do modelo (Metherell et al., 1993). No
+        entanto, percebeu-se uma subestimativa dos valores de carbono na biomassa acima do solo e grãos e uma
+        superestimativa do carbono nas raízes. Para melhorar as estimativas de carbono nesses compartimentos foram
+        necessários ajustes nos parâmetros relacionados a produção potencial mensal acima do solo - 'PRDX(1)', fração
+        inicial de carbono alocada às raízes - 'FRTC(1)' e índice de colheita máximo (fração de carbono vivo acima do
+        solo no grão) - 'HIMAX'.
+    </p>
+
+    <p style="margin-bottom: 25px;">
+        Os parâmetros ajustados diferem para sítios com milho simulado como safra principal e segunda safra.
+        Isso porque geralmente há diferença entre as variedades de milho usadas na safra principal e na safrinha para a
+        qual costuma-se escolher híbridos de ciclo mais curto, com rápido desenvolvimento inicial, e maior tolerância ao
+        estresse hídrico. Já na safra principal há maior disponibilidade hídrica e período de crescimento, permitindo
+        uso de ciclos mais longos e voltados a um maior potencial produtivo (Borghi et al., 2023). Na figura 7 é
+        possível observar a relação entre os estoques de carbono do solo mensurados e simulados pelo modelo para os
+        sítios com milho na safra principal (Figura 7A) e na segunda safra (Figura 7B).
+    </p>
+
+    <figure
+        style="margin: 40px auto; text-align: center; background: #1e1e1e; padding: 15px; border-radius: 12px; border: 1px solid #333;">
+        <img src="secoes/04_parametrizacao/ref5.png" alt="Figura 7"
+            style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
+        <figcaption style="font-size: 0.85rem; color: #888; margin-top: 12px; text-align: left; padding-left: 10px;">
+            <strong style="color: #4CAF50;">Figura 7.</strong> Calibração de milho safra (A) e safrinha (B) para
+            estoques de carbono orgânico no solo para o profundidade de 0-20 cm.
+        </figcaption>
+    </figure>
+
+    <h2
+        style="color: #ffffff; text-align: left; font-size: 1.5rem; margin-top: 40px; border-left: 5px solid #4CAF50; padding-left: 15px;">
+        Rodar Modelo Century</h2>
+
+    <p style="margin-bottom: 25px;">
+        Inicialmente, o modelo foi executado em um ponto central de cada talhão para avaliar os agendamentos que
+        detalham a cobertura e o manejo ao longo do histórico do talhão (Figura 8). Concluímos esses testes no final de
+        setembro e agora estamos nos preparando para executar o modelo de forma espacializada nos talhões.
+    </p>
+
+    <figure
+        style="margin: 40px auto; text-align: center; background: #1e1e1e; padding: 15px; border-radius: 12px; border: 1px solid #333;">
+        <img src="secoes/04_parametrizacao/ref7.png" alt="Figura 8"
+            style="width: 100%; height: auto; border-radius: 8px; display: block; margin: 0 auto;">
+        <figcaption style="font-size: 0.85rem; color: #888; margin-top: 12px; text-align: left; padding-left: 10px;">
+            <strong style="color: #4CAF50;">Figura 8.</strong> Comportamento de carbono orgânico no solo nos anos 1985
+            - 2024 em 15 dos 34 fazendas Reverte® estimada por um ponto central por talhão na finalidade de testar o
+            agendamento de uso.
+        </figcaption>
+    </figure>
+
+    <div style="clear: both;"></div>
+</article>

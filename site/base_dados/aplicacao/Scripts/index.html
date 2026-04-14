@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Guilherme Vaz" /><link rel="canonical" href="https://guilhermeramosvaz.github.io/Classificacao-Pastagem-SC/base_dados/aplicacao/Scripts/" />
+      <link rel="shortcut icon" href="../../../img/favicon.ico" />
+    <title>Index - Documentação - Classificação Pastagem Santa Catarina</title>
+    <link rel="stylesheet" href="../../../css/theme.css" />
+    <link rel="stylesheet" href="../../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Index";
+        var mkdocs_page_input_path = "base_dados\\aplicacao\\Scripts\\README.md";
+        var mkdocs_page_url = "/Classificacao-Pastagem-SC/base_dados/aplicacao/Scripts/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../../.." class="icon icon-home"> Documentação - Classificação Pastagem Santa Catarina
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../mds/01_visao_geral/">Visão Geral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../mds/02_integracao_dados/">Integração de Dados</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../mds/03_desenho_amostral/">Desenho Amostral</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../mds/04_processamento_classificacao/">Processamento da Classificação</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../mds/05_preparacao_refinamento/">Refinamento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../mds/06_analise_mapeamento/">Análise do Mapeamento</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../mds/07_avaliacao_acuracia/">Avaliação de Acurácia</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../../../mds/08_passo_a_passo/">Passo a Passo (Scripts)</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../..">Documentação - Classificação Pastagem Santa Catarina</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Index</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC/edit/master/docs/base_dados/aplicacao/Scripts/README.md">Edit on Classificacao-Pastagem-SC</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h2 align="center"> Descrição do uso dos scripts</h2>
+
+<h3 align="Left">Introdução</h3>
+<div align="justify"> 
+    Para que fosse possível realizar de forma eficiente  muitos códigos foram desenvolvidos para cada etapa do projeto.
+</div>
+<p><br></p>
+<div align="center">
+    <img src="../../imgs/scripts_tipos.png" width="70%" alt="Foto_pastagem_Vieira_Mesquita(11/2025)">
+    <p><i>Figura 1: Tipos de scripts.</i></p>
+</div>
+<p><br></p>
+<details>
+  <summary><b>Clique para ver o Sumário</b></summary>
+  <ol>
+      <li><a href="#gerarpontos">Geração de Amostras</a></li>
+      <li><a href="#class">Classificação</a></li>
+      <li><a href="#filtro">Filtro de Moda</a></li>
+      <li><a href="#rec">Recorte da classificação</a></li>
+      <li><a href="#save">Salvar Alterações</a></li>
+      <li><a href="#listagem">Listagem de Dados</a></li>
+      <li><a href="#align">Alinhamento de Dados</a></li>
+      <li><a href="#visu">Visualização de Dados</a></li>
+  </ol>
+</details>
+<hr>
+
+<h3 align="left" id="gerarpontos">Geração de Amostras</h3>
+<div align="justify"> 
+    Através da relação entre os dados do mapeamento do Mapbiomas e Global Pasture Watch (GPW). Executado na IDE R Stúdio em ambiente de linguagem R.<br>
+    <a href="./amostras_treinamento_sc_remap.R"><kbd> Código para gerar pontos </kbd></a>
+</div>
+<p><br></p>
+<hr>
+
+<h3 align="left" id="class">Classificação</h3>
+<div align="justify"> 
+    Classificação utilizando o algoritmo random forest com 500 árvores realizando a classificação por cartas do IBGE e unindo os dados após termino de classificações. Foi executado em ambiente de Google Earth Engine (GEE). <br>
+    <a href="./Classificacao.js"><kbd> Código de classificação </kbd></a>
+</div>
+<p><br></p>
+<hr>
+
+<h3 align="left" id="filtro">Filtro de Moda</h3>
+<div align="justify"> 
+    Aplicação do filtro de moda, o script abaixo contem também filtro de mediana caso desejado. Foi executado em ambiente de Google Earth Engine (GEE). <br>
+    <a href="./Classificacao.js"><kbd> Código de aplicação do filtro de moda </kbd></a>
+</div>
+<p><br></p>
+<hr>
+
+<h3 align="left" id="rec">Recorte da classificação</h3>
+<div align="justify"> 
+    Após classificação realizada, é necessário que os dados sejam distribuidos para a etapa de refinamento e posteriormente de auditoria. Os dados são recortados e reprojetados para uma projeção que permita utilzar o tamanho do pixel em metros sem necessidade de conversão e separados em pastas para cada interprete. Realizado no terminal em ambiente linux usando o WSL. <br>
+    <a href="./recorte_automatizado.sh"><kbd> Código de recorte </kbd></a>
+</div>
+<p><br></p>
+<hr>
+
+<h3 align="left" id="save">Salvar Alterações</h3>
+<div align="justify"> 
+    Após os refinamentos e auditorias realizados no <a href="https://github.com/SMByC/ThRasE"> thRasE </a>, os analistas mandavam uma pasta contendo os arquivos raster usados e o dado de extensão ".yaml" que continha as alterações. Para que o dado seja salvo é necessário fixar essa alteração, então usando o dado original dentro da pasta criar uma nova versão do arquivo usando o script abaixo. <br>
+    <a href="./salvar_em_pastas_yamlTIF.sh"><kbd> Código de salvar alterações </kbd></a>
+</div>
+<p><br></p>
+<hr>
+
+<h3 align="left" id="listagem">Listagem de Dados</h3>
+<div align="justify"> 
+    Para controle de dados, foi necessário que os dados salvos fossem listados visando entender as informações de cada dado gerado, desde extensão até mesmo valor sem dados. Essa é a etapa de checagem de dados. <br>
+    <a href="./listar.py"><kbd> Código python de listar metadados </kbd></a> <br><a href="./listar_nodata_tipo_p_lista_RASTER_v2.sh"><kbd> Código shell script de listar metadados</kbd></a>
+</div>
+<p><br></p>
+<hr>
+
+<h3 align="left" id="align">Alinhamento de Dados</h3>
+<div align="justify"> 
+    Posterior ao processo de checagem é gerado, após verificar compatibilidade dos dados, os processos de união e alinhamento e reprojeção foram aplicados. <br>
+    <a href="./uniao_de_dados.sh"><kbd> Código de alinhar e unir rasters </kbd></a> 
+</div>
+<p><br></p>
+<hr>
+
+<h3 align="left" id="visu">Visualização de Dados</h3>
+<div align="justify"> 
+    Ao final dos processamentos os dados gerados são novamente inseridos no GEE para fins de visualização. <br>
+    <a href="./mascara_estrato_amostral_Mapbiomas_GPW.js"><kbd> Código para visualização de comparação entre resultado e bases </kbd></a> <br> <a href="./split_panel.js"><kbd> Código para visualização de comparativo em paralelo de dados </kbd></a>
+</div>
+<p><br></p>
+<hr>
+              
+            </div>
+          </div><footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/guilhermeramosvaz/Classificacao-Pastagem-SC" class="fa fa-code-fork" style="color: #fcfcfc"> Classificacao-Pastagem-SC</a>
+        </span>
+    
+    
+    
+  </span>
+</div>
+    <script src="../../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../../..";</script>
+    <script src="../../../js/theme_extra.js"></script>
+    <script src="../../../js/theme.js"></script>
+      <script src="../../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
