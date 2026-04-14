@@ -1,11 +1,13 @@
 # Monitoramento de Carbono - Iniciativa REVERTE®
 
-Bem-vindo à documentação oficial do projeto de **Monitoramento de Carbono**, uma colaboração estratégica entre a **The Nature Conservancy (TNC)**, **Syngenta** e o Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federal de Goiás (**LAPIG/UFG**).
+Bem-vindo à documentação oficial do projeto de **Monitoramento de Carbono**, uma colaboração estratégica entre a **The Nature Conservancy (TNC)**, **Syngenta** e o Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federal de Goiás (**LAPIG/UFG**). 
 
 ---
 
 ## 🎯 Objetivo do Projeto
 O programa REVERTE® busca apoiar produtores rurais na recuperação de áreas degradadas no Cerrado, promovendo a transição para sistemas de cultivo agrícola mais produtivos e sustentáveis. Este repositório documenta os protocolos científicos e técnicos utilizados para estimar o sequestro de carbono orgânico no solo e os impactos ambientais dessas práticas.
+
+[Saiba mais sobre a Iniciativa REVERTE®](https://www.tnc.org.br/sobre-a-tnc/quem-somos/como-trabalhamos/nossos-apoiadores/apoiadores/syngenta-reverte/)
 
 ---
 
@@ -28,9 +30,12 @@ Acesso direto aos códigos de automação (R, Python e GEE) utilizados para extr
 ---
 
 ## 🤝 Instituições Parceiras
-- **LAPIG/UFG:** Responsável pela modelagem biofísico-ambiental e produção de mapas de pastagem (MapBiomas).
-- **TNC:** Foco na conservação do bioma Cerrado e estratégias regenerativas.
-- **Syngenta:** Liderança na implementação do programa e suporte aos produtores rurais.
+
+| Logotipo | Instituição |
+| :---: | :--- |
+| <img src="base_dados/images/Sensoriamento_Remoto_e_Geoprocessamento.png" width="200"> | **Laboratório de Sensoriamento Remoto e Geoprocessamento (LAPIG/UFG)** |
+| <img src="base_dados/images/tnc.jpg" width="120"> | **The Nature Conservancy (TNC)** |
+| <img src="base_dados/images/Syngenta_Logo.svg.png" width="180"> | **Syngenta** |
 
 ---
 *Dúvidas ou sugestões sobre a documentação? Entre em contato com a equipe técnica do LAPIG/UFG.*
