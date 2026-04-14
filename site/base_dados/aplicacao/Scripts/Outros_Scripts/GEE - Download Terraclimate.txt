@@ -1,0 +1,104 @@
+# LAPIG - Grupo Carbono
+#
+# 2025-05-30
+# Marcos Cardoso; Maria Hunter
+#
+# 
+# https://code.earthengine.google.com/3f9fad4e13fa80d7d5ceafbb883e8bea?noload=true
+#
+#
+# --
+
+var fazendas = ee.FeatureCollection('projects/lapig-459118/assets/fazendas-id-revert');
+var idsUnicos = fazendas.aggregate_array('id').distinct().getInfo();
+print('IDs:', idsUnicos);
+print('Número):', idsUnicos.length);
+
+var anosParaProcessar = [];
+for (var i = 1958; i <= 1958; i++) {
+  anosParaProcessar.push(i);
+}
+
+function agruparFazendasPorId(id) {
+  return fazendas.filter(ee.Filter.eq('id', id));
+}
+
+anosParaProcessar.forEach(function(ano) {
+  print('Processando ano:', ano);
+
+  var startDate = ee.Date.fromYMD(ano, 1, 1);
+  var endDate = ee.Date.fromYMD(ano, 12, 31);
+
+  var datasetAnual = ee.ImageCollection('IDAHO_EPSCOR/TERRACLIMATE')
+                      .filter(ee.Filter.date(startDate, endDate));
+
+  function processarMesParaAno(mes) {
+    mes = ee.Number(mes);
+    var colecaoMensal = datasetAnual
+                        .filter(ee.Filter.calendarRange(mes, mes, 'month'))
+                        .select('tmmn');
+    var baseImage = ee.Image(colecaoMensal.first());
+
+    var mensal = colecaoMensal.mean()
+                        .round()
+                        // .multiply(0.1)
+                        .setDefaultProjection(baseImage.projection());
+
+    var resampled = mensal.reduceResolution({
+      reducer: ee.Reducer.mean(),
+      maxPixels: 65536
+    }).reproject({
+      crs: 'EPSG:4326',
+      scale: 30
+    });
+    
+    return resampled;
+  }
+
+  var meses = ee.List.sequence(1, 12);
+  var imagensMensaisAnuais = meses.map(processarMesParaAno);
+
+  function exportarPorGrupoParaAno(idFazenda) {
+    var grupoFazendas = agruparFazendasPorId(idFazenda);
+    var primeiraFazenda = ee.Feature(grupoFazendas.first());
+    var nomeFazendaInfo = primeiraFazenda.get('nome').getInfo();
+    
+    var nomeFazenda;
+    if (!nomeFazendaInfo) {
+      nomeFazenda = idFazenda;
+    } else {
+      nomeFazenda = String(nomeFazendaInfo).replace(/[^a-zA-Z0-9_]/g, '-').toLowerCase();
+    }
+    
+    var geometriaAgrupada = grupoFazendas.geometry().dissolve();
+    
+    for (var i = 0; i < 12; i++) {
+      var mesNumero = i + 1;
+      var imagemMensal = ee.Image(imagensMensaisAnuais.get(i));
+      var recorte = imagemMensal.clip(geometriaAgrupada).round();
+      var mesFormatado = ('0' + mesNumero).slice(-2);
+      
+      var nomeArquivo = ano + '_' + mesFormatado + '_tmin_' + nomeFazenda;
+      var pastaDrive =  nomeFazenda;
+      var descricaoTask = 's_' + ano + '_' + mesFormatado + '_' + nomeFazenda;
+
+      Export.image.toDrive({
+        image: recorte.int16(),
+        description: descricaoTask,
+        folder: pastaDrive,
+        fileNamePrefix: nomeArquivo,
+        region: geometriaAgrupada,
+        scale: 30,
+        maxPixels: 1e9,
+        fileFormat: 'GeoTIFF',
+        formatOptions: {
+          cloudOptimized: true
+        }
+      });
+    }
+  }
+
+  idsUnicos.forEach(exportarPorGrupoParaAno);
+});
+
+print('Geração de tarefas de exportação iniciada para os anos:', anosParaProcessar);

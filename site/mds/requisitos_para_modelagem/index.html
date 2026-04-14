@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Felipe Jesus" /><link rel="canonical" href="https://FelipeJesusRemoteSensing.github.io/CarbonProgram/mds/requisitos_para_modelagem/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Requisitos para Modelagem - Documentação - Monitoramento de Carbono</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Requisitos para Modelagem";
+        var mkdocs_page_input_path = "mds\\requisitos_para_modelagem.md";
+        var mkdocs_page_url = "/CarbonProgram/mds/requisitos_para_modelagem/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Documentação - Monitoramento de Carbono
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contexto/">Contexto</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../referencias_conceituais/">Referências Conceituais</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Requisitos para Modelagem</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#plano-amostral">Plano Amostral</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#regioes-de-campo">Regiões de Campo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#coletas-em-campo">Coletas em Campo</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#preparacao-do-modelo-century">Preparação do Modelo Century</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../scripts/">Processos (Scripts)</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Documentação - Monitoramento de Carbono</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Requisitos para Modelagem</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/FelipeJesusRemoteSensing/CarbonProgram/edit/master/docs/mds/requisitos_para_modelagem.md">Edit on CarbonProgram</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="estabelecimento-dos-requisitos-e-informacoes-para-modelagem">Estabelecimento dos requisitos e informações para modelagem</h1>
+<p>Para subsidiar as simulações do modelo Century no contexto do projeto REVERTE®, foi realizado um extenso processamento de dados geoespaciais e ambientais. Inicialmente, foi estruturado um banco de dados com informações de uso e cobertura da terra provenientes da Coleção 10 do MapBiomas (Mapbiomas, 2025), abrangendo o período de 1985 a 2024, com resolução espacial de 30 metros. Esses dados foram essenciais para caracterizar o histórico de uso da terra nas 36 fazendas participantes localizadas no Cerrado entre os estados de Goiás, Mato Grosso, Mato Grosso do Sul, Tocantins e Maranhão.</p>
+<p>Complementarmente, foram processadas séries temporais de NDVI mensais, com o objetivo de identificar padrões sazonais de cobertura vegetal e atividades agrícolas ao longo dos anos. Também foram extraídas variáveis climáticas essenciais ao funcionamento do modelo Century, como temperatura (máxima, mínima e média mensal) e precipitação acumulada mensal. Esses dados foram obtidos a partir das bases globais CHELSA (Climatologies at High Resolution for the Earth’s Land Surface Areas), NASA POWER (Prediction Of Worldwide Energy Resources), TerraClimate and WorldClim e a base nacional BR-DWGD (Brazilian Daily Weather Gridded Data).</p>
+<p>Com o intuito de verificar a compatibilidade entre as fontes de dados climáticos, foi conduzida uma análise preliminar de consistência entre as séries históricas de todas as bases e comparação com dados de torres meteorológicas. A equipe técnica concluiu que a base de dados TerraClimate se mostrou mais completa, com estimativas de variáveis climáticas mais próximas aos dados das torres. Dessa forma, as variáveis climáticas foram extraídas e organizadas individualmente para cada fazenda.</p>
+<p>Para garantir a acurácia na identificação do uso da terra atual e recente, foi elaborada uma rotina específica no Google Earth Engine (Figura 4) que realiza a extração de todas as imagens disponíveis do sensor Sentinel-2A para os polígonos dos talhões das fazendas. O script implementado permite a visualização otimizada das imagens em composição colorida real, além da geração automática da série temporal de NDVI para o ponto central de cada talhão. A frequência das imagens (a cada cinco dias) viabilizou a inspeção visual detalhada dos usos agrícolas praticados em cada área, mesmo em cenários com elevada cobertura de nuvens. Além de identificação de cobertura e cultivo sub-anual, permitiu identificar datas estimadas para manejos como revolvimento de solo ou distúrbios como queimas.</p>
+<p><img alt="Código de inspeção" src="../../base_dados/images/codigo_inspec.png" />
+<em>Figura 4. Código desenvolvido no Google Earth Engine para inspeção visual de talhões e extração de séries temporais de NDVI.</em></p>
+<p>Para melhorar a variabilidade dos solos considerados e deixar nossa modelagem mais robusta, foram comparadas as granulometrias dos solos das talhões REVERTE® levantadas nos anos anteriores pela Syngenta com dados de calibração e validação do modelo Century específica de áreas de pastagens e soja. A distância até pontos de calibração e validação e a similaridade entre os solos foram identificadas.</p>
+<p>Como resultado dessa etapa, foi gerada uma planilha síntese contendo as principais informações fenológicas e agronômicas observadas: tipo de cultivo, sistema de plantio, data estimada de plantio e colheita, práticas de manejo (como pousio e rotação), e outras variáveis consideradas relevantes para a parametrização do modelo Century:</p>
+<ul>
+<li>Uso sub-anual de ano 2021 - 2024 por meio de inspeção de imagens Sentinel-2 (<a href="https://code.earthengine.google.com/8b73184a6f2574169c9a6acd9134706b">Visualizar no GEE</a>);</li>
+<li>Datas estimadas de queima e revolvimento de solo a partir de 2021;</li>
+<li>Uso anual ano 1985-2024 seguindo a moda da classificação dentro de MapBiomas Coleção 9 (<a href="https://code.earthengine.google.com/0d3186d3eea31a5f6788e703eb3d1184">Visualizar no GEE</a>);</li>
+<li>Ano de abertura a partir de 1985;</li>
+<li>Temperatura mensal histórico e média (CHELSA e NASA POWER);</li>
+<li>Precipitação acumulada mensal histórico e média (CHELSA e NASA POWER);</li>
+<li>Propriedades do solo: granulometria, pH, densidade e carbono (Syngenta e complemento EMBRAPA);</li>
+<li>Tendência NDVI a partir do Theropoda (<a href="https://github.com/lapig-ufg/TheroPoDa">Repositório GitHub</a>);</li>
+<li>Região Ecofisiológica (Sano et al., 2019);</li>
+<li>Distância até sítios de atual calibração/validação do Century com usos “pastagem” e “soja”;</li>
+<li>Dissimilaridade entre textura de solo (Syngenta) e sítios de atual calibração/validação do Century com usos “pastagem” e “soja”.</li>
+</ul>
+<p>Com base na planilha síntese, foram selecionadas fazendas e talhões específicos para amostragem de carbono no solo no período de entressafra, os quais foram entregues à TNC e Syngenta em 31 de março. Após o contato prévio feito pela Syngenta, a equipe entrou em contato com todas as fazendas para obter a data de colheita estimada e confirmar a acessibilidade antes de finalizar o planejamento do campo.</p>
+<h2 id="plano-amostral">Plano Amostral</h2>
+<p>O plano amostral na Figura 3 foi utilizado para toda a amostragem realizada em campo. Para cada talhão, foi realizada uma seleção aleatória de três regiões de 1 ha onde seriam coletados amostras indeformadas para estimativas de densidade, e deformados para análise de granulometria, pH e carbono. As amostras indeformadas foram retiradas do ponto central da área amostral com amostrador de impacto em camadas 0 - 5, 5 - 10, 10 - 20, e 20 - 30 cm e transferidos para sacola para reutilização do anel kopek com volume conhecido. Em volta da amostra indeformada, 5 pontos entre uma distância de 3 m do ponto central foram amostrados com trado sonda para compor uma amostra composta nas profundidades de 0 - 10, 10 - 20, e 20 - 30 cm (amostra deformada). As amostras foram depositadas em um balde e misturadas. Em seguida, uma porção de 500 g de cada profundidade foi separada e seca ao ar livre para ser transportada ao laboratório.</p>
+<h2 id="regioes-de-campo">Regiões de Campo</h2>
+<p>As fazendas selecionadas foram separadas em três regiões, especificando a rota, quilometragem e prioridade.</p>
+<p><strong>Região Central:</strong> Fazendas de Goiás e Mato Grosso constam com o maior número de regiões edafoclimáticas do Cerrado e o maior número de Fazendas e Talhões dentro do programa REVERTE® (Figura 5A). Dos 119 talhões que fazem parte do programa, 79 estão nesta região. Também incluem os usos mais frequentes, sendo soja/pousio, soja/pastagem e soja/milho. Nessa região a equipe completou a amostragem em 13 fazendas e 28 talhões ao longo de 30 dias no mês de Julho 2025. A equipe percorreu mais de 5000 km e o projeto contou com um orçamento de aproximadamente R$50.000,00. Os solos do Mato Grosso variam entre franco arenoso e areia franca, e de Goiás entre franco-argiloso, arenoso e argilo-arenoso. Considerando a inexistência de amostragem atual de calibração e validação para a modelagem de soja no estado de Goiás, e a escassez de amostras para pastagens no estado de Mato Grosso, com uma distribuição geográfica limitada às proximidades da fronteira com Goiás, as amostras provenientes das talhões e fazendas REVERTE® irão aprimorar a capacidade de monitoramento da região por meio de modelagem.</p>
+<p><strong>Região Matopiba:</strong> Na região do Matopiba há oito fazendas e 27 talhões do Programa REVERTE® nos estados de Maranhão e Tocantins. Foram selecionadas três fazendas e sete talhões nas ecorregiões de Floresta de Cocais e Araguaia Tocantins para completar a amostragem de solo. Os talhões nessa região mostram usos de pousio e pastagem na safrinha, e variabilidade na granulometria dos solos entre areia franca, franco-argiloso, arenoso e franco-arenoso. Essa região também tem menos precipitação do que a região central com precipitação total anual ~1000 mm. O campo para amostragem desta região aconteceu no mês de Agosto abrangendo 4500 km e orçamento de R$30.000.</p>
+<p><strong>Região Sul:</strong> No estado de Mato Grosso do Sul, tem quatro fazendas e treze talhões que fazem parte do Programa REVERTE®. Nesta região conta com talhões com usos de soja/trigo além do soja/pousio, e soja/pastagem. Tem dois tipos de solos distintos, franco-arenoso e argilo-arenoso. Como a textura dos solos, usos e variáveis edafoclimáticas não são muito diferentes das fazendas e regiões incluídos no plano de amostragem em outros estados, a amostragem dessa região teve prioridade menor. O campo adicional para fazer amostragem nesta região dependerá de recursos adicionais.</p>
+<h2 id="coletas-em-campo">Coletas em Campo</h2>
+<p>A coleta na região central foi realizada entre os dias 3 e 28 de Julho de 2025; a amostragem de solo ocorreu em 13 fazendas e 23 talhões. Outras quatro fazendas e oito talhões integraram a coleta na região do Matopiba no mês de Agosto de 2025. No total, 649 amostras foram coletadas (371 indeformadas e 278 deformadas) nas 17 fazendas e 31 talhões (Figura 6). Até o final de Setembro, foram recebidas do laboratório estimativas de carbono em 6 fazendas da região central e densidade das amostras dos 23 talhões iniciais.
+<img alt="alt text" src="../../base_dados/images/distribuicao_amostras.png" />
+Nos talhões com resultados preliminares o carbono em áreas de pastagem varia entre 20 e 55 T ha-1 considerando 0 - 30 cm de profundidade, e em áreas de cultivo varia entre 18 e 64 T ha-1.</p>
+<h2 id="preparacao-do-modelo-century">Preparação do Modelo Century</h2>
+<p>Foi realizada uma revisão da literatura para obtenção de dados de referência de carbono orgânico no solo em áreas com cultivo de cana de açúcar e milho no Cerrado na qual foram encontrados dados 25 de sítios sob cultivo de Cana e 42 sob cultivo de milho. Os dados de cana de açúcar encontram-se concentrados na região centro-sul que é a região com clima mais propício para esse cultivo (Oliveira et al., 2012) (Figura 7A) enquanto os dados de milho encontram-se mais bem distribuídos pelo bioma (Figura 7B).</p>
+<p><img alt="Calibração" src="../../base_dados/images/calval.png" />
+<em>Figura 7. Mapa da área de estudo (bioma Cerrado), com a localização dos sítios de calibração (0-20 cm) para os cultivos de: A) cana de açúcar e B) milho.</em></p>
+<p>A revisão bibliográfica para obtenção de dados de carbono na biomassa da cana de açúcar (Figura 8) e biomassa e grãos do milho (Figura 9) precisou incluir dados amostrados em outras regiões do Brasil, uma vez que o número de referências encontradas considerando somente o Cerrado foi muito baixa. Para trabalhos que apresentavam apenas dados de matéria seca a conversão para carbono foi realizada considerando o fator de conversão de 50% (IPCC, 2006).</p>
+<p><img alt="Referência Cana" src="../../base_dados/images/referencia1.png" />
+<em>Figura 8. Valores de referência de carbono na biomassa aérea e radicular da cana de açúcar no Brasil.</em></p>
+<p><img alt="Referência Milho" src="../../base_dados/images/referencia2.png" />
+<em>Figura 9. Valores de referência de carbono na biomassa aérea, radicular e grão de milho no Brasil.</em></p>
+<p>Também foi realizada uma revisão dos trabalhos que utilizaram o modelo CENTURY para simular os estoques e a dinâmica de carbono em áreas com ambos os cultivos. Nesta revisão foram encontrados e testados, 4 trabalhos com parâmetros pré-ajustados para simular a cana-de-açúcar (Brandani et al., 2015; Carvalho, 2014; Galdos et al., 2010; Wendling, 2007)  e 5 parâmetros pré-ajustados para o cultivo de milho (Barbosa, 2021; Dias, 2010; Metherell et al., 1993; Rosendo, 2010; Vogado, 2020) (Tabela S2).</p>
+<p>Informações sobre manejo nos dois cultivos, incluindo a prática de queima da cana-de-açúcar até o ano 2007, e adubação também foram levantadas. No preparo do solo para o plantio da cana de açúcar, foram utilizados parâmetros (CULT) do trabalho de Wendling (2007) (tabela S3); no plantio, foi simulada a adubação (FERT) com 140 kg/ha de P2O5 (Rein et al., 2022) e 120 kg/ha* de N (valor médio dos trabalhos de Galdos et al., 2010; Franco et al., 2015; Oliveira et al., 2017; Zani et al., 2018) (Tabela S4). Nos sítios com adição de torta de filtro e vinhaça, foram utilizados parâmetros de adição de matéria orgânica (OMAD) do trabalho de Brandani et al., 2015 com alguns ajustes adicionais (Tabela S5). A inserção ou não da queima da cana na preparação para colheita foi inserida de acordo com as informações disponibilizadas para cada sítio de forma individual. Para os sítios onde houve queima da palha, foram utilizados os parâmetros de colheita (HARV) do trabalho de Wendling (2007) e para os que não tiveram queima, foram utilizados os parâmetros disponibilizados em Galdos et al., (2010) (Tabela S6).</p>
+<p>No preparo do solo para o plantio do milho, foram utilizados dois conjuntos de parâmetros (CULT): um para plantio direto e outro para sítios sob plantio convencional (Tabela S7). Posteriormente, foram simulados dois eventos de adubação (FERT), um no plantio e outro referente a cobertura (30 dias após o plantio). No plantio, simulou-se a adubação com 30 Kg ha de N, 80 kg ha de P2O5 e 20 kg ha de S e na cobertura 100 Kg ha de N (Tabela S8). No campo, a determinação da necessidade de nutrientes deve ser feita através da análise de solo, no entanto, nem todos os trabalhos utilizados como referência disponibilizam esta informação. A necessidade de criar parâmetros gerais para um cultivo ou região apontou para utilizar valores médios. Os valores médios de N, P e S utilizados nas simulações foram calculados considerando uma produtividade média de 6 a 8 t/ha de grãos, em solos com teor médio de argila e com disponibilidade média desses nutrientes (Alves et al., 2000; Coelho, 2006; Gianluppi et al., 2002; Sousa &amp; Lobato, 2004).</p>
+<p>Na Figura 10 é possível observar a representação esquemática dos períodos de cultivos simulados em: A) Cana de açúcar; B) áreas com soja como safra principal e milho na entressafra e C) milho como safra principal.</p>
+<p><img alt="Representação esquemática" src="../../base_dados/images/ref3.png" />
+<em>Figura 10. Representação esquemática dos períodos de cultivos simulados em: A) cana de açúcar; B) áreas com soja como safra principal e milho na entressafra e C) milho como safra principal.</em></p>
+<p>Entre os parâmetros encontrados e testados para o cultivo de Cana os que apresentaram resultados mais compatíveis com os dados de referência foram os de Wendling (2007). Entretanto, subestimaram os valores de carbono na biomassa aérea, logo, foi necessária a realização de ajustes adicionais para atingir valores mais próximos aos observados na literatura (Figuras 11A e 11B). Apesar dos resultados próximos aos observados para solo e biomassa aérea, o conjunto de parâmetros atuais superestima os valores de carbono das raízes e novos ajustes estão em andamento para corrigir as superestimativas nesse compartimento.</p>
+<p><img alt="Comparação Carbono Orgânico" src="../../base_dados/images/ref4.png" />
+<em>Figura 11. Comparação entre valores publicados de carbono orgânico (A) na biomassa aérea e (B) no solo (0-20 cm) em áreas de cana-de-açúcar e valores estimados pelo modelo CENTURY 4.5.</em></p>
+<p>Entre os parâmetros encontrados e testados para o cultivo de milho os que apresentaram resultados mais compatíveis com os dados de referência foram os parâmetros default do modelo (Metherell et al., 1993). No entanto, percebeu-se uma subestimativa dos valores de carbono na biomassa acima do solo e grãos e uma superestimativa do carbono nas raízes. Para melhorar as estimativas de carbono nesses compartimentos foram necessários ajustes nos parâmetros relacionados a produção potencial mensal acima do solo - 'PRDX(1)', fração inicial de carbono alocada às raízes - 'FRTC(1)' e índice de colheita máximo (fração de carbono vivo acima do solo no grão) - 'HIMAX'.</p>
+<p>Os parâmetros ajustados diferem para sítios com milho simulado como safra principal e segunda safra (Tabela S2). Isso porque geralmente há diferença entre as variedades de milho usadas na safra principal e na safrinha para a qual costuma-se escolher híbridos de ciclo mais curto, com rápido desenvolvimento inicial, e maior tolerância ao estresse hídrico. Já na safra principal há maior disponibilidade hídrica e período de crescimento, permitindo uso de ciclos mais longos e voltados a um maior potencial produtivo (Borghi et al., 2023). Na figura 12 é possível observar a relação entre os estoques de carbono do solo mensurados e simulados pelo modelo para os sítios com milho na safra principal (Figura 12A) e na segunda safra (Figura 12B).</p>
+<p><img alt="Calibração de Milho" src="../../base_dados/images/ref5.png" />
+<em>Figura 12. Calibração de milho safra (A) e safrinha (B) para estoques de carbono orgânico no solo para o profundidade de 0-20 cm.</em></p>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../referencias_conceituais/" class="btn btn-neutral float-left" title="Referências Conceituais"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../scripts/" class="btn btn-neutral float-right" title="Processos (Scripts)">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/FelipeJesusRemoteSensing/CarbonProgram" class="fa fa-code-fork" style="color: #fcfcfc"> CarbonProgram</a>
+        </span>
+    
+    
+      <span><a href="../referencias_conceituais/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../scripts/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

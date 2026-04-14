@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Felipe Jesus" /><link rel="canonical" href="https://FelipeJesusRemoteSensing.github.io/CarbonProgram/mds/scripts/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Processos (Scripts) - Documentação - Monitoramento de Carbono</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Processos (Scripts)";
+        var mkdocs_page_input_path = "mds\\scripts.md";
+        var mkdocs_page_url = "/CarbonProgram/mds/scripts/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Documentação - Monitoramento de Carbono
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contexto/">Contexto</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../referencias_conceituais/">Referências Conceituais</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requisitos_para_modelagem/">Requisitos para Modelagem</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Processos (Scripts)</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#scripts-de-espacializacao">Scripts de Espacialização</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#outros-scripts-e-utilidades">Outros Scripts e Utilidades</a>
+        <ul>
+    <li class="toctree-l3"><a class="reference internal" href="#downloads-e-gee">Downloads e GEE</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#processamento-de-imagens-r">Processamento de Imagens (R)</a>
+    </li>
+    <li class="toctree-l3"><a class="reference internal" href="#utilidades-python">Utilidades (Python)</a>
+    </li>
+        </ul>
+    </li>
+    </ul>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Documentação - Monitoramento de Carbono</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Processos (Scripts)</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/FelipeJesusRemoteSensing/CarbonProgram/edit/master/docs/mds/scripts.md">Edit on CarbonProgram</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="processos-e-scripts">Processos e Scripts</h1>
+<p>Esta seção detalha os scripts desenvolvidos para o processamento de dados, espacialização do modelo Century e automação de downloads no contexto do monitoramento de carbono.</p>
+<h2 id="scripts-de-espacializacao">Scripts de Espacialização</h2>
+<p>Estes scripts em linguagem R são responsáveis pelo fluxo de execução espacial do modelo Century, desde a extração de dados até a geração de mosaicos finais.</p>
+<ul>
+<li><a href="../../base_dados/aplicacao/Scripts/Scripts_Espacializa%C3%A7%C3%A3o/0_f_run_century_spatial_reverte_pasta.R"><strong>0_f_run_century_spatial_reverte_pasta.R</strong></a>: Função principal para execução espacializada do Century.</li>
+<li><a href="../../base_dados/aplicacao/Scripts/Scripts_Espacializa%C3%A7%C3%A3o/01_extract_csv_blocos.R"><strong>01_extract_csv_blocos.R</strong></a>: Extração de dados em formato CSV para processamento por blocos.</li>
+<li><a href="../../base_dados/aplicacao/Scripts/Scripts_Espacializa%C3%A7%C3%A3o/02_run_century-roi_reverte.R"><strong>02_run_century-roi_reverte.R</strong></a>: Execução do modelo para regiões de interesse específicas (ROIs).</li>
+<li><a href="../../base_dados/aplicacao/Scripts/Scripts_Espacializa%C3%A7%C3%A3o/03_csv_to_outsub_raster_reverte_somsc.R"><strong>03_csv_to_outsub_raster_reverte_somsc.R</strong></a>: Conversão de saídas CSV para formato raster (SOMSC).</li>
+<li><a href="../../base_dados/aplicacao/Scripts/Scripts_Espacializa%C3%A7%C3%A3o/04_san-csv_to_raster_cerr_somsc.R"><strong>04_san-csv_to_raster_cerr_somsc.R</strong></a>: Processamento e conversão de dados de solo do Cerrado.</li>
+<li><a href="../../base_dados/aplicacao/Scripts/Scripts_Espacializa%C3%A7%C3%A3o/05_mosaic_talhoes.R"><strong>05_mosaic_talhoes.R</strong></a>: Geração de mosaicos finais a partir dos talhões processados.</li>
+</ul>
+<h2 id="outros-scripts-e-utilidades">Outros Scripts e Utilidades</h2>
+<p>Scripts auxiliares para download de dados via Google Earth Engine (GEE), preparação de imagens de referência e conferência de arquivos.</p>
+<h3 id="downloads-e-gee">Downloads e GEE</h3>
+<ul>
+<li><a href="../../base_dados/aplicacao/Scripts/Outros_Scripts/GEE%20-%20Download%20Lulc%20Mapbiomas.txt"><strong>GEE - Download Lulc Mapbiomas.txt</strong></a>: Script para download de mapas de uso e cobertura do MapBiomas.</li>
+<li><a href="../../base_dados/aplicacao/Scripts/Outros_Scripts/GEE%20-%20Download%20Soil%20Embrapa.txt"><strong>GEE - Download Soil Embrapa.txt</strong></a>: Script para download de dados de solo da Embrapa.</li>
+<li><a href="../../base_dados/aplicacao/Scripts/Outros_Scripts/GEE%20-%20Download%20Terraclimate.txt"><strong>GEE - Download Terraclimate.txt</strong></a>: Script para download de variáveis climáticas do TerraClimate.</li>
+</ul>
+<h3 id="processamento-de-imagens-r">Processamento de Imagens (R)</h3>
+<ul>
+<li><a href="../../base_dados/aplicacao/Scripts/Outros_Scripts/R%20-%20Criar%20imagem%20referencia.R"><strong>R - Criar imagem referencia.R</strong></a>: Geração de imagem de referência para o projeto.</li>
+<li><a href="../../base_dados/aplicacao/Scripts/Outros_Scripts/R%20-%20Criar%20imagem%20referencia%20individual.R"><strong>R - Criar imagem referencia individual.R</strong></a>: Geração de referências por área específica.</li>
+<li><a href="../../base_dados/aplicacao/Scripts/Outros_Scripts/R%20-%20Recortar%20img%20referencia%20com%20base%20nos%20talhoes.R"><strong>R - Recortar img referencia com base nos talhoes.R</strong></a>: Recorte de imagens utilizando os limites dos talhões.</li>
+<li><a href="../../base_dados/aplicacao/Scripts/Outros_Scripts/R%20-%20Recortar%20raster%20com%20base%20em%20outro.R"><strong>R - Recortar raster com base em outro.R</strong></a>: Padronização de extensões entre rasters.</li>
+</ul>
+<h3 id="utilidades-python">Utilidades (Python)</h3>
+<ul>
+<li><a href="../../base_dados/aplicacao/Scripts/Outros_Scripts/PY%20-%20Conferir%20se%20h%C3%A1%20arquivos%20faltantes%20nas%20pastas.py"><strong>PY - Conferir se há arquivos faltantes nas pastas.py</strong></a>: Script para validação da integridade do banco de dados e arquivos processados.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../requisitos_para_modelagem/" class="btn btn-neutral float-left" title="Requisitos para Modelagem"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/FelipeJesusRemoteSensing/CarbonProgram" class="fa fa-code-fork" style="color: #fcfcfc"> CarbonProgram</a>
+        </span>
+    
+    
+      <span><a href="../requisitos_para_modelagem/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>

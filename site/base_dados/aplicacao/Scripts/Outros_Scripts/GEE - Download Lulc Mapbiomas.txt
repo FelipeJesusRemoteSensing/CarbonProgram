@@ -1,0 +1,42 @@
+# LAPIG - Grupo Carbono
+#
+# 2025-05-30
+# Marcos Cardoso; Maria Hunter
+#
+# https://code.earthengine.google.com/efb8e74e730ee20c263d93766a7e32b1?noload=true
+#
+# --
+
+var fazendas_rasters = ee.ImageCollection('projects/lapig-459118/assets/rs_fazendas_revert');
+var mapbiomas_col9 = ee.Image('projects/mapbiomas-public/assets/brazil/lulc/collection9/mapbiomas_collection90_integration_v1');
+
+var idsDasFazendas = fazendas_rasters.aggregate_array('system:index').getInfo();
+var anos = ee.List.sequence(1985, 2023);
+
+idsDasFazendas.forEach(function(id) {
+  var fazendaImage = fazendas_rasters.filter(ee.Filter.eq('system:index', id)).first();
+
+  if (fazendaImage) {
+    var geometry = fazendaImage.geometry();
+    var mascaraFazenda = fazendaImage.gt(0);
+
+    anos.getInfo().forEach(function(ano) {
+      var banda_lulc_anual = 'classification_' + ano;
+      var lulc_anual_selecionado = mapbiomas_col9.select(banda_lulc_anual);
+      var lulcRecortadoBruto = lulc_anual_selecionado.clip(geometry);
+      var lulcMascarado = lulcRecortadoBruto.updateMask(mascaraFazenda);
+      var description_name = ano + '_lulc_' + id;
+
+      Export.image.toDrive({
+        image: lulcMascarado.rename(banda_lulc_anual),
+        description: description_name,
+        folder: 'LULC_Serie_Temporal',
+        scale: 30,
+        region: geometry.bounds(),
+        maxPixels: 1e13
+      });
+    });
+  } else {
+    print('Aviso: Imagem da fazenda com ID ' + id + ' não encontrada.');
+  }
+});

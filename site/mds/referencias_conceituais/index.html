@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="author" content="Felipe Jesus" /><link rel="canonical" href="https://FelipeJesusRemoteSensing.github.io/CarbonProgram/mds/referencias_conceituais/" />
+      <link rel="shortcut icon" href="../../img/favicon.ico" />
+    <title>Referências Conceituais - Documentação - Monitoramento de Carbono</title>
+    <link rel="stylesheet" href="../../css/theme.css" />
+    <link rel="stylesheet" href="../../css/theme_extra.css" />
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/styles/github.min.css" />
+        <link href="../../stylesheets/extra.css" rel="stylesheet" />
+    
+      <script>
+        // Current page data
+        var mkdocs_page_name = "Refer\u00eancias Conceituais";
+        var mkdocs_page_input_path = "mds\\referencias_conceituais.md";
+        var mkdocs_page_url = "/CarbonProgram/mds/referencias_conceituais/";
+      </script>
+    
+    <!--[if lt IE 9]>
+      <script src="../../js/html5shiv.min.js"></script>
+    <![endif]-->
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/11.8.0/highlight.min.js"></script>
+      <script>hljs.highlightAll();</script> 
+</head>
+
+<body class="wy-body-for-nav" role="document">
+
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side stickynav">
+    <div class="wy-side-scroll">
+      <div class="wy-side-nav-search">
+          <a href="../.." class="icon icon-home"> Documentação - Monitoramento de Carbono
+        </a><div role="search">
+  <form id ="rtd-search-form" class="wy-form" action="../../search.html" method="get">
+      <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" title="Type search term here" />
+  </form>
+</div>
+      </div>
+
+      <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../..">Home</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../contexto/">Contexto</a>
+                </li>
+              </ul>
+              <ul class="current">
+                <li class="toctree-l1 current"><a class="reference internal current" href="#">Referências Conceituais</a>
+    <ul class="current">
+    <li class="toctree-l2"><a class="reference internal" href="#o-modelo-century">O Modelo Century</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#calibracao-e-validacao-no-cerrado-brasileiro">Calibração e Validação no Cerrado Brasileiro</a>
+    </li>
+    <li class="toctree-l2"><a class="reference internal" href="#variaveis-e-dados-complementares">Variáveis e Dados Complementares</a>
+    </li>
+    </ul>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../requisitos_para_modelagem/">Requisitos para Modelagem</a>
+                </li>
+              </ul>
+              <ul>
+                <li class="toctree-l1"><a class="reference internal" href="../scripts/">Processos (Scripts)</a>
+                </li>
+              </ul>
+      </div>
+    </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+      <nav class="wy-nav-top" role="navigation" aria-label="Mobile navigation menu">
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../..">Documentação - Monitoramento de Carbono</a>
+        
+      </nav>
+      <div class="wy-nav-content">
+        <div class="rst-content"><div role="navigation" aria-label="breadcrumbs navigation">
+  <ul class="wy-breadcrumbs">
+    <li><a href="../.." class="icon icon-home" aria-label="Docs"></a></li>
+      <li class="breadcrumb-item active">Referências Conceituais</li>
+    <li class="wy-breadcrumbs-aside">
+          <a href="https://github.com/FelipeJesusRemoteSensing/CarbonProgram/edit/master/docs/mds/referencias_conceituais.md">Edit on CarbonProgram</a>
+    </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+            <div class="section" itemprop="articleBody">
+              
+                <h1 id="referencias-conceituais">Referências Conceituais</h1>
+<h2 id="o-modelo-century">O Modelo Century</h2>
+<p>O modelo Century é um modelo de processos biogeoquímicos utilizado para estimar a ciclagem e estoques de nutrientes críticos em ecossistemas variados. Desenvolvido pelo Colorado State University, tem ampla aplicação no Brasil e em ecossistemas tropicais (Wendling et al., 2014; Baethgen et al., 2021). O modelo tem como incluir ciclagem e estoques de Carbono, Fósforo, Nitrogênio e Enxofre, porém tem maior aplicação para Carbono e Nitrogênio. </p>
+<p>O modelo é composto de três sub-modelos: vegetação, água e dinâmica de matéria orgânica e precisa de entradas sobre cobertura e manejo ao longo do tempo, clima e solos. A estrutura básica dos arquivos utilizados para estruturar o modelo está à mostra em Figura 1. Os doze arquivos que fazem parte do FILE100 permitem especificar o uso e cobertura ao longo do tempo.</p>
+<p><img alt="Estrutura do modelo Century" src="../../base_dados/images/century_model.png" />
+<em>Figura 1. Estrutura do modelo Century mostrando a relação entre os programas e os arquivos acessórios detalhando a agenda dos usos e eventos ao longo do tempo (EVENT100) e os detalhes de tratamento de manejo e uso como fertilização (FERT), pastejo (GRAZ), e fogo (FIRE) entre outros.</em></p>
+<h2 id="calibracao-e-validacao-no-cerrado-brasileiro">Calibração e Validação no Cerrado Brasileiro</h2>
+<p>O LAPIG em parceria com UFS e TNC tem trabalhado ao longo dos últimos anos na melhoria do modelo Century na região do Cerrado Brasileiro (Santos et al., 2022, Santos et al., 2024) e na calibração do modelo para usos típicos da região. Atualmente, já possui a calibração e validação a partir de 111 sítios distribuídos (Figura 2) na região para três usos específicos: Cerrado (39), pastagem (30) e soja (42). </p>
+<p>Para calibrar o modelo é necessário informações sobre estoques de carbono, densidade, pH e granulometria do solo, assim como informações sobre a vegetação em pé. Atualmente temos variabilidade de região, clima, e solos dentro dessas amostras. Porém, o agrupamento dos sítios atuais deixa algumas regiões com menos amostras. A calibração do modelo requer dados de estoques de carbono, densidade, pH e granulometria do solo, além de informações sobre a vegetação. Atualmente, as amostras exibem variabilidade regional, climática e de tipos de solo. No entanto, o agrupamento dos locais de amostragem resulta em uma cobertura desigual, com algumas regiões apresentando um número reduzido de amostras.</p>
+<p>Para otimizar o modelo, a seleção de áreas de amostragem de solo deve considerar a distribuição atual das propriedades rurais que integram o programa REVERTE®, bem como a baixa representatividade espacial nos locais de calibração e validação. A escolha das fazendas para amostragem adicional priorizou aquelas que possibilitam a comparação entre áreas de soja e pastagens, levando em conta fatores como solo, região, dados de manejo disponíveis e o tempo decorrido desde a conversão, conforme o agrupamento das fazendas e suas variáveis específicas.</p>
+<p><img alt="Distribuição de sítios de calibração" src="../../base_dados/images/sitios_calval.png" />
+<em>Figura 2. Distribuição de 111 sítios utilizada para calibração e validação de modelo CENTURY divididos entre 3 coberturas: cerrado (39), pastagem (30) e soja (42).</em></p>
+<h2 id="variaveis-e-dados-complementares">Variáveis e Dados Complementares</h2>
+<p>Além dos dados fornecidos pela Syngenta, foram levantadas as informações que atualmente servem de base para o modelo, considerando as características específicas de cada talhão/fazenda participante do programa, como: </p>
+<ul>
+<li>Dados meteorológicos obtidos do Banco de Dados Meteorológicos (BDMEP) do Instituto Nacional de Meteorologia (INMET);</li>
+<li>Características edáficas baseadas em amostras de 0 a 10 cm, coletadas em anos anteriores, e complementadas por dados do PronaSolos da Embrapa, em escala de 90m, para as profundidades de 10 a 30 cm.</li>
+</ul>
+              
+            </div>
+          </div><footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="Footer Navigation">
+        <a href="../contexto/" class="btn btn-neutral float-left" title="Contexto"><span class="icon icon-circle-arrow-left"></span> Previous</a>
+        <a href="../requisitos_para_modelagem/" class="btn btn-neutral float-right" title="Requisitos para Modelagem">Next <span class="icon icon-circle-arrow-right"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <!-- Copyright etc -->
+  </div>
+
+  Built with <a href="https://www.mkdocs.org/">MkDocs</a> using a <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a> provided by <a href="https://readthedocs.org">Read the Docs</a>.
+</footer>
+          
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+
+  <div class="rst-versions" role="note" aria-label="Versions">
+  <span class="rst-current-version" data-toggle="rst-current-version">
+    
+        <span>
+          <a href="https://github.com/FelipeJesusRemoteSensing/CarbonProgram" class="fa fa-code-fork" style="color: #fcfcfc"> CarbonProgram</a>
+        </span>
+    
+    
+      <span><a href="../contexto/" style="color: #fcfcfc">&laquo; Previous</a></span>
+    
+    
+      <span><a href="../requisitos_para_modelagem/" style="color: #fcfcfc">Next &raquo;</a></span>
+    
+  </span>
+</div>
+    <script src="../../js/jquery-3.6.0.min.js"></script>
+    <script>var base_url = "../..";</script>
+    <script src="../../js/theme_extra.js"></script>
+    <script src="../../js/theme.js"></script>
+      <script src="../../search/main.js"></script>
+    <script>
+        jQuery(function () {
+            SphinxRtdTheme.Navigation.enable(true);
+        });
+    </script>
+
+</body>
+</html>
