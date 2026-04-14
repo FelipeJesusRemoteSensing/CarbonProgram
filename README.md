@@ -14,8 +14,18 @@ A documentação completa, incluindo metodologias, requisitos de modelagem e ref
 - `docs/`: Arquivos fonte da documentação em Markdown.
 - `docs/mds/`: Páginas específicas (Contexto, Modelagem, Scripts, etc.).
 - `docs/base_dados/`: Imagens e arquivos de suporte.
+- `docs/base_dados/aplicacao/Scripts/`: Contém os scripts R, Python e GEE categorizados.
 - `mkdocs.yml`: Arquivo de configuração do site de documentação.
-- `Resultados/`: Pasta destinada a resultados processados (se aplicável).
+
+## 💻 Scripts e Automação
+
+O projeto conta com scripts automatizados para processamento de dados geoespaciais e execução do modelo Century. Os principais fluxos incluem:
+
+- **Extração de Dados:** Scripts GEE para download de variáveis climáticas e uso da terra.
+- **Espacialização:** Rotinas em R para rodar o modelo Century em escala de talhão.
+- **Validação:** Ferramentas em Python para verificação de integridade do banco de dados.
+
+A lista detalhada e os links para cada script podem ser encontrados na página de **[Processos (Scripts)](https://FelipeJesusRemoteSensing.github.io/CarbonProgram/mds/scripts/)**.
 
 ## 🛠️ Como rodar localmente
 

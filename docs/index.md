@@ -25,7 +25,7 @@ Base científica sobre o **Modelo Century**, processos de calibração para o bi
 Detalhamento de como os dados são processados, desde imagens Sentinel-2 via Google Earth Engine até o plano amostral de campo realizado em 2025.
 
 ### 💻 [Processos (Scripts)](mds/scripts.md)
-Acesso direto aos códigos de automação (R, Python e GEE) utilizados para extração de dados, espacialização da modelagem e validação do banco de dados.
+Acompanhamento técnico dos códigos de automação desenvolvidos em **R** (espacialização), **Google Earth Engine** (extração de dados) e **Python** (validação). Todos os scripts estão disponíveis e linkados em sua respectiva [página de documentação](mds/scripts.md).
 
 ---
 
