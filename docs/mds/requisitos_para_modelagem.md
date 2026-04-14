@@ -15,14 +15,14 @@ Para melhorar a variabilidade dos solos considerados e deixar nossa modelagem ma
 
 Como resultado dessa etapa, foi gerada uma planilha síntese contendo as principais informações fenológicas e agronômicas observadas: tipo de cultivo, sistema de plantio, data estimada de plantio e colheita, práticas de manejo (como pousio e rotação), e outras variáveis consideradas relevantes para a parametrização do modelo Century:
 
-- Uso sub-anual de ano 2021 - 2024 por meio de inspeção de imagens Sentinel-2 (https://code.earthengine.google.com/8b73184a6f2574169c9a6acd9134706b);
+- Uso sub-anual de ano 2021 - 2024 por meio de inspeção de imagens Sentinel-2 ([Visualizar no GEE](https://code.earthengine.google.com/8b73184a6f2574169c9a6acd9134706b));
 - Datas estimadas de queima e revolvimento de solo a partir de 2021;
-- Uso anual ano 1985-2024 seguindo a moda da classificação dentro de MapBiomas Coleção 9 (https://code.earthengine.google.com/0d3186d3eea31a5f6788e703eb3d1184);
+- Uso anual ano 1985-2024 seguindo a moda da classificação dentro de MapBiomas Coleção 9 ([Visualizar no GEE](https://code.earthengine.google.com/0d3186d3eea31a5f6788e703eb3d1184));
 - Ano de abertura a partir de 1985;
 - Temperatura mensal histórico e média (CHELSA e NASA POWER);
 - Precipitação acumulada mensal histórico e média (CHELSA e NASA POWER);
 - Propriedades do solo: granulometria, pH, densidade e carbono (Syngenta e complemento EMBRAPA);
-- Tendência NDVI a partir do Theropoda (https://github.com/lapig-ufg/TheroPoDa);
+- Tendência NDVI a partir do Theropoda ([Repositório GitHub](https://github.com/lapig-ufg/TheroPoDa));
 - Região Ecofisiológica (Sano et al., 2019);
 - Distância até sítios de atual calibração/validação do Century com usos “pastagem” e “soja”;
 - Dissimilaridade entre textura de solo (Syngenta) e sítios de atual calibração/validação do Century com usos “pastagem” e “soja”.
@@ -47,7 +47,7 @@ Separamos as fazendas selecionadas em três regiões, especificando a rota, quil
 ## Coletas em Campo
 
 Fizemos coleta na região central entre os dias 3 e 28 de Julho de 2025, a amostragem de solo foi realizada em 13 fazendas e 23 talhões. Mais quatro fazendas e oito talhões fizeram parte da coleta na região do Matopiba no mês de Agosto de 2025. No total, 649 amostras foram coletadas (371 indeformadas e 278 deformadas) nas 17 fazendas e 31 talhões (Figura 6). Todas as amostras foram entregues para o laboratório de microbiologia do solo na Universidade Federal de Mato Grosso (UFMT) para análises de granulometria, pH, carbono e densidade. Até o final de Setembro, recebemos do laboratório estimativas de carbono em 6 fazendas da região central e densidade das amostras dos 23 talhões iniciais.
-
+![alt text](../base_dados/images/distribuicao_amostras.png)
 Nos talhões com resultados preliminares o carbono em áreas de pastagem varia entre 20 e 55 T ha-1 considerando 0 - 30 cm de profundidade, e em áreas de cultivo varia entre 18 e 64 T ha-1.
 
 ## Preparação do Modelo Century
