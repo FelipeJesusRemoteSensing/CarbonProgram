@@ -1,8 +1,8 @@
-site_name: Documentação - Classificação Pastagem Santa Catarina
+site_name: Documentação - Monitoramento de Carbono
 site_author: Felipe Jesus
-site_url: 
-repo_url: 
-repo_name: 
+site_url: 'https://FelipeJesusRemoteSensing.github.io/CarbonProgram/'
+repo_url: 'https://github.com/FelipeJesusRemoteSensing/CarbonProgram'
+repo_name: 'CarbonProgram'
 theme:
   name: readthedocs
 
@@ -11,12 +11,5 @@ extra_css:
  
 nav:
   - 'Home': 'index.md'
-  - 'Contexto': 'mds/Contexto.md'
-  - 'Integração de Dados': 'mds/integracao_dados.md'
-  - 'Desenho Amostral': 'mds/desenho_amostral.md'
-  - 'Processamento da Classificação': 'mds/processamento_classificacao.md'
-  - 'Refinamento': 'mds/preparacao_refinamento.md'
-  - 'Trabalho de Campo': 'mds/trabalho_campo.md'
-  - 'Análise do Mapeamento': 'mds/analise_mapeamento.md'
-  - 'Avaliação de Acurácia': 'mds/avaliacao_acuracia.md'
-  - 'Processos (Scripts)': 'mds/passo_a_passo.md'
+  - 'Contexto': 'mds/contexto.md'
+  - 'Referências Conceituais': 'mds/referencias_conceituais.md'
