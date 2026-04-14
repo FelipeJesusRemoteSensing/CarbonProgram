@@ -27,21 +27,7 @@ O projeto conta com scripts automatizados para processamento de dados geoespacia
 
 A lista detalhada e os links para cada script podem ser encontrados na página de **[Processos (Scripts)](https://FelipeJesusRemoteSensing.github.io/CarbonProgram/mds/scripts/)**.
 
-## 🛠️ Como rodar localmente
-
-Para visualizar a documentação em seu computador:
-
-1. Instale o Python (se não o tiver).
-2. Instale o MkDocs e o tema ReadTheDocs:
-   ```bash
-   pip install mkdocs mkdocs-readthedocs-theme
-   ```
-3. No terminal, dentro da pasta do projeto, execute:
-   ```bash
-   mkdocs serve
-   ```
-4. Acesse `http://127.0.0.1:8000/` no seu navegador.
 
 ---
-**Responsável:** Felipe Jesus  
+**Responsáveis:** Felipe Jesus e Marcos Cardoso
 **Instituição:** LAPIG / UFG
