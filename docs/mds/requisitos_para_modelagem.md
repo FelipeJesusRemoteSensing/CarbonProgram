@@ -47,7 +47,9 @@ As fazendas selecionadas foram separadas em três regiões, especificando a rota
 ## Coletas em Campo
 
 A coleta na região central foi realizada entre os dias 3 e 28 de Julho de 2025; a amostragem de solo ocorreu em 13 fazendas e 23 talhões. Outras quatro fazendas e oito talhões integraram a coleta na região do Matopiba no mês de Agosto de 2025. No total, 649 amostras foram coletadas (371 indeformadas e 278 deformadas) nas 17 fazendas e 31 talhões (Figura 6). Até o final de Setembro, foram recebidas do laboratório estimativas de carbono em 6 fazendas da região central e densidade das amostras dos 23 talhões iniciais.
-![alt text](../base_dados/images/distribuicao_amostras.png)
+
+![Distribuição de amostras](../base_dados/images/distribuicao_amostras.png)
+
 Nos talhões com resultados preliminares o carbono em áreas de pastagem varia entre 20 e 55 T ha-1 considerando 0 - 30 cm de profundidade, e em áreas de cultivo varia entre 18 e 64 T ha-1.
 
 ## Preparação do Modelo Century

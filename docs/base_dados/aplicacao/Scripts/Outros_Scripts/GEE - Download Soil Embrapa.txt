@@ -21,7 +21,7 @@ var ph_5_15cm = ee.Image('projects/lapig-459118/assets/embrapa_pronassolos/br_ph
 var ph_15_30cm = ee.Image('projects/lapig-459118/assets/embrapa_pronassolos/br_ph_h2o_15-30cm');
 
 
-var fazendas_rasters = ee.ImageCollection('projects/lapig-459118/assets/rs_fazendas_revert');
+var fazendas_rasters = ee.ImageCollection('');
 
 var processarSolo = function(band0_5, band5_15, band15_30, outputBandName) {
   var ponderado = band0_5.multiply(1/6)

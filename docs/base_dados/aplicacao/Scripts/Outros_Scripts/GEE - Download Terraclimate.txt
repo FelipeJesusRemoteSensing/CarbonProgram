@@ -9,7 +9,7 @@
 #
 # --
 
-var fazendas = ee.FeatureCollection('projects/lapig-459118/assets/fazendas-id-revert');
+var fazendas = ee.FeatureCollection('');
 var idsUnicos = fazendas.aggregate_array('id').distinct().getInfo();
 print('IDs:', idsUnicos);
 print('Número):', idsUnicos.length);
