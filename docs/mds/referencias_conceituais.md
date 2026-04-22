@@ -27,6 +27,8 @@ Para otimizar o modelo, a seleção de áreas de amostragem de solo deve conside
 
 Além dos dados fornecidos pela Syngenta, foram levantadas as informações que atualmente servem de base para o modelo, considerando as características específicas de cada fazenda participante do programa:
 
+> Imagens figurativas, não representando as fazendas participantes do programa.
+
 ### Imagem de Referência
 
 Para cada fazenda, é gerado um raster onde cada pixel recebe um ID sequencial único.
