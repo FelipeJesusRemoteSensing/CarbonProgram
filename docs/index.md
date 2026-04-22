@@ -46,7 +46,7 @@ Acompanhamento técnico dos códigos de automação desenvolvidos em **R** (espa
 ---
 *Dúvidas sobre a documentação? Entre em contato com a equipe técnica do LAPIG/UFG.*
 
-**Coordenador Científico:** Laerte Ferreira ([laerter@ufg.br](mailto:laerter@ufg.br))  
+**Coordenador Científico:** Laerte Ferreira ([laerte@ufg.br](mailto:laerte@ufg.br))  
 **Coordenadora Técnica:** Maria Hunter ([maria.hunter@ufg.br](mailto:maria.hunter@ufg.br))  
 **Colaboradores:** Felipe Jesus ([felipejesus@discente.ufg.br](mailto:felipejesus@discente.ufg.br)), Marcos Cardoso ([marcoscardoso@discente.ufg.br](mailto:marcoscardoso@discente.ufg.br)), Maiara Pedral, Ana Pretto, Isabela Nogueira e Alexandre Siqueira
 
