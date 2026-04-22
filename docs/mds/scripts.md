@@ -17,9 +17,10 @@ Estão na pasta `Outros_Scripts` (Arquivos que começam com `GEE`):
 
 ```mermaid
 flowchart LR
-    A[MapBiomas Col.10\n1985–2024] --> D[Google Drive\npor fazenda]
-    B[PronaSolos\nEmbrapa] --> D
-    C[TerraClimate\n1958–2024] --> D
+    A[☁️ Downloads GEE] --> B
+    B[MapBiomas Col.10\n1985–2024] --> C[Google Drive\npor fazenda]
+    B[PronaSolos\nEmbrapa] --> C
+    B[TerraClimate\n1958–2024] --> C
 ```
 *Figura 2. Extração de variáveis ambientais via Google Earth Engine.*
 
