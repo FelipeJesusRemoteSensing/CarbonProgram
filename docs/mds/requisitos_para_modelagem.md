@@ -28,10 +28,15 @@ flowchart TD
 
 Com o intuito de verificar a compatibilidade entre as fontes de dados climáticos, foi conduzida uma análise preliminar de consistência entre as séries históricas de todas as bases e comparação com dados de torres meteorológicas. A equipe técnica concluiu que a base de dados TerraClimate se mostrou mais completa, com estimativas de variáveis climáticas mais próximas aos dados das torres. Dessa forma, as variáveis climáticas foram extraídas e organizadas individualmente para cada fazenda.
 
-Para garantir a acurácia na identificação do uso da terra atual e recente, foi elaborada uma rotina específica no **Google Earth Engine** (Figura 1) que realiza a extração de todas as imagens disponíveis do sensor Sentinel-2A para os polígonos dos talhões das fazendas. O [script utilizado](../mds/scripts.md#downloads-e-gee) permite a visualização otimizada das imagens em composição colorida real, além da geração automática da série temporal de NDVI para o ponto central de cada talhão. A frequência das imagens (a cada cinco dias) viabilizou a inspeção visual detalhada dos usos agrícolas praticados em cada área, mesmo em cenários com elevada cobertura de nuvens. Além de identificação de cobertura e cultivo sub-anual, permitiu identificar datas estimadas para manejos como revolvimento de solo ou distúrbios como queimas.
+![Comparativo bases climáticas](../base_dados/images/grafico_bases_clima.png)
+*Figura 1. Temperaturas mínimas (A), máximas médias (B) e precipitação acumulada anual (C) referentes ao período de 1980-2005 observadas em estações meteorológicas (INMET) e disponíveis nas bases de dados.*
+
+Além dos valores de quantidade de chuva e dos valores médios de temperatura, outro fator importante a ser analisado é a distribuição ao longo do ano. É importante que os dados climáticos utilizados como entrada para modelagem dos estoques de C na região reproduzam bem essa variação, uma vez que esse fator é determinante para o crescimento da vegetação, principal via de entrada de carbono no ecossistema.
+
+Para garantir a acurácia na identificação do uso da terra atual e recente, foi elaborada uma rotina específica no **Google Earth Engine** (Figura 2) que realiza a extração de todas as imagens disponíveis do sensor Sentinel-2A para os polígonos dos talhões das fazendas. O [script utilizado](../mds/scripts.md#downloads-e-gee) permite a visualização otimizada das imagens em composição colorida real, além da geração automática da série temporal de NDVI para o ponto central de cada talhão. A frequência das imagens (a cada cinco dias) viabilizou a inspeção visual detalhada dos usos agrícolas praticados em cada área, mesmo em cenários com elevada cobertura de nuvens. Além de identificação de cobertura e cultivo sub-anual, permitiu identificar datas estimadas para manejos como revolvimento de solo ou distúrbios como queimas.
 
 ![Código de inspeção](../base_dados/images/codigo_inspec.png)
-*Figura 1. Código desenvolvido no Google Earth Engine para inspeção visual de talhões e extração de séries temporais de NDVI.*
+*Figura 2. Código desenvolvido no Google Earth Engine para inspeção visual de talhões e extração de séries temporais de NDVI.*
 
 Para melhorar a variabilidade dos solos considerados, foram comparadas a granulometria dos solos das talhões REVERTE® levantadas nos anos anteriores pela Syngenta com dados de calibração e validação do modelo Century específica de áreas de pastagens e soja. A distância até pontos de calibração e validação e a similaridade entre os solos foram identificadas.
 
