@@ -11,6 +11,8 @@ flowchart LR
 ```
 *Figura 1. Visão geral da arquitetura de processos e automação.*
 
+---
+
 ## Downloads das bases ambientais pelo Google Earth Engine
 
 Estão na pasta `Outros_Scripts` (Arquivos que começam com `GEE`):
@@ -104,6 +106,8 @@ flowchart LR
           return resampled;
         }
         ```
+
+---
 
 ## Processamento de preparação de Imagens no Rstudio
 
@@ -218,6 +222,8 @@ flowchart LR
           writeRaster(r_final, caminho_salvar, overwrite = TRUE, gdal=c("COMPRESS=LZW"))
         }
         ```
+
+---
 
 ## Modelagem do Century para o ponto amostral
 
@@ -375,6 +381,8 @@ A estrutura de pastas recomendada para a **Simulação por ponto** é:
         }
         ```
 
+---
+
 ## Modelagem do Century espacializada para o talhão
 
 Estão na pasta `Scripts_Espacialização`:
@@ -518,6 +526,8 @@ A estrutura de pastas recomendada para a **Simulação espacializada** é:
         mosaico_final <- do.call(mosaic, c(lista_rasters, fun="mean"))
         writeRaster(mosaico_final, "outputs/MOSAICO_SOMSC_2024.tif", overwrite=TRUE)
         ```
+
+---
 
 ## Extras
 
