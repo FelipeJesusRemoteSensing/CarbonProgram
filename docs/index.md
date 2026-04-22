@@ -44,11 +44,10 @@ Acompanhamento técnico dos códigos de automação desenvolvidos em **R** (espa
 | <img src="base_dados/images/Syngenta_Logo.svg.png" width="180"> | **Syngenta** |
 
 ---
-*Dúvidas ou sugestões sobre a documentação? Entre em contato com a equipe técnica do LAPIG/UFG.*
+*Dúvidas sobre a documentação? Entre em contato com a equipe técnica do LAPIG/UFG.*
 
-Coordenador Ciêntifico: Laerte Ferreira ([laerter@ufg.br])
-Coordenadora Técnica: Maria Hunter ([maria.hunter@ufg.br])
-
-Colaboradores: Felipe Jesus ([felipejesus@discente.ufg.br]), Marcos Cardoso ([marcoscardoso@discente.ufg.br]), Maiara Pedral, Ana Pretto, Isabela Nogueira e Alexandre Siqueira
+**Coordenador Científico:** Laerte Ferreira ([laerter@ufg.br](mailto:laerter@ufg.br))  
+**Coordenadora Técnica:** Maria Hunter ([maria.hunter@ufg.br](mailto:maria.hunter@ufg.br))  
+**Colaboradores:** Felipe Jesus ([felipejesus@discente.ufg.br](mailto:felipejesus@discente.ufg.br)), Marcos Cardoso ([marcoscardoso@discente.ufg.br](mailto:marcoscardoso@discente.ufg.br)), Maiara Pedral, Ana Pretto, Isabela Nogueira e Alexandre Siqueira
 
 *Última atualização: 17/04/2026*
