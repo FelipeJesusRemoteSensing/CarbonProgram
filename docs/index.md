@@ -1,3 +1,5 @@
+![Monitoramento de Carbono](base_dados/images/IMG_20250722_095057.jpg)
+
 # Monitoramento de Carbono - Iniciativa REVERTE®
 
 Bem-vindo à documentação oficial do projeto de **Monitoramento de Carbono**, uma colaboração estratégica entre a **The Nature Conservancy (TNC)**, **Syngenta** e o Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federal de Goiás (**LAPIG/UFG**). 
