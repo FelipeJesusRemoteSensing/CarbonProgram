@@ -12,13 +12,14 @@ Bem-vindo à documentação oficial do projeto de **Monitoramento de Carbono**, 
 ## Objetivo do Projeto
 O programa REVERTE® busca apoiar produtores rurais na recuperação de áreas degradadas no Cerrado, promovendo a transição para sistemas de cultivo agrícola mais produtivos e sustentáveis. Este repositório documenta os protocolos científicos e técnicos utilizados para estimar o sequestro de carbono orgânico no solo e os impactos ambientais dessas práticas.
 
-[Saiba mais sobre a Iniciativa REVERTE®](https://www.tnc.org.br/sobre-a-tnc/quem-somos/como-trabalhamos/nossos-apoiadores/apoiadores/syngenta-reverte/)
+[↗ Saiba mais sobre a Iniciativa REVERTE®](https://www.tnc.org.br/sobre-a-tnc/quem-somos/como-trabalhamos/nossos-apoiadores/apoiadores/syngenta-reverte/)
 
 ---
 
 ## Guia de Navegação
 
-Explore as seções da documentação para entender o fluxo completo do projeto:
+A documentação está organizada em quatro seções que seguem o fluxo lógico do projeto — do contexto geral até a implementação técnica. Recomenda-se a leitura na ordem apresentada para melhor compreensão.
+
 
 ### [Contexto](mds/contexto.md)
 Entenda o panorama da pecuária no Brasil, os desafios do monitoramento de solo e o papel fundamental do programa REVERTE® na mitigação climática.
@@ -44,3 +45,10 @@ Acompanhamento técnico dos códigos de automação desenvolvidos em **R** (espa
 
 ---
 *Dúvidas ou sugestões sobre a documentação? Entre em contato com a equipe técnica do LAPIG/UFG.*
+
+Coordenador Ciêntifico: Laerte Ferreira ([laerter@ufg.br])
+Coordenadora Técnica: Maria Hunter ([maria.hunter@ufg.br])
+
+Colaboradores: Felipe Jesus ([felipejesus@discente.ufg.br]), Marcos Cardoso ([marcoscardoso@discente.ufg.br]), Maiara Pedral, Ana Pretto, Isabela Nogueira e Alexandre Siqueira
+
+*Última atualização: 17/04/2026*
