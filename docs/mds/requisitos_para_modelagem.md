@@ -11,38 +11,38 @@ Complementarmente, foram processadas séries temporais de NDVI mensais, com o ob
 
 ```mermaid
 flowchart TD
-    A[🛰️ Fontes de Dados] --> B
+    A[Fontes de Dados] --> B
     A --> C
     A --> D
 
-    B[📍 Uso e Cobertura do Solo\nMapBiomas Coleção 10\n1985–2024 · 30m]
-    C[🌿 Séries Temporais NDVI\nMensais · Sentinel-2\nPadrões sazonais]
-    D[🌦️ Variáveis Climáticas\nCHELSA · NASA POWER\nTerraClimate · BR-DWGD]
+    B[Uso e Cobertura do Solo\nMapBiomas Coleção 10\n1985–2024 · 30m]
+    C[Séries Temporais NDVI\nMensais · Sentinel-2\nPadrões sazonais]
+    D[Variáveis Climáticas\nCHELSA · NASA POWER\nTerraClimate · BR-DWGD]
 
-    B --> E[🗄️ Banco de Dados Geoespacial\nfazendas do Cerrado\nGO · MT · MS · TO · MA]
+    B --> E[Banco de Dados Geoespacial\nfazendas do Cerrado\nGO · MT · MS · TO · MA]
     C --> E
     D --> E
 
-    E --> F[⚙️ Simulações\nModelo Century]
+    E --> FSimulações\nModelo Century]
 ```
 
 Com o intuito de verificar a compatibilidade entre as fontes de dados climáticos, foi conduzida uma análise preliminar de consistência entre as séries históricas de todas as bases e comparação com dados de torres meteorológicas. A equipe técnica concluiu que a base de dados TerraClimate se mostrou mais completa, com estimativas de variáveis climáticas mais próximas aos dados das torres. Dessa forma, as variáveis climáticas foram extraídas e organizadas individualmente para cada fazenda.
 
-Para garantir a acurácia na identificação do uso da terra atual e recente, foi elaborada uma rotina específica no **Google Earth Engine** (Figura 1) que realiza a extração de todas as imagens disponíveis do sensor Sentinel-2A para os polígonos dos talhões das fazendas. O [script implementado](../mds/scripts.md#downloads-e-gee) permite a visualização otimizada das imagens em composição colorida real, além da geração automática da série temporal de NDVI para o ponto central de cada talhão. A frequência das imagens (a cada cinco dias) viabilizou a inspeção visual detalhada dos usos agrícolas praticados em cada área, mesmo em cenários com elevada cobertura de nuvens. Além de identificação de cobertura e cultivo sub-anual, permitiu identificar datas estimadas para manejos como revolvimento de solo ou distúrbios como queimas.
+Para garantir a acurácia na identificação do uso da terra atual e recente, foi elaborada uma rotina específica no **Google Earth Engine** (Figura 1) que realiza a extração de todas as imagens disponíveis do sensor Sentinel-2A para os polígonos dos talhões das fazendas. O [script utilizado](../mds/scripts.md#downloads-e-gee) permite a visualização otimizada das imagens em composição colorida real, além da geração automática da série temporal de NDVI para o ponto central de cada talhão. A frequência das imagens (a cada cinco dias) viabilizou a inspeção visual detalhada dos usos agrícolas praticados em cada área, mesmo em cenários com elevada cobertura de nuvens. Além de identificação de cobertura e cultivo sub-anual, permitiu identificar datas estimadas para manejos como revolvimento de solo ou distúrbios como queimas.
 
 ![Código de inspeção](../base_dados/images/codigo_inspec.png)
 *Figura 1. Código desenvolvido no Google Earth Engine para inspeção visual de talhões e extração de séries temporais de NDVI.*
 
-Para melhorar a variabilidade dos solos considerados e deixar nossa modelagem mais robusta, foram comparadas as granulometrias dos solos das talhões REVERTE® levantadas nos anos anteriores pela Syngenta com dados de calibração e validação do modelo Century específica de áreas de pastagens e soja. A distância até pontos de calibração e validação e a similaridade entre os solos foram identificadas.
+Para melhorar a variabilidade dos solos considerados, foram comparadas a granulometria dos solos das talhões REVERTE® levantadas nos anos anteriores pela Syngenta com dados de calibração e validação do modelo Century específica de áreas de pastagens e soja. A distância até pontos de calibração e validação e a similaridade entre os solos foram identificadas.
 
 Como resultado dessa etapa, foi gerada uma planilha síntese contendo as principais informações fenológicas e agronômicas observadas: tipo de cultivo, sistema de plantio, data estimada de plantio e colheita, práticas de manejo (como pousio e rotação), e outras variáveis consideradas relevantes para a parametrização do modelo Century:
 
 - Uso sub-anual de ano 2021 - 2024 por meio de inspeção de imagens Sentinel-2 ([Visualizar no GEE](https://code.earthengine.google.com/8b73184a6f2574169c9a6acd9134706b));
 - Datas estimadas de queima e revolvimento de solo a partir de 2021;
-- Uso anual ano 1985-2024 seguindo a moda da classificação dentro de MapBiomas Coleção 9 ([Visualizar no GEE](https://code.earthengine.google.com/0d3186d3eea31a5f6788e703eb3d1184));
+- Uso anual ano 1985-2024 seguindo a moda da classificação dentro de MapBiomas Coleção 10 ([Visualizar no GEE](https://code.earthengine.google.com/0d3186d3eea31a5f6788e703eb3d1184));
 - Ano de abertura a partir de 1985;
-- Temperatura mensal histórico e média (CHELSA e NASA POWER);
-- Precipitação acumulada mensal histórico e média (CHELSA e NASA POWER);
+- Temperatura mensal histórico e média (CHELSA, NASA POWER e TerraClimate);
+- Precipitação acumulada mensal histórico e média (CHELSA, NASA POWER e TerraClimate);
 - Propriedades do solo: granulometria, pH, densidade e carbono (Syngenta e complemento EMBRAPA);
 - Tendência NDVI calculada via Theropoda — ferramenta desenvolvida pelo LAPIG/UFG ([Repositório GitHub](https://github.com/lapig-ufg/TheroPoDa));
 - Região Ecofisiológica (Sano et al., 2019);
@@ -53,7 +53,12 @@ Com base na planilha síntese, foram selecionadas fazendas e talhões específic
 
 ## Plano Amostral
 
-O plano amostral na Figura 3 foi utilizado para toda a amostragem realizada em campo. Para cada talhão, foi realizada uma seleção aleatória de três regiões de 1 ha onde seriam coletados amostras indeformadas para estimativas de densidade, e deformados para análise de granulometria, pH e carbono. As amostras indeformadas foram retiradas do ponto central da área amostral com amostrador de impacto em camadas 0 - 5, 5 - 10, 10 - 20, e 20 - 30 cm e transferidos para sacola para reutilização do anel kopek com volume conhecido. Em volta da amostra indeformada, 5 pontos entre uma distância de 3 m do ponto central foram amostrados com trado sonda para compor uma amostra composta nas profundidades de 0 - 10, 10 - 20, e 20 - 30 cm (amostra deformada). As amostras foram depositadas em um balde e misturadas. Em seguida, uma porção de 500 g de cada profundidade foi separada e seca ao ar livre para ser transportada ao laboratório.
+O plano amostral na Figura 2 foi utilizado para toda a amostragem realizada em campo. Para cada talhão, foi realizada uma seleção aleatória de três regiões de 1 ha onde seriam coletados amostras indeformadas para estimativas de densidade, e deformados para análise de granulometria, pH e carbono. As amostras indeformadas foram retiradas do ponto central da área amostral com amostrador de impacto em camadas 0 - 5, 5 - 10, 10 - 20, e 20 - 30 cm e transferidos para sacola para reutilização do anel kopek com volume conhecido. 
+
+Em volta da amostra indeformada, 5 pontos entre uma distância de 3 m do ponto central foram amostrados com trado sonda para compor uma amostra composta nas profundidades de 0 - 10, 10 - 20, e 20 - 30 cm (amostra deformada). As amostras foram depositadas em um balde e misturadas. Em seguida, uma porção de 500 g de cada profundidade foi separada e seca ao ar livre para ser transportada ao laboratório.
+
+![Distribuição de amostras](../base_dados/images/campo_procedimento.png){ width="100%" }
+*Figura 2. Desenho amostral das coletas das amostras de solo.*
 
 ## Regiões de Campo
 
@@ -78,7 +83,7 @@ As fazendas selecionadas foram separadas em três regiões, especificando a rota
 A coleta na região central foi realizada entre os dias 3 e 28 de Julho de 2025; a amostragem de solo ocorreu em 13 fazendas e 23 talhões. Outras quatro fazendas e oito talhões integraram a coleta na região do Matopiba no mês de Agosto de 2025. No total, 649 amostras foram coletadas (371 indeformadas e 278 deformadas) nas 17 fazendas e 31 talhões (Figura 2). Todas os resultados das amostras foram recebidos no final de Janeiro de 2026.
 
 ![Distribuição de amostras](../base_dados/images/distribuicao_amostras.png){ width="100%" }
-*Figura 2. Distribuição das fazendas selecionadas para coleta de amostras de carbono no solo.*
+*Figura 3. Distribuição das fazendas selecionadas para coleta de amostras de carbono no solo.*
 
 Nas amostras de campo houve grande variabilidade em textura e carbono. O carbono em áreas de pastagem variou entre 20 e 88 T ha-1 considerando 0 - 30 cm de profundidade, e em áreas de cultivo varia entre 19 e 72 T ha-1.  Onde temos amostras de pasto e cultivo na
 mesma fazenda, observamos que a maioria mostrou 
@@ -87,45 +92,45 @@ maior estoque de carbono nas áreas cultivadas.
 
 ## Preparação do Modelo Century
 
-Foi realizada uma revisão da literatura para obtenção de dados de referência de carbono orgânico no solo em áreas com cultivo de cana de açúcar e milho no Cerrado na cual foram encontrados dados 25 de sítios sob cultivo de Cana e 42 sob cultivo de milho. Os dados de cana de açúcar encontram-se concentrados na região centro-sul que é a região com clima mais propício para esse cultivo (Oliveira et al., 2012) (Figura 3A) enquanto os dados de milho encontram-se mais bem distribuídos pelo bioma (Figura 3B).
+Foi realizada uma revisão da literatura para obtenção de dados de referência de carbono orgânico no solo em áreas com cultivo de cana de açúcar e milho no Cerrado na cual foram encontrados dados 25 de sítios sob cultivo de Cana e 42 sob cultivo de milho. Os dados de cana de açúcar encontram-se concentrados na região centro-sul que é a região com clima mais propício para esse cultivo (Oliveira et al., 2012) (Figura 4A) enquanto os dados de milho encontram-se mais bem distribuídos pelo bioma (Figura 4B).
 
 ![Calibração](../base_dados/images/calval.png)
-*Figura 3. Mapa da área de estudo (bioma Cerrado), com a localização dos sítios de calibração (0-20 cm) para os cultivos de: A) cana de açúcar e B) milho.*
+*Figura 4. Mapa da área de estudo (bioma Cerrado), com a localização dos sítios de calibração (0-20 cm) para os cultivos de: A) cana de açúcar e B) milho.*
 
-A revisão bibliográfica para obtenção de dados de carbono na biomassa da cana de açúcar (Figura 4A) e biomassa e grãos do milho (Figura 4B) precisou incluir dados amostrados em outras regiões do Brasil, uma vez que o número de referências encontradas considerando somente o Cerrado foi muito baixa. Para trabalhos que apresentavam apenas dados de matéria seca a conversão para carbono foi realizada considerando o fator de conversão de 50% (IPCC, 2006).
+A revisão bibliográfica para obtenção de dados de carbono na biomassa da cana de açúcar (Figura 5A) e biomassa e grãos do milho (Figura 5B) precisou incluir dados amostrados em outras regiões do Brasil, uma vez que o número de referências encontradas considerando somente o Cerrado foi muito baixa. Para trabalhos que apresentavam apenas dados de matéria seca a conversão para carbono foi realizada considerando o fator de conversão de 50% (IPCC, 2006).
 
 ![Referência Cana](../base_dados/images/referencia1.png)
-*Figura 4. Valores de referência de carbono na biomassa aérea e radicular da cana de açúcar no Brasil.*
+*Figura 5. Valores de referência de carbono na biomassa aérea e radicular da cana de açúcar no Brasil.*
 
 ![Referência Milho](../base_dados/images/referencia2.png)
-*Figura 5. Valores de referência de carbono na biomassa aérea, radicular e grão de milho no Brasil.*
+*Figura 6. Valores de referência de carbono na biomassa aérea, radicular e grão de milho no Brasil.*
 
-Também foi realizada uma revisão dos trabalhos que utilizaram o modelo CENTURY para simular os estoques e a dinâmica de carbono em áreas com ambos os cultivos. Nesta revisão foram encontrados e testados, 4 trabalhos com parâmetros pré-ajustados para simular a cana-de-açúcar (Brandani et al., 2015; Carvalho, 2014; Galdos et al., 2010; Wendling, 2007)  e 5 parâmetros pré-ajustados para o cultivo de milho (Barbosa, 2021; Dias, 2010; Metherell et al., 1993; Rosendo, 2010; Vogado, 2020) (Tabela S2).
+Também foi realizada uma revisão dos trabalhos que utilizaram o modelo CENTURY para simular os estoques e a dinâmica de carbono em áreas com ambos os cultivos. Nesta revisão foram encontrados e testados, 4 trabalhos com parâmetros pré-ajustados para simular a cana-de-açúcar (Brandani et al., 2015; Carvalho, 2014; Galdos et al., 2010; Wendling, 2007)  e 5 parâmetros pré-ajustados para o cultivo de milho (Barbosa, 2021; Dias, 2010; Metherell et al., 1993; Rosendo, 2010; Vogado, 2020).
 
-Informações sobre manejo nos dois cultivos, incluindo a prática de queima da cana-de-açúcar até o ano 2007, e adubação também foram levantadas. No preparo do solo para o plantio da cana de açúcar, foram utilizados parâmetros (CULT) do trabalho de Wendling (2007) (tabela S3); no plantio, foi simulada a adubação (FERT) com 140 kg/ha de P2O5 (Rein et al., 2022) e 120 kg/ha* de N (valor médio dos trabalhos de Galdos et al., 2010; Franco et al., 2015; Oliveira et al., 2017; Zani et al., 2018) (Tabela S4). Nos sítios com adição de torta de filtro e vinhaça, foram utilizados parâmetros de adição de matéria orgânica (OMAD) do trabalho de Brandani et al., 2015 com alguns ajustes adicionais (Tabela S5). A inserção ou não da queima da cana na preparação para colheita foi inserida de acordo com as informações disponibilizadas para cada sítio de forma individual. Para os sítios onde houve queima da palha, foram utilizados os parâmetros de colheita (HARV) do trabalho de Wendling (2007) e para os que não tiveram queima, foram utilizados os parâmetros disponibilizados em Galdos et al., (2010) (Tabela S6).
+Informações sobre manejo nos dois cultivos, incluindo a prática de queima da cana-de-açúcar até o ano 2007, e adubação também foram levantadas. No preparo do solo para o plantio da cana de açúcar, foram utilizados parâmetros (CULT) do trabalho de Wendling (2007); no plantio, foi simulada a adubação (FERT) com 140 kg/ha de P2O5 (Rein et al., 2022) e 120 kg/ha* de N (valor médio dos trabalhos de Galdos et al., 2010; Franco et al., 2015; Oliveira et al., 2017; Zani et al., 2018). Nos sítios com adição de torta de filtro e vinhaça, foram utilizados parâmetros de adição de matéria orgânica (OMAD) do trabalho de Brandani et al., 2015 com alguns ajustes adicionais. A inserção ou não da queima da cana na preparação para colheita foi inserida de acordo com as informações disponibilizadas para cada sítio de forma individual. Para os sítios onde houve queima da palha, foram utilizados os parâmetros de colheita (HARV) do trabalho de Wendling (2007) e para os que não tiveram queima, foram utilizados os parâmetros disponibilizados em Galdos et al., (2010).
 
-No preparo do solo para o plantio do milho, foram utilizados dois conjuntos de parâmetros (CULT): um para plantio direto e outro para sítios sob plantio convencional (Tabela S7). Posteriormente, foram simulados dois eventos de adubação (FERT), um no plantio e outro referente a cobertura (30 dias após o plantio). No plantio, simulou-se a adubação com 30 Kg ha de N, 80 kg ha de P2O5 e 20 kg ha de S e na cobertura 100 Kg ha de N (Tabela S8). No campo, a determinação da necessidade de nutrientes deve ser feita através da análise de solo, no entanto, nem todos os trabalhos utilizados como referência disponibilizam esta informação. A necessidade de criar parâmetros gerais para um cultivo ou região apontou para utilizar valores médios. Os valores médios de N, P e S utilizados nas simulações foram calculados considerando uma produtividade média de 6 a 8 t/ha de grãos, em solos com teor médio de argila e com disponibilidade média desses nutrientes (Alves et al., 2000; Coelho, 2006; Gianluppi et al., 2002; Sousa & Lobato, 2004).
+No preparo do solo para o plantio do milho, foram utilizados dois conjuntos de parâmetros (CULT): um para plantio direto e outro para sítios sob plantio convencional. Posteriormente, foram simulados dois eventos de adubação (FERT), um no plantio e outro referente a cobertura (30 dias após o plantio). No plantio, simulou-se a adubação com 30 Kg ha de N, 80 kg ha de P2O5 e 20 kg ha de S e na cobertura 100 Kg ha de N. No campo, a determinação da necessidade de nutrientes deve ser feita através da análise de solo, no entanto, nem todos os trabalhos utilizados como referência disponibilizam esta informação. A necessidade de criar parâmetros gerais para um cultivo ou região apontou para utilizar valores médios. Os valores médios de N, P e S utilizados nas simulações foram calculados considerando uma produtividade média de 6 a 8 t/ha de grãos, em solos com teor médio de argila e com disponibilidade média desses nutrientes (Alves et al., 2000; Coelho, 2006; Gianluppi et al., 2002; Sousa & Lobato, 2004).
 
-Na Figura 10 é possível observar a representação esquemática dos períodos de cultivos simulados em: A) Cana de açúcar; B) áreas com soja como safra principal e milho na entressafra e C) milho como safra principal.
+Na Figura 7 é possível observar a representação esquemática dos períodos de cultivos simulados em: A) Cana de açúcar; B) áreas com soja como safra principal e milho na entressafra e C) milho como safra principal.
 
 ![Representação esquemática](../base_dados/images/ref3.png)
-*Figura 10. Representação esquemática dos períodos de cultivos simulados em: A) cana de açúcar; B) áreas com soja como safra principal e milho na entressafra e C) milho como safra principal.*
+*Figura 7. Representação esquemática dos períodos de cultivos simulados em: A) cana de açúcar; B) áreas com soja como safra principal e milho na entressafra e C) milho como safra principal.*
 
 ### Cana-de-Açúcar
 
-Entre os parâmetros encontrados e testados para o cultivo de Cana os que apresentaram resultados mais compatíveis com os dados de referência foram os de Wendling (2007). Entretanto, subestimaram os valores de carbono na biomassa aérea, logo, foi necessária a realização de ajustes adicionais para atingir valores mais próximos aos observados na literatura (Figuras 11A e 11B). Apesar dos resultados próximos aos observados para solo e biomassa aérea, o conjunto de parâmetros atuais superestima os valores de carbono das raízes e novos ajustes estão em andamento para corrigir as superestimativas nesse compartimento.
+Entre os parâmetros encontrados e testados para o cultivo de Cana os que apresentaram resultados mais compatíveis com os dados de referência foram os de Wendling (2007). Entretanto, subestimaram os valores de carbono na biomassa aérea, logo, foi necessária a realização de ajustes adicionais para atingir valores mais próximos aos observados na literatura (Figuras 8A e 8B). Apesar dos resultados próximos aos observados para solo e biomassa aérea, o conjunto de parâmetros atuais superestima os valores de carbono das raízes e novos ajustes estão em andamento para corrigir as superestimativas nesse compartimento.
 
 ![Comparação Carbono Orgânico](../base_dados/images/ref4.png)
-*Figura 11. Comparação entre valores publicados de carbono orgânico (A) na biomassa aérea e (B) no solo (0-20 cm) em áreas de cana-de-açúcar e valores estimados pelo modelo CENTURY 4.5.*
+*Figura 8. Comparação entre valores publicados de carbono orgânico (A) na biomassa aérea e (B) no solo (0-20 cm) em áreas de cana-de-açúcar e valores estimados pelo modelo CENTURY 4.5.*
 
 ### Milho
 
 Entre os parâmetros encontrados e testados para o cultivo de milho os que apresentaram resultados mais compatíveis com os dados de referência foram os parâmetros default do modelo (Metherell et al., 1993). No entanto, percebeu-se uma subestimativa dos valores de carbono na biomassa acima do solo e grãos e uma superestimativa do carbono nas raízes. Para melhorar as estimativas de carbono nesses compartimentos foram necessários ajustes nos parâmetros relacionados a produção potencial mensal acima do solo - 'PRDX(1)', fração inicial de carbono alocada às raízes - 'FRTC(1)' e índice de colheita máximo (fração de carbono vivo acima do solo no grão) - 'HIMAX'.
 
-Os parâmetros ajustados diferem para sítios com milho simulado como safra principal e segunda safra (Tabela S2). Isso porque geralmente há diferença entre as variedades de milho usadas na safra principal e na safrinha para a qual costuma-se escolher híbridos de ciclo mais curto, com rápido desenvolvimento inicial, e maior tolerância ao estresse hídrico. Já na safra principal há maior disponibilidade hídrica e período de crescimento, permitindo uso de ciclos mais longos e voltados a um maior potencial produtivo (Borghi et al., 2023). Na figura 12 é possível observar a relação entre os estoques de carbono do solo mensurados e simulados pelo modelo para os sítios com milho na safra principal (Figura 12A) e na segunda safra (Figura 12B).
+Os parâmetros ajustados diferem para sítios com milho simulado como safra principal e segunda safra (Tabela S2). Isso porque geralmente há diferença entre as variedades de milho usadas na safra principal e na safrinha para a qual costuma-se escolher híbridos de ciclo mais curto, com rápido desenvolvimento inicial, e maior tolerância ao estresse hídrico. Já na safra principal há maior disponibilidade hídrica e período de crescimento, permitindo uso de ciclos mais longos e voltados a um maior potencial produtivo (Borghi et al., 2023). Na figura 9 é possível observar a relação entre os estoques de carbono do solo mensurados e simulados pelo modelo para os sítios com milho na safra principal (Figura 9A) e na segunda safra (Figura 9B).
 
 ![Calibração de Milho](../base_dados/images/ref5.png)
-*Figura 12. Calibração de milho safra (A) e safrinha (B) para estoques de carbono orgânico no solo para o profundidade de 0-20 cm.*
+*Figura 9. Calibração de milho safra (A) e safrinha (B) para estoques de carbono orgânico no solo para o profundidade de 0-20 cm.*
 
 ---
 - [← Referências Conceituais](referencias_conceituais.md)
