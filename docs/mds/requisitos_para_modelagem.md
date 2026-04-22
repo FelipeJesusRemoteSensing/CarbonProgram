@@ -60,9 +60,9 @@ Com base na planilha síntese, foram selecionadas fazendas e talhões específic
 
 ## Plano Amostral
 
-O plano amostral na Figura 4 foi utilizado para toda a amostragem realizada em campo. Para cada talhão, foi realizada uma seleção aleatória de três regiões de 1 ha onde seriam coletados amostras indeformadas para estimativas de densidade, e deformados para análise de granulometria, pH e carbono. As amostras indeformadas foram retiradas do ponto central da área amostral com amostrador de impacto em camadas 0 - 5, 5 - 10, 10 - 20, e 20 - 30 cm e transferidos para sacola para reutilização do anel kopek com volume conhecido. 
+O plano amostral na Figura 4 foi utilizado para toda a amostragem realizada em campo. Para cada talhão, foi realizada uma seleção aleatória de três regiões de 1 ha onde seriam coletados amostras indeformadas para estimativas de densidade, e deformados para análise de granulometria, pH e carbono. As amostras indeformadas foram retiradas do ponto central da área amostral com amostrador de impacto em camadas **0 - 5, 5 - 10, 10 - 20, e 20 - 30 cm** e transferidos para sacola para reutilização do anel kopek com volume conhecido. 
 
-Em volta da amostra indeformada, 5 pontos entre uma distância de 3 m do ponto central foram amostrados com trado sonda para compor uma amostra composta nas profundidades de 0 - 10, 10 - 20, e 20 - 30 cm (amostra deformada). As amostras foram depositadas em um balde e misturadas. Em seguida, uma porção de 500 g de cada profundidade foi separada e seca ao ar livre para ser transportada ao laboratório.
+Em volta da amostra indeformada, 5 pontos entre uma distância de **3 m** do ponto central foram amostrados com trado sonda para compor uma amostra composta nas profundidades de **0 - 10, 10 - 20, e 20 - 30 cm** (amostra deformada). As amostras foram depositadas em um balde e misturadas. Em seguida, uma porção de 500 g de cada profundidade foi separada e seca ao ar livre para ser transportada ao laboratório.
 
 ![Distribuição de amostras](../base_dados/images/campo_procedimento.png){ width="100%" }
 *Figura 4. Desenho amostral das coletas das amostras de solo.*
@@ -76,8 +76,7 @@ As fazendas selecionadas foram separadas em três regiões, especificando a rota
 | Central | GO, MT | 13 | 28 | Franco-argiloso, arenoso | 
 | Matopiba | MA, TO | 4 | 7 | Areia franca, franco-argiloso | 
 | Sul | MS | — | — | Franco-arenoso, argilo-arenoso |
-
-*Quadro 1 - Resumo das amostragens de campo realizadas nas diferentes regiões*
+*Quadro 1 - Resumo das amostragens de campo realizadas nas diferentes regiões.*
 
 <!-- **Região Central:** Fazendas de Goiás e Mato Grosso constam com o maior número de regiões edafoclimáticas do Cerrado e o maior número de Fazendas e Talhões dentro do programa REVERTE® (Figura 5A). Dos 119 talhões que fazem parte do programa, 79 estão nesta região. Também incluem os usos mais frequentes, sendo soja/pousio, soja/pastagem e soja/milho. Nessa região a equipe completou a amostragem em 13 fazendas e 28 talhões ao longo de 30 dias no mês de Julho 2025. 
 A equipe percorreu mais de 5000 km e o projeto contou com um orçamento de aproximadamente R$50.000,00. Os solos do Mato Grosso variam entre franco arenoso e areia franca, e de Goiás entre franco-argiloso, arenoso e argilo-arenoso. Considerando a inexistência de amostragem atual de calibração e validação para a modelagem de soja no estado de Goiás, e a escassez de amostras para pastagens no estado de Mato Grosso, com uma distribuição geográfica limitada às proximidades da fronteira com Goiás, as amostras provenientes das talhões e fazendas REVERTE® irão aprimorar a capacidade de monitoramento da região por meio de modelagem.
@@ -86,35 +85,33 @@ A equipe percorreu mais de 5000 km e o projeto contou com um orçamento de aprox
 
 **Região Sul:** No estado de Mato Grosso do Sul, tem quatro fazendas e treze talhões que fazem parte do Programa REVERTE®. Nesta região conta com talhões com usos de soja/trigo além do soja/pousio, e soja/pastagem. Tem dois tipos de solos distintos, franco-arenoso e argilo-arenoso. Como a textura dos solos, usos e variáveis edafoclimáticas não são muito diferentes das fazendas e regiões incluídos no plano de amostragem em outros estados, a amostragem dessa região teve prioridade menor. O campo adicional para fazer amostragem nesta região dependerá de recursos adicionais. -->
 
-**Região Central:** Fazendas de Goiás e Mato Grosso concentram o maior número de regiões edafoclimáticas do Cerrado e a maior parte das fazendas e talhões selecionados para amostragem dentro do programa REVERTE®. Os usos mais frequentes nessa região são soja/pousio, soja/pastagem e soja/milho. A amostragem foi realizada ao longo de 30 dias em julho de 2025, percorrendo mais de 5.000 km com orçamento de aproximadamente R$50.000,00. 
+**Região Central:** Fazendas de Goiás e Mato Grosso concentram o maior número de regiões edafoclimáticas do Cerrado e a maior parte das fazendas e talhões selecionados para amostragem dentro do programa REVERTE®. Os usos mais frequentes nessa região são soja/pousio, soja/pastagem e soja/milho. A amostragem foi realizada ao longo de 30 dias em julho de 2025, percorrendo mais de **5.000 km** com orçamento de aproximadamente **R$50.000,00**. 
 Os solos do Mato Grosso variam entre franco-arenoso e areia franca, e os de Goiás entre franco-argiloso, arenoso e argilo-arenoso. As amostras coletadas nessa região irão aprimorar a capacidade de monitoramento por modelagem, especialmente considerando a baixa representatividade atual de sítios de calibração para soja em Goiás e para pastagens no Mato Grosso.
 
-**Região Matopiba:** Abrangendo fazendas nos estados do Maranhão e Tocantins, foram selecionadas propriedades nas ecorregiões de Floresta de Cocais e Araguaia Tocantins para complementar a amostragem de solo. Os talhões dessa região apresentam usos de pousio e pastagem na safrinha, com variabilidade na granulometria entre areia franca, franco-argiloso, arenoso e franco-arenoso. A região recebe menor precipitação em relação à Região Central, com total anual de aproximadamente 1.000 mm. A amostragem ocorreu em agosto de 2025, abrangendo cerca de 4.500 km com orçamento de R$30.000,00.
+**Região Matopiba:** Abrangendo fazendas nos estados do Maranhão e Tocantins, foram selecionadas propriedades nas ecorregiões de Floresta de Cocais e Araguaia Tocantins para complementar a amostragem de solo. Os talhões dessa região apresentam usos de pousio e pastagem na safrinha, com variabilidade na granulometria entre areia franca, franco-argiloso, arenoso e franco-arenoso. A região recebe menor precipitação em relação à Região Central, com total anual de aproximadamente **1.000 mm**. A amostragem ocorreu em agosto de 2025, abrangendo cerca de **4.500 km** com orçamento de **R$30.000,00**.
 
 **Região Sul:** No estado de Mato Grosso do Sul, foram identificadas fazendas com talhões sob usos de soja/trigo, soja/pousio e soja/pastagem, com dois tipos de solo predominantes: franco-arenoso e argilo-arenoso. Por apresentar características edafoclimáticas semelhantes às das demais regiões já amostradas, essa região recebeu prioridade menor no plano amostral. A realização de coletas adicionais nessa região está condicionada à disponibilidade de recursos.
 
 
 ## Coletas em Campo
 
-A coleta na região central foi realizada entre os dias 3 e 28 de Julho de 2025; a amostragem de solo ocorreu em 13 fazendas e 23 talhões. Outras quatro fazendas e oito talhões integraram a coleta na região do Matopiba no mês de Agosto de 2025. 
-No total, 649 amostras foram coletadas (371 indeformadas e 278 deformadas) nas 17 fazendas e 31 talhões (Figura 5). Todas os resultados das amostras foram recebidos no final de Janeiro de 2026.
+A coleta na região central foi realizada entre os dias 3 e 28 de Julho de 2025; a amostragem de solo ocorreu em 13 fazendas e 28 talhões. Outras 4 fazendas e 7 talhões integraram a coleta na região do Matopiba no mês de Agosto de 2025. 
+No total, 649 amostras foram coletadas (**371 indeformadas e 278 deformadas**) nas 17 fazendas e 35 talhões (Figura 5). Todas os resultados das amostras foram recebidos no final de Janeiro de 2026.
 
 ![Distribuição de amostras](../base_dados/images/distribuicao_amostras.png){ width="100%" }
 *Figura 5. Distribuição das fazendas selecionadas para coleta de amostras de carbono no solo.*
 
-Nas amostras de campo houve grande variabilidade em textura e carbono. O carbono em áreas de pastagem variou entre 20 e 88 T ha-1 considerando 0 - 30 cm de profundidade, e em áreas de cultivo varia entre 19 e 72 T ha-1.  Onde temos amostras de pasto e cultivo na
-mesma fazenda, observamos que a maioria mostrou 
-maior estoque de carbono nas áreas cultivadas.
+Nas amostras de campo houve grande variabilidade em textura e carbono. O carbono em áreas de pastagem variou entre 20 e 88 T ha⁻¹ considerando 0 - 30 cm de profundidade, e em áreas de cultivo varia entre **19 e 72 T ha⁻¹**.  Onde temos amostras de pasto e cultivo na mesma fazenda, observou-se que a maioria apresentou **maior estoque de carbono nas áreas cultivadas**.
 
 
 ## Preparação do Modelo Century
 
-Foi realizada uma revisão da literatura para obtenção de dados de referência de carbono orgânico no solo em áreas com cultivo de cana de açúcar e milho no Cerrado na cual foram encontrados dados 25 de sítios sob cultivo de Cana e 42 sob cultivo de milho. Os dados de cana de açúcar encontram-se concentrados na região centro-sul que é a região com clima mais propício para esse cultivo (Oliveira et al., 2012) (Figura 6A) enquanto os dados de milho encontram-se mais bem distribuídos pelo bioma (Figura 6B).
+Foi realizada uma revisão da literatura para obtenção de dados de referência de carbono orgânico no solo em áreas com cultivo de cana de açúcar e milho no Cerrado na qual foram encontrados dados de **25 sítios** sob cultivo de cana e **42 sítios** sob cultivo de milho. Os dados de cana de açúcar encontram-se concentrados na região centro-sul que é a região com clima mais propício para esse cultivo (Oliveira et al., 2012) (Figura 6A) enquanto os dados de milho encontram-se mais bem distribuídos pelo bioma (Figura 6B).
 
 ![Calibração](../base_dados/images/calval.png)
 *Figura 6. Mapa da área de estudo (bioma Cerrado), com a localização dos sítios de calibração (0-20 cm) para os cultivos de: A) cana de açúcar e B) milho.*
 
-A revisão bibliográfica para obtenção de dados de carbono na biomassa da cana de açúcar (Figura 7A) e biomassa e grãos do milho (Figura 7B) precisou incluir dados amostrados em outras regiões do Brasil, uma vez que o número de referências encontradas considerando somente o Cerrado foi muito baixa. Para trabalhos que apresentavam apenas dados de matéria seca a conversão para carbono foi realizada considerando o fator de conversão de 50% (IPCC, 2006).
+A revisão bibliográfica para obtenção de dados de carbono na biomassa da cana de açúcar (Figura 7A) e biomassa e grãos do milho (Figura 7B) precisou incluir dados amostrados em outras regiões do Brasil, uma vez que o número de referências encontradas considerando somente o Cerrado foi muito baixa. Para trabalhos que apresentavam apenas dados de matéria seca a conversão para carbono foi realizada considerando o fator de conversão de **50%** (IPCC, 2006).
 
 ![Referência Cana](../base_dados/images/referencia1.png)
 *Figura 7A. Valores de referência de carbono na biomassa aérea e radicular da cana de açúcar no Brasil.*
