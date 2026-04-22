@@ -5,8 +5,9 @@ Esta seção detalha em módulos os conjuntos de scripts desenvolvidos para o pr
 ```mermaid
 flowchart LR
     A[☁️ Downloads GEE] --> B[🗂️ Prep. Imagens R]
-    B --> C[📍 Modelagem Pontual] | D[🗺️ Espacialização]
-    D --> E[🐍 Validação Python]
+    B --> C[🐍 Verificação Arquivos]
+    C --> D[📍 Modelagem Pontual]
+    C --> E[🗺️ Espacialização]
 ```
 
 ## Downloads das bases ambientais pelo Google Earth Engine
