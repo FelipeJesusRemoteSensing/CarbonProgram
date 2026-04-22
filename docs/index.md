@@ -1,5 +1,10 @@
 ![Monitoramento de Carbono](base_dados/images/IMG_20250722_095057.jpg)
 
+<p align="center">
+  <img src="..." width="700" alt="Área de pastagem monitorada no Cerrado, GO – 2025">
+  <br><em>Área de coleta amostral, Goiás, 2025.</em>
+</p>
+
 # Monitoramento de Carbono - Iniciativa REVERTE®
 
 Bem-vindo à documentação oficial do projeto de **Monitoramento de Carbono**, uma colaboração estratégica entre a **The Nature Conservancy (TNC)**, **Syngenta** e o Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federal de Goiás (**LAPIG/UFG**). 
