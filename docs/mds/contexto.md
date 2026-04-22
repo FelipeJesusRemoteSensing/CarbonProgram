@@ -42,9 +42,9 @@ O Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federa
 
 ```mermaid
 flowchart LR
-    A[Dados Satélitarios e de Campo] --> B[Processamento<br>Espacial · Modelo Century]
+    A[Dados Satelitários e de Campo] --> B[Processamento<br>Espacial · Modelo Century]
     B --> C[Estimativa<br>de Carbono Orgânico<br> do Solo]
-    C --> D[Validação · Campo 2025<br> Protocolo de Verificação e Reprodução]
+    C --> D[Validação · Campo <br> Protocolo de Verificação e Reprodução]
 
 ```
 
