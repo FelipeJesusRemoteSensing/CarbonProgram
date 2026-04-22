@@ -16,9 +16,9 @@ Estão na pasta `Outros_Scripts` (Arquivos que começam com `GEE`):
 
 ```mermaid
 flowchart LR
-    A[MapBiomas Col.10\n1985–2024] --> B[Google Drive\npor fazenda]
-    A --> B[PronaSolos\nEmbrapa]\n\
-    A --> B[TerraClimate\n1958–2024]
+    A[MapBiomas Col.10\n1985–2024] --> D[Google Drive\npor fazenda]
+    B[PronaSolos\nEmbrapa] --> D
+    C[TerraClimate\n1958–2024] --> D
 ```
 
 
@@ -228,6 +228,18 @@ flowchart LR
     D --> E[Gráficos · RMSE\nRanking Top 10]
 ```
 
+A estrutura de pastas recomendada para a **Simulação por ponto** é:
+
+```text
+📦 Diretório do Projeto
+├── 📂 century/              # Arquivos base e executáveis do modelo Century
+├── 📂 century_parametros/   # Planilhas CSV com a lista de parametrizações e alterações
+├── 📂 ponto/                # Arquivos de agendamento (.sch e .100) específicos do ponto
+├── 📂 reference_values/     # Dados observados em campo/laboratório para calibração
+├── 📂 resul/                # Pasta de saída (arquivos .lis, .bin, planilhas e gráficos gerados)
+└── 📄 Projeto_R.Rproj       # Projeto R configurado para interligar scripts e diretórios
+```
+
 - [**1_rodar_simulações_CR_CM.R**](../base_dados/aplicacao/Scripts/Scripts_Ponto/1_rodar_simulações_CR_CM.R): Executa as simulações do modelo Century para os pontos de calibração e validação.
     <br>**Principais Etapas:**
     1. Lê os agendamentos (`.sch` e `.100`) para a inicialização e o uso do solo.
@@ -359,18 +371,6 @@ flowchart LR
         }
         ```
 
-A estrutura de pastas recomendada para a **Simulação por ponto** é:
-
-```text
-📦 Diretório do Projeto
-├── 📂 century/              # Arquivos base e executáveis do modelo Century
-├── 📂 century_parametros/   # Planilhas CSV com a lista de parametrizações e alterações
-├── 📂 ponto/                # Arquivos de agendamento (.sch e .100) específicos do ponto
-├── 📂 reference_values/     # Dados observados em campo/laboratório para calibração
-├── 📂 resul/                # Pasta de saída (arquivos .lis, .bin, planilhas e gráficos gerados)
-└── 📄 Projeto_R.Rproj       # Projeto R configurado para interligar scripts e diretórios
-```
-
 ## Modelagem do Century espacializada para o talhão
 
 Estão na pasta `Scripts_Espacialização`:
@@ -382,6 +382,18 @@ flowchart LR
     C --> D[CSV · SOMSC\npor pixel · ano]
     D --> E[Rasters TIFF\nanuais por talhão]
     E --> F[Mosaico final\nSOMSC_ano.tif]
+```
+
+A estrutura de pastas recomendada para a **Simulação espacializada** é:
+
+```text
+📦 Diretório do Projeto
+├── 📂 century/              # Arquivos base e executáveis do modelo Century
+├── 📂 dados/                # Diretório central de processamento espacial
+│   ├── 📂 agendamento/      # Arquivos de agendamento (.sch e .100) para cada classe ou bioma
+│   ├── 📂 blocos/           # Tabelas CSV com os dados ambientais extraídos dos rasters pixel a pixel
+│   └── 📂 output/           # Diretório onde as saídas do modelo serão armazenadas e convertidas
+└── 📄 Projeto_R.Rproj       # Projeto R configurado para interligar scripts e diretórios
 ```
 
 - [**0_f_run_century_spatial_reverte_pasta.R**](../base_dados/aplicacao/Scripts/Scripts_Espacialização/0_f_run_century_spatial_reverte_pasta.R): Função principal que orquestra todo o fluxo de execução espacializada do modelo Century.
@@ -501,18 +513,6 @@ flowchart LR
         mosaico_final <- do.call(mosaic, c(lista_rasters, fun="mean"))
         writeRaster(mosaico_final, "outputs/MOSAICO_SOMSC_2024.tif", overwrite=TRUE)
         ```
-
-A estrutura de pastas recomendada para a **Simulação espacializada** é:
-
-```text
-📦 Diretório do Projeto
-├── 📂 century/              # Arquivos base e executáveis do modelo Century
-├── 📂 dados/                # Diretório central de processamento espacial
-│   ├── 📂 agendamento/      # Arquivos de agendamento (.sch e .100) para cada classe ou bioma
-│   ├── 📂 blocos/           # Tabelas CSV com os dados ambientais extraídos dos rasters pixel a pixel
-│   └── 📂 output/           # Diretório onde as saídas do modelo serão armazenadas e convertidas
-└── 📄 Projeto_R.Rproj       # Projeto R configurado para interligar scripts e diretórios
-```
 
 ## Extras
 
