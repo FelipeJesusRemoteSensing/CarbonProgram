@@ -25,7 +25,7 @@ A calibração do modelo requer dados de estoques de carbono, densidade, pH e gr
 ```mermaid
 flowchart LR
     classDef default fontSize:30px,padding:20px;
-    A[111 sítios amostrais<br>Cerrado · Pastagem · Soja · Cana] --> B[Dados de entrada<br>densidade · pH · granulometria · Temperatura · Precipitação · Uso do Solo]
+    A[111 sítios amostrais<br>Cerrado · Pastagem · Soja · Cana] --> B[Dados de entrada<br>solo · clima · uso do solo]
     B --> C[Rodadas do<br>Modelo Century]
     C --> D[Comparação com<br>dados observados]
     D -->|ajuste de parâmetros| C
