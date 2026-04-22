@@ -23,7 +23,7 @@ flowchart TD
     C --> E
     D --> E
 
-    E --> FSimulações\nModelo Century]
+    E --> F[Simulações\nModelo Century]
 ```
 
 Com o intuito de verificar a compatibilidade entre as fontes de dados climáticos, foi conduzida uma análise preliminar de consistência entre as séries históricas de todas as bases e comparação com dados de torres meteorológicas. A equipe técnica concluiu que a base de dados TerraClimate se mostrou mais completa, com estimativas de variáveis climáticas mais próximas aos dados das torres. Dessa forma, as variáveis climáticas foram extraídas e organizadas individualmente para cada fazenda.
@@ -80,7 +80,8 @@ As fazendas selecionadas foram separadas em três regiões, especificando a rota
 
 ## Coletas em Campo
 
-A coleta na região central foi realizada entre os dias 3 e 28 de Julho de 2025; a amostragem de solo ocorreu em 13 fazendas e 23 talhões. Outras quatro fazendas e oito talhões integraram a coleta na região do Matopiba no mês de Agosto de 2025. No total, 649 amostras foram coletadas (371 indeformadas e 278 deformadas) nas 17 fazendas e 31 talhões (Figura 2). Todas os resultados das amostras foram recebidos no final de Janeiro de 2026.
+A coleta na região central foi realizada entre os dias 3 e 28 de Julho de 2025; a amostragem de solo ocorreu em 13 fazendas e 23 talhões. Outras quatro fazendas e oito talhões integraram a coleta na região do Matopiba no mês de Agosto de 2025. 
+No total, 649 amostras foram coletadas (371 indeformadas e 278 deformadas) nas 17 fazendas e 31 talhões (Figura 2). Todas os resultados das amostras foram recebidos no final de Janeiro de 2026.
 
 ![Distribuição de amostras](../base_dados/images/distribuicao_amostras.png){ width="100%" }
 *Figura 3. Distribuição das fazendas selecionadas para coleta de amostras de carbono no solo.*
