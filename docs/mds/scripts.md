@@ -359,15 +359,16 @@ flowchart LR
         }
         ```
 
-A estrutura de pastas recomendada para Simulação por ponto é:
+A estrutura de pastas recomendada para a **Simulação por ponto** é:
 
 ```text
-century (arquivos century)
-century_parametros (csv com alterações)
-ponto (sch e .100)
-reference_values (dados de referencia)
-resul (resultados)
-Projeto R para interligar os scripts e pastas
+📦 Diretório do Projeto
+├── 📂 century/              # Arquivos base e executáveis do modelo Century
+├── 📂 century_parametros/   # Planilhas CSV com a lista de parametrizações e alterações
+├── 📂 ponto/                # Arquivos de agendamento (.sch e .100) específicos do ponto
+├── 📂 reference_values/     # Dados observados em campo/laboratório para calibração
+├── 📂 resul/                # Pasta de saída (arquivos .lis, .bin, planilhas e gráficos gerados)
+└── 📄 Projeto_R.Rproj       # Projeto R configurado para interligar scripts e diretórios
 ```
 
 ## Modelagem do Century espacializada para o talhão
@@ -501,15 +502,16 @@ flowchart LR
         writeRaster(mosaico_final, "outputs/MOSAICO_SOMSC_2024.tif", overwrite=TRUE)
         ```
 
-A estrutura de pastas recomendada para Simulação espacializada é:
+A estrutura de pastas recomendada para a **Simulação espacializada** é:
 
 ```text
-century (arquivos century)
-dados 
- - agendamento (arquivo sch e .100)
- - blocos (dados ambientais extraidas dos rasters por pixel)
- - output
-Projeto R para interligar os scripts e pastas
+📦 Diretório do Projeto
+├── 📂 century/              # Arquivos base e executáveis do modelo Century
+├── 📂 dados/                # Diretório central de processamento espacial
+│   ├── 📂 agendamento/      # Arquivos de agendamento (.sch e .100) para cada classe ou bioma
+│   ├── 📂 blocos/           # Tabelas CSV com os dados ambientais extraídos dos rasters pixel a pixel
+│   └── 📂 output/           # Diretório onde as saídas do modelo serão armazenadas e convertidas
+└── 📄 Projeto_R.Rproj       # Projeto R configurado para interligar scripts e diretórios
 ```
 
 ## Extras
