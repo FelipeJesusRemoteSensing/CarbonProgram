@@ -28,7 +28,7 @@ O LAPIG em parceria com UFS e TNC tem trabalhado ao longo dos últimos anos na m
 A calibração do modelo requer dados de estoques de carbono, densidade, pH e granulometria do solo, além de informações sobre a vegetação. Atualmente, as amostras exibem variabilidade regional, climática e de tipos de solo. No entanto, o agrupamento dos locais de amostragem resulta em uma cobertura desigual, com algumas regiões apresentando um número reduzido de amostras.
 
 ```mermaid
-flowchart TD
+flowchart LR
     classDef node font-size:16px
     A[111 sítios amostrais<br>Cerrado · Pastagem · Soja · Cana] --> B[Dados de entrada<br>solo · clima · uso do solo]
     B --> C[Rodadas do<br>Modelo Century]
@@ -90,4 +90,4 @@ Posteriormente, os dados de granulometria (argila, areia e silte) do **PronaSolo
 Para detalhes sobre os dados utilizados e os scripts desenvolvidos, consulte as seções:
 
 - [Requisitos para Modelagem](requisitos_para_modelagem.md)
-- [Processos (Scripts)](scripts.md)
+- [Processamento e Scripts](scripts.md)

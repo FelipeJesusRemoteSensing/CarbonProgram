@@ -51,4 +51,4 @@ flowchart LR
 Para detalhes sobre os dados utilizados e os scripts desenvolvidos, consulte as seções:
 
 - [Requisitos para Modelagem](requisitos_para_modelagem.md)
-- [Processos (Scripts)](scripts.md)
+- [Processamento e Scripts](scripts.md)

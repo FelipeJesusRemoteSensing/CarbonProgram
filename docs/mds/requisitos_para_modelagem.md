@@ -157,4 +157,4 @@ Os parâmetros ajustados diferem para sítios com milho simulado como safra prin
 
 ---
 - [← Referências Conceituais](referencias_conceituais.md)
-- [Processos (Scripts) →](scripts.md)
+- [Processamento e Scripts](scripts.md)

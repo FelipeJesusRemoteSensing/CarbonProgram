@@ -25,7 +25,7 @@ O projeto conta com scripts automatizados para processamento de dados geoespacia
 - **Espacialização:** Rotinas em R para rodar o modelo Century em escala de talhão.
 - **Validação:** Ferramentas em Python para verificação de integridade do banco de dados.
 
-A lista detalhada e os links para cada script podem ser encontrados na página de **[Processos (Scripts)](https://FelipeJesusRemoteSensing.github.io/CarbonProgram/mds/scripts/)**.
+A lista detalhada e os links para cada script podem ser encontrados na página de **[Processamento e Scripts](https://FelipeJesusRemoteSensing.github.io/CarbonProgram/mds/scripts/)**.
 
 
 ---
