@@ -1,10 +1,12 @@
 # Contexto
 
+> Esta seção apresenta o cenário que motivou o projeto: o problema da degradação de pastagens no Brasil, a resposta do programa REVERTE® e os desafios científicos do monitoramento de carbono no solo.
+
 ## Panorama da Pecuária no Brasil
 
-Apesar do Brasil ser o maior exportador de carne do mundo (2.327 toneladas em 2022) (FAO, 2023), suas práticas de pecuária são predominantemente extensivas, caracterizadas pelo baixo uso de tecnologia e baixa produtividade (Oliveira et al., 2018), o que implica em grandes rebanhos distribuídos em vastas áreas de pastagens, ocupando cerca de 21% do território nacional (Parente et al., 2017).
+Apesar do Brasil ser o maior exportador de carne do mundo (2.327 toneladas em 2022) (FAO, 2023), suas práticas de pecuária são predominantemente extensivas, caracterizadas pelo baixo uso de tecnologia e baixa produtividade (Oliveira et al., 2018), o que implica em grandes rebanhos distribuídos em vastas áreas de pastagens, ocupando cerca de **21%** do território nacional (Parente et al., 2017).
 
-A prevalência de práticas inadequadas de manejo explica tanto os baixos níveis de produtividade na pecuária quanto a degradação e o abandono de pastagens (Macedo et al., 2013). Resultados recentes obtidos pelo Lapig/UFG indicam que cerca de 98 Mha de pastagens no Brasil apresentam algum sinal de degradação (Santos et al., 2022), enquanto outros 10 Mha constituem atualmente áreas abandonadas (Parente et al., 2021).
+A prevalência de práticas inadequadas de manejo explica tanto os baixos níveis de produtividade na pecuária quanto a degradação e o abandono de pastagens (Macedo et al., 2013). Resultados recentes obtidos pelo Lapig/UFG indicam que cerca de **98 Mha** de pastagens no Brasil apresentam algum sinal de degradação (Santos et al., 2022), enquanto outros **10 Mha** constituem atualmente áreas abandonadas (Parente et al., 2021).
 
 No entanto, a restauração e o uso mais eficiente dessas vastas áreas de pastagens degradadas podem gerar ganhos ambientais significativos, incluindo a conservação do solo (Arantes et al., 2016), além de maior sequestro de carbono atmosférico (por exemplo, Bustamante et al., 2012). Ademais, o melhor manejo e otimização do uso das áreas de pastagens pode contribuir para a redução do desmatamento, dado que, ao longo dos anos, a expansão do rebanho tem ocorrido principalmente às custas da abertura de novas áreas, especialmente nos biomas Amazônia e Cerrado (Parente e Ferreira, 2018). De fato, as vastas áreas de pastagens no Brasil, particularmente aquelas com sinais de degradação, podem e devem ser consideradas reservas de terras disponíveis para outros usos (por exemplo, Lambin et al., 2013).
 
