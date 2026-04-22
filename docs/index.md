@@ -12,7 +12,7 @@ Bem-vindo à documentação oficial do projeto de **Monitoramento de Carbono**, 
 ## Objetivo do Projeto
 O programa REVERTE® busca apoiar produtores rurais na recuperação de áreas degradadas no Cerrado, promovendo a transição para sistemas de cultivo agrícola mais produtivos e sustentáveis. Este repositório documenta os protocolos científicos e técnicos utilizados para estimar o sequestro de carbono orgânico no solo e os impactos ambientais dessas práticas.
 
-↗ [↗ Saiba mais sobre a Iniciativa REVERTE®](https://www.tnc.org.br/sobre-a-tnc/quem-somos/como-trabalhamos/nossos-apoiadores/apoiadores/syngenta-reverte/)
+[↗ Saiba mais sobre a Iniciativa REVERTE®](https://www.tnc.org.br/sobre-a-tnc/quem-somos/como-trabalhamos/nossos-apoiadores/apoiadores/syngenta-reverte/)
 
 ---
 
