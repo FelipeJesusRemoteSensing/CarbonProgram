@@ -8,6 +8,10 @@ theme:
 
 extra_css:
   - stylesheets/extra.css
+
+plugins:
+  - search
+  - mermaid2
  
 nav:
   - 'Início': 'index.md'
