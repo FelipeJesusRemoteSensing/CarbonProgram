@@ -14,6 +14,14 @@ flowchart LR
 
 Estão na pasta `Outros_Scripts` (Arquivos que começam com `GEE`):
 
+```mermaid
+flowchart LR
+    A[MapBiomas Col.10\n1985–2024] --> B[Google Drive\npor fazenda]
+    A --> B[PronaSolos\nEmbrapa]\n\
+    A --> B[TerraClimate\n1958–2024]
+```
+
+
 - [**GEE - Download Lulc Mapbiomas.txt**](../base_dados/aplicacao/Scripts/Outros_Scripts/GEE%20-%20Download%20Lulc%20Mapbiomas.txt): Script para download de mapas de uso e cobertura do solo do MapBiomas.
     <br>**Principais Etapas:**
     1. Carrega os limites (rasters mascarados) das fazendas.
@@ -98,6 +106,14 @@ Estão na pasta `Outros_Scripts` (Arquivos que começam com `GEE`):
 ## Processamento de preparação de Imagens no Rstudio
 
 Estão na pasta `Outros_Scripts` (Arquivos que começam com `R`):
+
+```mermaid
+flowchart LR
+    A[Rasters brutos\nGoogle Drive] --> B[Imagem de referência\nID por pixel]
+    B --> C[Recorte por talhão]
+    C --> D[Alinhamento espacial\nresample · máscara]
+    D --> E[Rasters prontos\npor fazenda]
+```
 
 - [**R - Criar imagem referencia.R**](../base_dados/aplicacao/Scripts/Outros_Scripts/R%20-%20Criar%20imagem%20referencia.R): Geração de imagem raster de referência contendo IDs únicos por pixel para a área de estudo.
     <br>**Principais Etapas:**
@@ -203,6 +219,14 @@ Estão na pasta `Outros_Scripts` (Arquivos que começam com `R`):
 ## Modelagem do Century para o ponto amostral
 
 Estão na pasta `Scripts_Ponto`:
+
+```mermaid
+flowchart LR
+    A[Parâmetros\n.sch · .100] --> B[Simulações Century\nclima real · médio]
+    B --> C[Saídas .lis\npor simulação]
+    C --> D[CSV consolidado]
+    D --> E[Gráficos · RMSE\nRanking Top 10]
+```
 
 - [**1_rodar_simulações_CR_CM.R**](../base_dados/aplicacao/Scripts/Scripts_Ponto/1_rodar_simulações_CR_CM.R): Executa as simulações do modelo Century para os pontos de calibração e validação.
     <br>**Principais Etapas:**
@@ -350,6 +374,15 @@ Projeto R para interligar os scripts e pastas
 
 Estão na pasta `Scripts_Espacialização`:
 
+```mermaid
+flowchart LR
+    A[Rasters por talhão\nLULC · Solo · Clima] --> B[Extração CSV\npor pixel · bloco]
+    B --> C[Simulações Century\npor pixel]
+    C --> D[CSV · SOMSC\npor pixel · ano]
+    D --> E[Rasters TIFF\nanuais por talhão]
+    E --> F[Mosaico final\nSOMSC_ano.tif]
+```
+
 - [**0_f_run_century_spatial_reverte_pasta.R**](../base_dados/aplicacao/Scripts/Scripts_Espacialização/0_f_run_century_spatial_reverte_pasta.R): Função principal que orquestra todo o fluxo de execução espacializada do modelo Century.
     <br>**Principais Etapas:**
     1. Define funções para ler arquivos binários (`.bin`) e de texto (`.lis`) gerados pelo executável do Century.
@@ -482,6 +515,14 @@ Projeto R para interligar os scripts e pastas
 ## Extras
 
 Estão na pasta `Outros_Scripts` (Arquivos que começam com `Py`):
+
+```mermaid
+flowchart LR
+    A[Pastas de rasters\npor fazenda] --> B[Sequências esperadas\nLULC · Solo · Clima]
+    B --> C{Arquivos\ncompletos?}
+    C -->|✅ Sim| D[Pronto para\nmodelagem]
+    C -->|❌ Não| E[Alerta no console\nfazenda · mês · ano]
+```
 
 - [**PY - Conferir se há arquivos faltantes nas pastas.py**](../base_dados/aplicacao/Scripts/Outros_Scripts/PY%20-%20Conferir%20se%20há%20arquivos%20faltantes%20nas%20pastas.py): Script utilitário para validação da integridade estrutural, verificando se existem arquivos faltantes nas pastas antes da execução da modelagem.
     <br>**Principais Etapas:**
