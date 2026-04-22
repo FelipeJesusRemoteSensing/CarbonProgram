@@ -38,7 +38,7 @@ Sem uma especificidade mais granular nas estimativas de armazenamento de carbono
 
 ## O Papel do LAPIG/UFG
 
-O Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federal de Goiás (LAPIG/UFG), referência quanto ao monitoramento biofísico-ambiental de paisagens naturais e antrópicas e responsável pela produção dos mapas anuais de pastagem do MapBiomas para todo o país, irá desenvolver e combinar abordagens e metodologias estabelecidas e validadas baseadas em modelagem para testar a capacidade de monitoramento específico de projetos individuais.
+O Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federal de Goiás (LAPIG/UFG), é referência quanto ao monitoramento biofísico-ambiental de paisagens naturais e antrópicas e responsável pela produção dos mapas anuais de pastagem do MapBiomas para todo o país, irá desenvolver e combinar abordagens e metodologias estabelecidas e validadas baseadas em modelagem para testar a capacidade de monitoramento específico de projetos individuais.
 
 ```mermaid
 flowchart TD
