@@ -1,0 +1,133 @@
+# LAPIG - Grupo Carbono
+#
+# 2025-05-30
+# Marcos Cardoso; Maria Hunter
+#
+# https://code.earthengine.google.com/4ec9305e8eaa5f84447e72cb504d7fda?noload=true
+#
+# --
+
+
+var embrapaSand = ee.Image('projects/mapbiomas-workspace/SOLOS/REFERENCIAS/EMBRAPA/embrapa_pronassolos_sand');
+var embrapaSilt = ee.Image('projects/mapbiomas-workspace/SOLOS/REFERENCIAS/EMBRAPA/embrapa_pronassolos_silt');
+var embrapaClay = ee.Image('projects/mapbiomas-workspace/SOLOS/REFERENCIAS/EMBRAPA/embrapa_pronassolos_clay');
+
+var bkd_0_5cm = ee.Image('projects/lapig-459118/assets/embrapa_pronassolos/br_bulk_density_0-5cm_pred_Mg_m3');
+var bkd_5_15cm = ee.Image('projects/lapig-459118/assets/embrapa_pronassolos/br_bulk_density_5-15cm_pred_Mg_m3');
+var bkd_15_30cm = ee.Image('projects/lapig-459118/assets/embrapa_pronassolos/br_bulk_density_15-30cm_pred_Mg_m3');
+
+var ph_0_5cm = ee.Image('projects/lapig-459118/assets/embrapa_pronassolos/br_ph_h2o_0-5cm');
+var ph_5_15cm = ee.Image('projects/lapig-459118/assets/embrapa_pronassolos/br_ph_h2o_5-15cm');
+var ph_15_30cm = ee.Image('projects/lapig-459118/assets/embrapa_pronassolos/br_ph_h2o_15-30cm');
+
+
+var fazendas_rasters = ee.ImageCollection('');
+
+var processarSolo = function(band0_5, band5_15, band15_30, outputBandName) {
+  var ponderado = band0_5.multiply(1/6)
+                   .add(band5_15.multiply(2/6))
+                   .add(band15_30.multiply(3/6));
+
+  ponderado = ponderado.rename(outputBandName);
+
+  var resampled = ponderado.reduceResolution({
+    reducer: ee.Reducer.mean(),
+    maxPixels: 65500
+  }).reproject({
+    crs: 'EPSG:4326',
+    scale: 30
+  });
+
+  return resampled;
+};
+
+var areiaProcessada = processarSolo(
+  embrapaSand.select('sand_content_0_5cm_pred_g_kg'),
+  embrapaSand.select('sand_content_5_15cm_pred_g_kg'),
+  embrapaSand.select('sand_content_15_30cm_pred_g_kg'),
+  'sand_0-30'
+);
+
+var siltProcessado = processarSolo(
+  embrapaSilt.select('silt_content_0_5cm_pred_g_kg'),
+  embrapaSilt.select('silt_content_5_15cm_pred_g_kg'),
+  embrapaSilt.select('silt_content_15_30cm_pred_g_kg'),
+  'silt_0-30'
+);
+
+var clayProcessado = processarSolo(
+  embrapaClay.select('clay_content_0_5cm_pred_g_kg'),
+  embrapaClay.select('clay_content_5_15cm_pred_g_kg'),
+  embrapaClay.select('clay_content_15_30cm_pred_g_kg'),
+  'clay_0-30'
+);
+
+var bkdProcessado = processarSolo(bkd_0_5cm, bkd_5_15cm, bkd_15_30cm, 'bkd_0-30');
+var phProcessado = processarSolo(ph_0_5cm, ph_5_15cm, ph_15_30cm, 'ph_0-30');
+
+
+var idsDasFazendas = fazendas_rasters.aggregate_array('system:index').getInfo();
+
+idsDasFazendas.forEach(function(id) {
+  var fazendaImage = fazendas_rasters.filter(ee.Filter.eq('system:index', id)).first();
+
+  if (fazendaImage) {
+    var geometry = fazendaImage.geometry();
+    var mascaraFazenda = fazendaImage.gt(0);
+
+    var areiaRecortadaBruto = areiaProcessada.clip(geometry);
+    var areiaMascarada = areiaRecortadaBruto.updateMask(mascaraFazenda);
+    Export.image.toDrive({
+      image: areiaMascarada.round().int16(),
+      description: 'sand_0_30cm_' + id,
+      folder: 'embrapa',
+      scale: 30,
+      region: geometry.bounds(),
+      maxPixels: 1e13
+    });
+
+    var siltRecortadoBruto = siltProcessado.clip(geometry);
+    var siltMascarado = siltRecortadoBruto.updateMask(mascaraFazenda);
+    Export.image.toDrive({
+      image: siltMascarado.round().int16(),
+      description: 'silt_0_30cm_' + id,
+      folder: 'embrapa',
+      scale: 30,
+      region: geometry.bounds(),
+      maxPixels: 1e13
+    });
+
+    var clayRecortadoBruto = clayProcessado.clip(geometry);
+    var clayMascarado = clayRecortadoBruto.updateMask(mascaraFazenda);
+    Export.image.toDrive({
+      image: clayMascarado.round().int16(),
+      description: 'clay_0_30cm_' + id,
+      folder: 'embrapa',
+      scale: 30,
+      region: geometry.bounds(),
+      maxPixels: 1e13
+    });
+    
+    var bkdRecortadoBruto = bkdProcessado.clip(geometry);
+    var bkdMascarado = bkdRecortadoBruto.updateMask(mascaraFazenda);
+    Export.image.toDrive({
+      image: bkdMascarado.round().int16(),
+      description: 'bkd_0_30cm_' + id,
+      folder: 'embrapa',
+      scale: 30,
+      region: geometry.bounds(),
+      maxPixels: 1e13
+    });
+    
+    var phRecortadoBruto = phProcessado.clip(geometry);
+    var phMascarado = phRecortadoBruto.updateMask(mascaraFazenda);
+    Export.image.toDrive({
+      image: phMascarado.round().int16(),
+      description: 'ph_0_30cm_' + id,
+      folder: 'embrapa',
+      scale: 30,
+      region: geometry.bounds(),
+      maxPixels: 1e13
+    });
+  }
+});
