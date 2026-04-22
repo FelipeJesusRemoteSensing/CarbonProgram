@@ -7,6 +7,7 @@
 .wy-menu-vertical a {
     color: #b3b3b3 !important;
 }
+
 .wy-menu-vertical a:hover {
     background-color: #2980b9 !important;
     color: #ffffff !important;
@@ -32,28 +33,33 @@
 .wy-menu-vertical li.current {
     background: #e3e3e3 !important;
 }
-.wy-menu-vertical li.current > a,
-.wy-menu-vertical li.on > a {
+
+.wy-menu-vertical li.current>a,
+.wy-menu-vertical li.on>a {
     color: #404040 !important;
     background: #fcfcfc !important;
     border-right: solid 1px #c9c9c9 !important;
 }
-.wy-menu-vertical li.toctree-l1.current > a {
+
+.wy-menu-vertical li.toctree-l1.current>a {
     border-bottom: solid 1px #c9c9c9 !important;
     border-top: solid 1px #c9c9c9 !important;
 }
+
 .wy-menu-vertical li.current a:hover {
     background: #d6d6d6 !important;
     color: #404040 !important;
 }
 
 /* Ajustes de sub-menus de segundo/terceiro nível quando ativados */
-.wy-menu-vertical li.toctree-l2.current > a {
+.wy-menu-vertical li.toctree-l2.current>a {
     background: #c9c9c9 !important;
 }
-.wy-menu-vertical li.toctree-l3.current > a {
+
+.wy-menu-vertical li.toctree-l3.current>a {
     background: #bdbdbd !important;
 }
+
 .wy-menu-vertical li.current ul li a {
     color: #404040 !important;
 }
@@ -64,8 +70,8 @@
 }
 
 /* 3. Ajuste do texto e links dentro do bloco azul para ficarem legíveis (brancos) */
-.wy-side-nav-search > a,
-.wy-side-nav-search .wy-dropdown > a {
+.wy-side-nav-search>a,
+.wy-side-nav-search .wy-dropdown>a {
     color: #ffffff !important;
     font-weight: bold !important;
 }
@@ -98,25 +104,30 @@
 
 /* Recolher a caixa de busca no desktop (Tema Material) */
 @media screen and (min-width: 76.25em) {
-  .md-search__form {
-    width: 2.4rem !important;
-    background-color: transparent !important;
-    transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s !important;
-  }
-  
-  .md-search__form:hover,
-  .md-search__form:focus-within {
-    width: 14rem !important;
-    background-color: rgba(0, 0, 0, 0.26) !important;
-  }
-  
-  /* Esconder o placeholder quando recolhido */
-  .md-search__form:not(:hover):not(:focus-within) .md-search__input::placeholder {
-    color: transparent !important;
-  }
+    .md-search__form {
+        width: 2.4rem !important;
+        background-color: transparent !important;
+        transition: width 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.25s !important;
+    }
+
+    .md-search__form:hover,
+    .md-search__form:focus-within {
+        width: 14rem !important;
+        background-color: rgba(0, 0, 0, 0.26) !important;
+    }
+
+    /* Esconder o placeholder quando recolhido */
+    .md-search__form:not(:hover):not(:focus-within) .md-search__input::placeholder {
+        color: transparent !important;
+    }
 }
 
 /* Forçar tamanho da fonte nos fluxogramas Mermaid */
 .mermaid svg text {
-  font-size: 16px !important;
+    font-size: 16px !important;
+}
+
+.mermaid svg {
+    font-size: 18px !important;
+    min-width: 100%;
 }
