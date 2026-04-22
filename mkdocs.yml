@@ -6,6 +6,7 @@ repo_name: 'CarbonProgram'
 
 theme:
   name: material
+  logo: base_dados/images/Sensoriamento_Remoto_e_Geoprocessamento_-_branca.png
   language: pt-BR
   palette:
     - scheme: default
