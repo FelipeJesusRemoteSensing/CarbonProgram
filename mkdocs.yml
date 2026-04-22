@@ -36,6 +36,7 @@ extra_javascript:
 
 markdown_extensions:
   - attr_list
+  - pymdownx.details
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid
