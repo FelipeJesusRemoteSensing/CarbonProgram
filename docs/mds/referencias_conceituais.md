@@ -14,14 +14,23 @@ O modelo é composto de três sub-modelos: vegetação, água e dinâmica de mat
 
 ## Calibração e Validação no Cerrado Brasileiro
 
-O LAPIG em parceria com UFS e TNC tem trabalhado ao longo dos últimos anos na melhoria do modelo Century na região do Cerrado Brasileiro (Santos et al., 2022, Santos et al., 2024) e na calibração do modelo para usos típicos da região. Atualmente, já possui a calibração e validação a partir de 111 sítios distribuídos (Figura 2) na região para três usos específicos: Cerrado (39), pastagem (30) e soja (42). 
-
-A calibração do modelo requer dados de estoques de carbono, densidade, pH e granulometria do solo, além de informações sobre a vegetação. Atualmente, as amostras exibem variabilidade regional, climática e de tipos de solo. No entanto, o agrupamento dos locais de amostragem resulta em uma cobertura desigual, com algumas regiões apresentando um número reduzido de amostras.
-
-Para otimizar o modelo, a seleção de áreas de amostragem de solo deve considerar a distribuição atual das propriedades rurais que integram o programa REVERTE®, bem como a baixa representatividade espacial nos locais de calibração e validação. A escolha das fazendas para amostragem adicional priorizou aquelas que possibilitam a comparação entre áreas de soja e pastagens, levando em conta fatores como solo, região, dados de manejo disponíveis e o tempo decorrido desde a conversão, conforme o agrupamento das fazendas e suas variáveis específicas.
+O LAPIG em parceria com UFS e TNC tem trabalhado ao longo dos últimos anos na melhoria do modelo Century na região do Cerrado Brasileiro (Santos et al., 2022, Santos et al., 2024) e na calibração do modelo para usos típicos da região. Atualmente, já possui a calibração e validação a partir de **111 sítios** distribuídos (Figura 2) na região para três usos específicos: Cerrado (**39**), pastagem (**30**) e soja (**42**). 
 
 ![Distribuição de sítios de calibração](../base_dados/images/sitios_calval.png)
 *Figura 2. Distribuição de 111 sítios utilizada para calibração e validação de modelo CENTURY divididos entre 3 coberturas: cerrado (39), pastagem (30) e soja (42).*
+
+A calibração do modelo requer dados de estoques de carbono, densidade, pH e granulometria do solo, além de informações sobre a vegetação. Atualmente, as amostras exibem variabilidade regional, climática e de tipos de solo. No entanto, o agrupamento dos locais de amostragem resulta em uma cobertura desigual, com algumas regiões apresentando um número reduzido de amostras.
+
+```mermaid
+flowchart LR
+    A[111 sítios amostrais<br>Cerrado · Pastagem · Soja] --> B[Dados de entrada<br>carbono · pH · granulometria]
+    B --> C[Rodadas do<br>Modelo Century]
+    C --> D[Comparação com<br>dados observados]
+    D -->|ajuste de parâmetros| C
+    D --> E[✅ Modelo calibrado<br>para as culturas no Cerrado]
+```
+
+Para otimizar o modelo, a seleção de áreas de amostragem de solo deve considerar a distribuição atual das propriedades rurais que integram o programa REVERTE®, bem como a baixa representatividade espacial nos locais de calibração e validação. A escolha das fazendas para amostragem adicional priorizou aquelas que possibilitam a comparação entre áreas de soja e pastagens, levando em conta fatores como solo, região, dados de manejo disponíveis e o tempo decorrido desde a conversão, conforme o agrupamento das fazendas e suas variáveis específicas.
 
 ## Variáveis e Dados Complementares
 
@@ -61,11 +70,14 @@ As características edáficas foram extraídas do PronaSolos (Embrapa), com reso
 
 ---
 
-> 📌 Posteriormente, os dados de granulometria (argila, areia e silte) do **PronaSolos** foram substituídos pelos dados do **MapBiomas Solo**, que oferecem maior detalhamento espacial para o bioma Cerrado, permitindo a utilização de dados mais proximos ao encontrado em campo, e consequentemente estimativas mais acuradas dos estoques de carbono orgânico no solo. Os dados de pH e densidade do solo foram mantidos do PronaSolos.
+Posteriormente, os dados de granulometria (argila, areia e silte) do **PronaSolos** foram substituídos pelos dados do **MapBiomas Solo**, que oferecem maior detalhamento espacial para o bioma Cerrado, permitindo a utilização de dados mais proximos ao encontrado em campo, e consequentemente estimativas mais acuradas dos estoques de carbono orgânico no solo. Os dados de pH e densidade do solo foram mantidos do PronaSolos.
 
 ![PronassolosXMapbiomas](../base_dados/images/pronaxmapbioomas.png)
 *Figura 7. Comparativo dos dados de granulometria (argila, areia e silte) do PronaSolos e MapBiomas Solo.*
 
 ---
-- [Contexto](contexto.md)
+
+Para detalhes sobre os dados utilizados e os scripts desenvolvidos, consulte as seções:
+
 - [Requisitos para Modelagem](requisitos_para_modelagem.md)
+- [Processos (Scripts)](scripts.md)
