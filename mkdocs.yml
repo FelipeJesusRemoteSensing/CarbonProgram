@@ -35,6 +35,7 @@ extra_javascript:
   - https://unpkg.com/mermaid@11/dist/mermaid.min.js
 
 markdown_extensions:
+  - attr_list
   - pymdownx.superfences:
       custom_fences:
         - name: mermaid

@@ -1,4 +1,9 @@
-# Estabelecimento dos requisitos e informações para modelagem
+# Requisitos para Modelagem
+
+> Esta seção detalha o processamento de dados geoespaciais, o plano amostral 
+> de campo e a preparação do modelo Century para as culturas do Cerrado.
+
+---
 
 Para subsidiar as simulações do modelo Century no contexto do projeto REVERTE®, foi realizado um extenso processamento de dados geoespaciais e ambientais. Inicialmente, foi estruturado um banco de dados com informações de uso e cobertura da terra provenientes da Coleção 10 do MapBiomas (Mapbiomas, 2025), abrangendo o período de 1985 a 2024, com resolução espacial de 30 metros. Esses dados foram essenciais para caracterizar o histórico de uso da terra nas 36 fazendas participantes localizadas no Cerrado entre os estados de Goiás, Mato Grosso, Mato Grosso do Sul, Tocantins e Maranhão.
 
@@ -6,10 +11,10 @@ Complementarmente, foram processadas séries temporais de NDVI mensais, com o ob
 
 Com o intuito de verificar a compatibilidade entre as fontes de dados climáticos, foi conduzida uma análise preliminar de consistência entre as séries históricas de todas as bases e comparação com dados de torres meteorológicas. A equipe técnica concluiu que a base de dados TerraClimate se mostrou mais completa, com estimativas de variáveis climáticas mais próximas aos dados das torres. Dessa forma, as variáveis climáticas foram extraídas e organizadas individualmente para cada fazenda.
 
-Para garantir a acurácia na identificação do uso da terra atual e recente, foi elaborada uma rotina específica no **Google Earth Engine** (Figura 4) que realiza a extração de todas as imagens disponíveis do sensor Sentinel-2A para os polígonos dos talhões das fazendas. O [script implementado](../mds/scripts.md#downloads-e-gee) permite a visualização otimizada das imagens em composição colorida real, além da geração automática da série temporal de NDVI para o ponto central de cada talhão. A frequência das imagens (a cada cinco dias) viabilizou a inspeção visual detalhada dos usos agrícolas praticados em cada área, mesmo em cenários com elevada cobertura de nuvens. Além de identificação de cobertura e cultivo sub-anual, permitiu identificar datas estimadas para manejos como revolvimento de solo ou distúrbios como queimas.
+Para garantir a acurácia na identificação do uso da terra atual e recente, foi elaborada uma rotina específica no **Google Earth Engine** (Figura 1) que realiza a extração de todas as imagens disponíveis do sensor Sentinel-2A para os polígonos dos talhões das fazendas. O [script implementado](../mds/scripts.md#downloads-e-gee) permite a visualização otimizada das imagens em composição colorida real, além da geração automática da série temporal de NDVI para o ponto central de cada talhão. A frequência das imagens (a cada cinco dias) viabilizou a inspeção visual detalhada dos usos agrícolas praticados em cada área, mesmo em cenários com elevada cobertura de nuvens. Além de identificação de cobertura e cultivo sub-anual, permitiu identificar datas estimadas para manejos como revolvimento de solo ou distúrbios como queimas.
 
 ![Código de inspeção](../base_dados/images/codigo_inspec.png)
-*Figura 4. Código desenvolvido no Google Earth Engine para inspeção visual de talhões e extração de séries temporais de NDVI.*
+*Figura 1. Código desenvolvido no Google Earth Engine para inspeção visual de talhões e extração de séries temporais de NDVI.*
 
 Para melhorar a variabilidade dos solos considerados e deixar nossa modelagem mais robusta, foram comparadas as granulometrias dos solos das talhões REVERTE® levantadas nos anos anteriores pela Syngenta com dados de calibração e validação do modelo Century específica de áreas de pastagens e soja. A distância até pontos de calibração e validação e a similaridade entre os solos foram identificadas.
 
@@ -46,9 +51,10 @@ As fazendas selecionadas foram separadas em três regiões, especificando a rota
 
 ## Coletas em Campo
 
-A coleta na região central foi realizada entre os dias 3 e 28 de Julho de 2025; a amostragem de solo ocorreu em 13 fazendas e 23 talhões. Outras quatro fazendas e oito talhões integraram a coleta na região do Matopiba no mês de Agosto de 2025. No total, 649 amostras foram coletadas (371 indeformadas e 278 deformadas) nas 17 fazendas e 31 talhões (Figura 6). Todas os resultados das amostras foram recebidos no final de Janeiro de 2026.
+A coleta na região central foi realizada entre os dias 3 e 28 de Julho de 2025; a amostragem de solo ocorreu em 13 fazendas e 23 talhões. Outras quatro fazendas e oito talhões integraram a coleta na região do Matopiba no mês de Agosto de 2025. No total, 649 amostras foram coletadas (371 indeformadas e 278 deformadas) nas 17 fazendas e 31 talhões (Figura 2). Todas os resultados das amostras foram recebidos no final de Janeiro de 2026.
 
-![Distribuição de amostras](../base_dados/images/distribuicao_amostras.png)
+![Distribuição de amostras](../base_dados/images/distribuicao_amostras.png){ width="100%" }
+*Figura 2. Distribuição das fazendas selecionadas para coleta de amostras de carbono no solo.*
 
 Nas amostras de campo houve grande variabilidade em textura e carbono. O carbono em áreas de pastagem variou entre 20 e 88 T ha-1 considerando 0 - 30 cm de profundidade, e em áreas de cultivo varia entre 19 e 72 T ha-1.  Onde temos amostras de pasto e cultivo na
 mesma fazenda, observamos que a maioria mostrou 
@@ -57,18 +63,18 @@ maior estoque de carbono nas áreas cultivadas.
 
 ## Preparação do Modelo Century
 
-Foi realizada uma revisão da literatura para obtenção de dados de referência de carbono orgânico no solo em áreas com cultivo de cana de açúcar e milho no Cerrado na qual foram encontrados dados 25 de sítios sob cultivo de Cana e 42 sob cultivo de milho. Os dados de cana de açúcar encontram-se concentrados na região centro-sul que é a região com clima mais propício para esse cultivo (Oliveira et al., 2012) (Figura 7A) enquanto os dados de milho encontram-se mais bem distribuídos pelo bioma (Figura 7B).
+Foi realizada uma revisão da literatura para obtenção de dados de referência de carbono orgânico no solo em áreas com cultivo de cana de açúcar e milho no Cerrado na cual foram encontrados dados 25 de sítios sob cultivo de Cana e 42 sob cultivo de milho. Os dados de cana de açúcar encontram-se concentrados na região centro-sul que é a região com clima mais propício para esse cultivo (Oliveira et al., 2012) (Figura 3A) enquanto os dados de milho encontram-se mais bem distribuídos pelo bioma (Figura 3B).
 
 ![Calibração](../base_dados/images/calval.png)
-*Figura 7. Mapa da área de estudo (bioma Cerrado), com a localização dos sítios de calibração (0-20 cm) para os cultivos de: A) cana de açúcar e B) milho.*
+*Figura 3. Mapa da área de estudo (bioma Cerrado), com a localização dos sítios de calibração (0-20 cm) para os cultivos de: A) cana de açúcar e B) milho.*
 
-A revisão bibliográfica para obtenção de dados de carbono na biomassa da cana de açúcar (Figura 8) e biomassa e grãos do milho (Figura 9) precisou incluir dados amostrados em outras regiões do Brasil, uma vez que o número de referências encontradas considerando somente o Cerrado foi muito baixa. Para trabalhos que apresentavam apenas dados de matéria seca a conversão para carbono foi realizada considerando o fator de conversão de 50% (IPCC, 2006).
+A revisão bibliográfica para obtenção de dados de carbono na biomassa da cana de açúcar (Figura 4A) e biomassa e grãos do milho (Figura 4B) precisou incluir dados amostrados em outras regiões do Brasil, uma vez que o número de referências encontradas considerando somente o Cerrado foi muito baixa. Para trabalhos que apresentavam apenas dados de matéria seca a conversão para carbono foi realizada considerando o fator de conversão de 50% (IPCC, 2006).
 
 ![Referência Cana](../base_dados/images/referencia1.png)
-*Figura 8. Valores de referência de carbono na biomassa aérea e radicular da cana de açúcar no Brasil.*
+*Figura 4. Valores de referência de carbono na biomassa aérea e radicular da cana de açúcar no Brasil.*
 
 ![Referência Milho](../base_dados/images/referencia2.png)
-*Figura 9. Valores de referência de carbono na biomassa aérea, radicular e grão de milho no Brasil.*
+*Figura 5. Valores de referência de carbono na biomassa aérea, radicular e grão de milho no Brasil.*
 
 Também foi realizada uma revisão dos trabalhos que utilizaram o modelo CENTURY para simular os estoques e a dinâmica de carbono em áreas com ambos os cultivos. Nesta revisão foram encontrados e testados, 4 trabalhos com parâmetros pré-ajustados para simular a cana-de-açúcar (Brandani et al., 2015; Carvalho, 2014; Galdos et al., 2010; Wendling, 2007)  e 5 parâmetros pré-ajustados para o cultivo de milho (Barbosa, 2021; Dias, 2010; Metherell et al., 1993; Rosendo, 2010; Vogado, 2020) (Tabela S2).
 
