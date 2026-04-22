@@ -31,5 +31,5 @@ Além dos dados fornecidos pela Syngenta, foram levantadas as informações que 
 - Características edáficas baseadas em amostras de 0 a 10 cm, coletadas em anos anteriores, e complementadas por dados do PronaSolos da Embrapa, em escala de 90m, para as profundidades de 10 a 30 cm.
 
 ---
-- [← Contexto](contexto.md)
-- [Requisitos para Modelagem →](requisitos_para_modelagem.md)
+- [Contexto](contexto.md)
+- [Requisitos para Modelagem](requisitos_para_modelagem.md)

@@ -55,7 +55,7 @@
     background: #bdbdbd !important;
 }
 .wy-menu-vertical li.current ul li a {
-    color: #404040 !important; /* Para que os não selecionados dentro de um ativo continuem com a mesma cor dos links da barra lateral caso tenham um fundo escuro... Mas espere, na versão d-pat o li.current ul tem fundo claro ou não tem fundo extra? */
+    color: #404040 !important;
 }
 
 /* 2. Bloco de Busca em Azul (Padrão Cerrado d-pat) */
@@ -113,10 +113,5 @@
   /* Esconder o placeholder quando recolhido */
   .md-search__form:not(:hover):not(:focus-within) .md-search__input::placeholder {
     color: transparent !important;
-  }
-  
-  /* Ocultar o ícone de atalho (por exemplo, '/' ou 'Ctrl+K') se houver */
-  .md-search__form:not(:hover):not(:focus-within) .md-search__icon[for="__search"] {
-      display: none !important;
   }
 }
