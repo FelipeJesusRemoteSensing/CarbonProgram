@@ -9,6 +9,23 @@ Para subsidiar as simulações do modelo Century no contexto do projeto REVERTE�
 
 Complementarmente, foram processadas séries temporais de NDVI mensais, com o objetivo de identificar padrões sazonais de cobertura vegetal e atividades agrícolas ao longo dos anos. Também foram extraídas variáveis climáticas essenciais ao funcionamento do modelo Century, como temperatura (máxima, mínima e média mensal) e precipitação acumulada mensal. Esses dados foram obtidos a partir das bases globais CHELSA (Climatologies at High Resolution for the Earth’s Land Surface Areas), NASA POWER (Prediction Of Worldwide Energy Resources), TerraClimate and WorldClim e a base nacional BR-DWGD (Brazilian Daily Weather Gridded Data).
 
+```mermaid
+flowchart TD
+    A[🛰️ Fontes de Dados] --> B
+    A --> C
+    A --> D
+
+    B[📍 Uso e Cobertura do Solo\nMapBiomas Coleção 10\n1985–2024 · 30m]
+    C[🌿 Séries Temporais NDVI\nMensais · Sentinel-2\nPadrões sazonais]
+    D[🌦️ Variáveis Climáticas\nCHELSA · NASA POWER\nTerraClimate · BR-DWGD]
+
+    B --> E[🗄️ Banco de Dados Geoespacial\n36 fazendas · Cerrado\nGO · MT · MS · TO · MA]
+    C --> E
+    D --> E
+
+    E --> F[⚙️ Simulações\nModelo Century]
+```
+
 Com o intuito de verificar a compatibilidade entre as fontes de dados climáticos, foi conduzida uma análise preliminar de consistência entre as séries históricas de todas as bases e comparação com dados de torres meteorológicas. A equipe técnica concluiu que a base de dados TerraClimate se mostrou mais completa, com estimativas de variáveis climáticas mais próximas aos dados das torres. Dessa forma, as variáveis climáticas foram extraídas e organizadas individualmente para cada fazenda.
 
 Para garantir a acurácia na identificação do uso da terra atual e recente, foi elaborada uma rotina específica no **Google Earth Engine** (Figura 1) que realiza a extração de todas as imagens disponíveis do sensor Sentinel-2A para os polígonos dos talhões das fazendas. O [script implementado](../mds/scripts.md#downloads-e-gee) permite a visualização otimizada das imagens em composição colorida real, além da geração automática da série temporal de NDVI para o ponto central de cada talhão. A frequência das imagens (a cada cinco dias) viabilizou a inspeção visual detalhada dos usos agrícolas praticados em cada área, mesmo em cenários com elevada cobertura de nuvens. Além de identificação de cobertura e cultivo sub-anual, permitiu identificar datas estimadas para manejos como revolvimento de solo ou distúrbios como queimas.
@@ -27,7 +44,7 @@ Como resultado dessa etapa, foi gerada uma planilha síntese contendo as princip
 - Temperatura mensal histórico e média (CHELSA e NASA POWER);
 - Precipitação acumulada mensal histórico e média (CHELSA e NASA POWER);
 - Propriedades do solo: granulometria, pH, densidade e carbono (Syngenta e complemento EMBRAPA);
-- Tendência NDVI a partir do Theropoda ([Repositório GitHub](https://github.com/lapig-ufg/TheroPoDa));
+- Tendência NDVI calculada via Theropoda — ferramenta desenvolvida pelo LAPIG/UFG ([Repositório GitHub](https://github.com/lapig-ufg/TheroPoDa));
 - Região Ecofisiológica (Sano et al., 2019);
 - Distância até sítios de atual calibração/validação do Century com usos “pastagem” e “soja”;
 - Dissimilaridade entre textura de solo (Syngenta) e sítios de atual calibração/validação do Century com usos “pastagem” e “soja”.
@@ -41,6 +58,13 @@ O plano amostral na Figura 3 foi utilizado para toda a amostragem realizada em c
 ## Regiões de Campo
 
 As fazendas selecionadas foram separadas em três regiões, especificando a rota, quilometragem e prioridade.
+
+| Região | Estados | Fazendas | Talhões | Solos | Status |
+|:---|:---|:---:|:---:|:---|:---|
+| Central | GO, MT | 13 | 28 | Franco-argiloso, arenoso | ✅ Concluído |
+| Matopiba | MA, TO | 4 | 7 | Areia franca, franco-argiloso | ✅ Concluído |
+| Sul | MS | — | — | Franco-arenoso, argilo-arenoso | ❌ Não realizado |
+*Quadro 1 - Resumo das amostragens de campo realizadas nas diferentes regiões*\\
 
 **Região Central:** Fazendas de Goiás e Mato Grosso constam com o maior número de regiões edafoclimáticas do Cerrado e o maior número de Fazendas e Talhões dentro do programa REVERTE® (Figura 5A). Dos 119 talhões que fazem parte do programa, 79 estão nesta região. Também incluem os usos mais frequentes, sendo soja/pousio, soja/pastagem e soja/milho. Nessa região a equipe completou a amostragem em 13 fazendas e 28 talhões ao longo de 30 dias no mês de Julho 2025. A equipe percorreu mais de 5000 km e o projeto contou com um orçamento de aproximadamente R$50.000,00. Os solos do Mato Grosso variam entre franco arenoso e areia franca, e de Goiás entre franco-argiloso, arenoso e argilo-arenoso. Considerando a inexistência de amostragem atual de calibração e validação para a modelagem de soja no estado de Goiás, e a escassez de amostras para pastagens no estado de Mato Grosso, com uma distribuição geográfica limitada às proximidades da fronteira com Goiás, as amostras provenientes das talhões e fazendas REVERTE® irão aprimorar a capacidade de monitoramento da região por meio de modelagem.
 
@@ -87,10 +111,14 @@ Na Figura 10 é possível observar a representação esquemática dos períodos 
 ![Representação esquemática](../base_dados/images/ref3.png)
 *Figura 10. Representação esquemática dos períodos de cultivos simulados em: A) cana de açúcar; B) áreas com soja como safra principal e milho na entressafra e C) milho como safra principal.*
 
+### Cana-de-Açúcar
+
 Entre os parâmetros encontrados e testados para o cultivo de Cana os que apresentaram resultados mais compatíveis com os dados de referência foram os de Wendling (2007). Entretanto, subestimaram os valores de carbono na biomassa aérea, logo, foi necessária a realização de ajustes adicionais para atingir valores mais próximos aos observados na literatura (Figuras 11A e 11B). Apesar dos resultados próximos aos observados para solo e biomassa aérea, o conjunto de parâmetros atuais superestima os valores de carbono das raízes e novos ajustes estão em andamento para corrigir as superestimativas nesse compartimento.
 
 ![Comparação Carbono Orgânico](../base_dados/images/ref4.png)
 *Figura 11. Comparação entre valores publicados de carbono orgânico (A) na biomassa aérea e (B) no solo (0-20 cm) em áreas de cana-de-açúcar e valores estimados pelo modelo CENTURY 4.5.*
+
+### Milho
 
 Entre os parâmetros encontrados e testados para o cultivo de milho os que apresentaram resultados mais compatíveis com os dados de referência foram os parâmetros default do modelo (Metherell et al., 1993). No entanto, percebeu-se uma subestimativa dos valores de carbono na biomassa acima do solo e grãos e uma superestimativa do carbono nas raízes. Para melhorar as estimativas de carbono nesses compartimentos foram necessários ajustes nos parâmetros relacionados a produção potencial mensal acima do solo - 'PRDX(1)', fração inicial de carbono alocada às raízes - 'FRTC(1)' e índice de colheita máximo (fração de carbono vivo acima do solo no grão) - 'HIMAX'.
 
@@ -98,3 +126,7 @@ Os parâmetros ajustados diferem para sítios com milho simulado como safra prin
 
 ![Calibração de Milho](../base_dados/images/ref5.png)
 *Figura 12. Calibração de milho safra (A) e safrinha (B) para estoques de carbono orgânico no solo para o profundidade de 0-20 cm.*
+
+---
+- [← Referências Conceituais](referencias_conceituais.md)
+- [Processos (Scripts) →](scripts.md)
