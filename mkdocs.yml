@@ -49,7 +49,7 @@ plugins:
 nav:
   - 'Início': 'index.md'
   - 'Contexto': 'mds/contexto.md'
-  - 'Referências Conceituais': 'mds/referencias_conceituais.md'
+  - 'Referenciais Teóricos': 'mds/referencias_conceituais.md'
   - 'Requisitos para Modelagem': 'mds/requisitos_para_modelagem.md'
   - 'Processamento e Scripts': 'mds/scripts.md'
-  - 'Referências': 'mds/referencias.md'
+  - 'Referências Bibliográficas': 'mds/referencias.md'
