@@ -13,13 +13,13 @@ theme:
       primary: green
       accent: green
       toggle:
-        icon: material/brightness-7
+        icon: material/weather-night
         name: Mudar para modo escuro
     - scheme: slate
       primary: green
       accent: green
       toggle:
-        icon: material/brightness-4
+        icon: material/weather-sunny
         name: Mudar para modo claro
   features:
     - navigation.tabs
