@@ -7,8 +7,6 @@
 
 Para subsidiar as simulações do modelo Century no contexto do projeto REVERTE®, foi realizado um extenso processamento de dados geoespaciais e ambientais. Inicialmente, foi estruturado um banco de dados com informações de uso e cobertura da terra provenientes da Coleção 10 do MapBiomas (Mapbiomas, 2025), abrangendo o período de 1985 a 2024, com resolução espacial de 30 metros. Esses dados foram essenciais para caracterizar o histórico de uso da terra nas fazendas participantes localizadas no bioma Cerrado entre os estados de Goiás, Mato Grosso, Mato Grosso do Sul, Tocantins e Maranhão.
 
-Complementarmente, foram processadas séries temporais de NDVI mensais, com o objetivo de identificar padrões sazonais de cobertura vegetal e atividades agrícolas ao longo dos anos. Também foram extraídas variáveis climáticas essenciais ao funcionamento do modelo Century, como temperatura (máxima, mínima e média mensal) e precipitação acumulada mensal. Esses dados foram obtidos a partir das bases globais CHELSA (Climatologies at High Resolution for the Earth’s Land Surface Areas), NASA POWER (Prediction Of Worldwide Energy Resources), TerraClimate and WorldClim e a base nacional BR-DWGD (Brazilian Daily Weather Gridded Data).
-
 ```mermaid
 flowchart TD
     A[Fontes de Dados] --> B
@@ -25,11 +23,14 @@ flowchart TD
 
     E --> F[Simulações\nModelo Century]
 ```
+*Figura 1. Fluxograma de processamento de dados geoespaciais e ambientais para subsidiar as simulações do modelo Century no contexto do projeto REVERTE®.*
 
-Com o intuito de verificar a compatibilidade entre as fontes de dados climáticos, foi conduzida uma análise preliminar de consistência entre as séries históricas de todas as bases e comparação com dados de torres meteorológicas. A equipe técnica concluiu que a base de dados TerraClimate se mostrou mais completa, com estimativas de variáveis climáticas mais próximas aos dados das torres. Dessa forma, as variáveis climáticas foram extraídas e organizadas individualmente para cada fazenda.
+Complementarmente, foram processadas séries temporais de NDVI mensais, com o objetivo de identificar padrões sazonais de cobertura vegetal e atividades agrícolas ao longo dos anos. Também foram extraídas variáveis climáticas essenciais ao funcionamento do modelo Century, como temperatura (máxima, mínima e média mensal) e precipitação acumulada mensal. Esses dados foram obtidos a partir das bases globais CHELSA (Climatologies at High Resolution for the Earth’s Land Surface Areas), NASA POWER (Prediction Of Worldwide Energy Resources), TerraClimate and WorldClim e a base nacional BR-DWGD (Brazilian Daily Weather Gridded Data).
+
+Com o intuito de verificar a compatibilidade entre as fontes de dados climáticos, foi conduzida uma análise preliminar de consistência entre as séries históricas de todas as bases e comparação com dados de torres meteorológicas (Figura 2). A equipe técnica concluiu que a base de dados TerraClimate se mostrou mais completa, com estimativas de variáveis climáticas mais próximas aos dados das torres. Dessa forma, as variáveis climáticas foram extraídas e organizadas individualmente para cada fazenda.
 
 ![Comparativo bases climáticas](../base_dados/images/grafico_bases_clima.png)
-*Figura 1. Temperaturas mínimas (A), máximas médias (B) e precipitação acumulada anual (C) referentes ao período de 1980-2005 observadas em estações meteorológicas (INMET) e disponíveis nas bases de dados.*
+*Figura 2. Temperaturas mínimas (A), máximas médias (B) e precipitação acumulada anual (C) referentes ao período de 1980-2005 observadas em estações meteorológicas (INMET) e disponíveis nas bases de dados.*
 
 Além dos valores de quantidade de chuva e dos valores médios de temperatura, outro fator importante a ser analisado é a distribuição ao longo do ano. É importante que os dados climáticos utilizados como entrada para modelagem dos estoques de C na região reproduzam bem essa variação, uma vez que esse fator é determinante para o crescimento da vegetação, principal via de entrada de carbono no ecossistema.
 
