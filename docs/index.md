@@ -40,7 +40,7 @@ Acompanhamento técnico dos códigos de automação desenvolvidos em **R** (espa
 | Logotipo | Instituição |
 | :---: | :--- |
 | <img src="base_dados/images/Sensoriamento_Remoto_e_Geoprocessamento.png" width="200"> | **Laboratório de Sensoriamento Remoto e Geoprocessamento (LAPIG/UFG)** |
-| <img src="base_dados/images/tnc.png" width="120"> | **The Nature Conservancy (TNC)** |
+| <img src="base_dados/images/tnc.png" width="200"> | **The Nature Conservancy (TNC)** |
 | <img src="base_dados/images/Syngenta_Logo.svg.png" width="180"> | **Syngenta** |
 
 ---
