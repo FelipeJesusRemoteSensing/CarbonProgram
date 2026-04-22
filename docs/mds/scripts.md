@@ -434,7 +434,7 @@ flowchart LR
         # Se não estiver instalada, instale com: install.packages("terra")
         library(terra)
         
-        input_file_path <- "D:/Projetos-Lapig/century/revert/rasters/Fazendas/MT - Agua Cristal - 6-57-7/lulc_mb_col9_30m/1985_lulc_6-57-7.tif"
+        input_file_path <- "/CAMINHO.tif"
         
         tryCatch({
         
@@ -488,9 +488,9 @@ flowchart LR
         library(raster)
         library(sf)
         
-        caminho_raster <- "D:/Projetos-Lapig/century/revert/rasters/Fazendas/GO - Morasha - 35-38-76-34-36-39/img_ref_30m_35-38-76-34-36-39.tif"
-        caminho_shapefile <- "D:/Projeto_LAPIG/Revert/Centroids Morasha/talhoes_morasha_revert_2.shp"
-        diretorio_saida <- "D:/Projeto_LAPIG/Revert/Centroids Morasha/Talhoes_Recortados"
+        caminho_raster <- "/CAMINHO.tif"
+        caminho_shapefile <- "/CAMINHO.shp"
+        diretorio_saida <- "/CAMINHO/PASTA"
         
         if (!dir.exists(diretorio_saida)) {
           dir.create(diretorio_saida, recursive = TRUE)
@@ -529,8 +529,8 @@ flowchart LR
         library(terra)
         
         # --- 1. CONFIGURAÇÃO ---
-        caminho_referencia <- "D:/Projetos-Lapig/century/reverte/rasters/fazendas/MT - AGM/lulc_mb_col10_30m/1985_lulc_AGM.tif"
-        pasta_precipitacao <- "C:/Users/marco/Downloads/acm_series_completa/acm_series_completa"
+        caminho_referencia <- "/CAMINHO.tif"
+        pasta_precipitacao <- "/CAMINHO/PASTA"
         pasta_saida <- file.path(pasta_precipitacao, "recortados_zeros_v2")
         
         if (!dir.exists(pasta_saida)) dir.create(pasta_saida)
@@ -2418,15 +2418,15 @@ A estrutura de pastas recomendada para a **Simulação espacializada** é:
         suppressWarnings(suppressMessages(library(lubridate)))
         suppressWarnings(suppressMessages(library(terra)))
         
-        setwd("C:/Users/anaca/Desktop/codigos_century")
-        base_path <- "C:/Users/anaca/Nextcloud/century/reverte/rasters/fazendas" # MUDAR UMA UNICA VEZ
+        setwd("CAMINHO")
+        base_path <- "/CAMINHO/PASTA" # MUDAR UMA UNICA VEZ
         folder_match <- list.dirs(base_path, full.names = TRUE, recursive = FALSE)
         inputDir <- folder_match[grep(paste0(name_farm, "$"), folder_match)]
-        outputDir <- "C:/Users/anaca/Desktop/codigos_century/dados/blocos" # MUDAR UMA UNICA VEZ
+        outputDir <- "/CAMINHO/PASTA" # MUDAR UMA UNICA VEZ
         
         if(!dir.exists(outputDir)) dir.create(outputDir, recursive = TRUE)
         
-        shp_path <- vect("C:/Users/anaca/Nextcloud/century/reverte/shps/talhoes_revert/2026-02-10_ultima_versao/talhoes_revert_final") # MUDAR UMA UNICA VEZ
+        shp_path <- vect("/CAMINHO/PASTA") # MUDAR UMA UNICA VEZ
         talhoes <- shp_path[shp_path$Name_Farm == name_farm, ]
         name_talhoes <- unique(talhoes$Name)
         
@@ -2740,11 +2740,11 @@ A estrutura de pastas recomendada para a **Simulação espacializada** é:
         if (exists("base_path")) {
           base_fazendas <- base_path
         } else {
-          base_fazendas <- "C:/Users/anaca/Nextcloud/century/reverte/rasters/fazendas"
+          base_fazendas <- "/CAMINHO/PASTA"
         }
         
         ###
-        # Lista de pastas de fazendas (ex: "GO - BOJ")
+        # Lista de pastas de fazendas 
         fazendas_dirs <- list.dirs(
           base_fazendas,
           full.names = TRUE,
@@ -2901,13 +2901,13 @@ A estrutura de pastas recomendada para a **Simulação espacializada** é:
         if (exists("outputDir")) {
           output_root <- outputDir
         } else {
-          output_root <- "C:/Users/anaca/Desktop/codigos_century/dados/output"
+          output_root <- "CAMINHO/dados/output"
           cat("[INFO] outputDir não encontrado na sessão. Usando padrão:", output_root, "\n")
         }
         
         ###
         # Diretório base para organizar os resultados espacializados
-        base_espacializado <- "C:/Users/anaca/Desktop/codigos_century/fazendas_espacializadas"
+        base_espacializado <- "CAMINHO/fazendas_espacializadas"
         if (!dir.exists(base_espacializado)) dir.create(base_espacializado, recursive = TRUE)
         
         ###
@@ -3199,7 +3199,7 @@ flowchart LR
         
         
         if __name__ == "__main__":
-            pasta_alvo = r"D:\Projetos-Lapig\century\revert\rasters\Fazendas"
+            pasta_alvo = r"CAMINHO\Fazendas"
             verificar_arquivos_nas_pastas(pasta_alvo)
             # A mensagem "Verificação concluída." agora faz parte do resumo dentro da função.
         
