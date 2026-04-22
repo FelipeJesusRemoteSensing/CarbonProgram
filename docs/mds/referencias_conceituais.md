@@ -36,7 +36,7 @@ flowchart LR
     D -->|ajuste de parâmetros| C
     D --> E[✅ Modelo calibrado<br>para as culturas no Cerrado]
 ```
-*Figura 3. Fluxograma de calibração e validação do modelo CENTURY para as culturas do Cerrado*
+*Figura 3. Fluxograma de calibração e validação do modelo CENTURY para as culturas do Cerrado.*
 
 Para otimizar o modelo, a seleção de áreas de amostragem de solo deve considerar a distribuição atual das propriedades rurais que integram o programa REVERTE®, bem como a baixa representatividade espacial nos locais de calibração e validação. A escolha das fazendas para amostragem adicional priorizou aquelas que possibilitam a comparação entre áreas de soja e pastagens, levando em conta fatores como solo, região, dados de manejo disponíveis e o tempo decorrido desde a conversão, conforme o agrupamento das fazendas e suas variáveis específicas.
 
