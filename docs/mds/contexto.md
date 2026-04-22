@@ -32,7 +32,7 @@ flowchart TD
 
 Parte relevante dos impactos está relacionada ao ganho ambiental associado à proteção dos remanescentes de vegetação agrícola existentes e ao potencial incremento de carbono no solo decorrente da adoção de melhores práticas da agricultura regenerativa. Entretanto, o dimensionamento desses benefícios apresenta desafios, especialmente em relação ao ganho de carbono orgânico no solo. 
 
-A América do Sul possui diversos ecossistemas e tipos de solo, além de variado relevo, e contém cerca de 10% (160 Gt C) do estoque mundial de carbono orgânico do solo. Uma expansão da agricultura regenerativa nas terras agricultáveis da região tem o potencial de armazenar até 0,3 Gt C anualmente, ou seja, uma estimativa de 2 Gt C até 2030. Essas estimativas, no entanto, dependem de suposições em escala nacional ou mesmo global e não levam em conta o papel da variabilidade local no armazenamento de carbono no solo. 
+A América do Sul possui diversos ecossistemas e tipos de solo, além de variado relevo, e contém cerca de 10% (**160 Gt C**) do estoque mundial de carbono orgânico do solo. Uma expansão da agricultura regenerativa nas terras agricultáveis da região tem o potencial de armazenar até **0,3 Gt C** anualmente, ou seja, uma estimativa de **2 Gt C** até 2030. Essas estimativas, no entanto, dependem de suposições em escala nacional ou mesmo global e não levam em conta o papel da variabilidade local no armazenamento de carbono no solo. 
 
 Sem uma especificidade mais granular nas estimativas de armazenamento de carbono no solo, é um desafio identificar e priorizar os locais ou tipos de práticas que têm o maior impacto de mitigação climática. Além disso, ainda não se pode prever a contribuição de projetos individuais com a especificidade necessária para gerar compensações de carbono ou benefícios de escopo 3 de acordo com os padrões de registro.
 
@@ -42,9 +42,9 @@ O Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federa
 
 ```mermaid
 flowchart LR
-    A[🛰️ Dados de Entrada<br>Sentinel-2 · GEE] --> B[⚙️ Processamento<br>Espacial · Century]
-    B --> C[📊 Estimativa<br>de Carbono no Solo]
-    C --> D[✅ Validação · Campo 2025<br>📄 Protocolo Final]
+    A[Dados Satélitarios e de Campo] --> B[Processamento<br>Espacial · Modelo Century]
+    B --> C[Estimativa<br>de Carbono Orgânico<br> do Solo]
+    C --> D[Validação · Campo 2025<br> Protocolo de Verificação e Reprodução]
 
 ```
 
