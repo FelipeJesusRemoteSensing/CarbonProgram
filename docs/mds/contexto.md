@@ -2,8 +2,6 @@
 
 > Esta seção apresenta o cenário que motivou o projeto: o problema da degradação de pastagens no Brasil, a resposta do programa REVERTE® e os desafios científicos do monitoramento de carbono no solo.
 
-AAA
-
 ## Panorama da Pecuária no Brasil
 
 Apesar do Brasil ser o maior exportador de carne do mundo (2.327 toneladas em 2022) (FAO, 2023), suas práticas de pecuária são predominantemente extensivas, caracterizadas pelo baixo uso de tecnologia e baixa produtividade (Oliveira et al., 2018), o que implica em grandes rebanhos distribuídos em vastas áreas de pastagens, ocupando cerca de **21%** do território nacional (Parente et al., 2017).
@@ -22,9 +20,9 @@ A implementação em escala do programa REVERTE® no Cerrado brasileiro represen
 
 ```mermaid
 flowchart TD
-    A[🌾 Pastagens degradadas~98 Mha no Brasil] --> B[Baixa produtividade +pressão sobre vegetação nativa]
-    B --> C[Programa REVERTE®TNC + Syngenta]
-    C --> D[Boas práticas agrícolasinsumos + instrumentos financeiros]
+    A[Pastagens degradadas<br>~98 Mha no Brasil] --> B[Baixa produtividade +<br>pressão sobre vegetação nativa]
+    B --> C[Programa REVERTE®<br>TNC + Syngenta]
+    C --> D[Boas práticas agrícolas<br>insumos + instrumentos financeiros]
     D --> E[Recuperação do solo]
     E --> F[🌱 Sequestro de carbono]
     E --> G[🌳 Redução do desmatamento]
@@ -43,12 +41,11 @@ Sem uma especificidade mais granular nas estimativas de armazenamento de carbono
 O Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federal de Goiás (LAPIG/UFG), é referência quanto ao monitoramento biofísico-ambiental de paisagens naturais e antrópicas e responsável pela produção dos mapas anuais de pastagem do MapBiomas para todo o país, irá desenvolver e combinar abordagens e metodologias estabelecidas e validadas baseadas em modelagem para testar a capacidade de monitoramento específico de projetos individuais.
 
 ```mermaid
-flowchart TD
-    A[🛰️ Imagens Sentinel-2Google Earth Engine] --> B[Processamento espacialR]
-    B --> C[ModelagemModelo Century]
-    C --> D[Estimativa de carbonoorgânico no solo]
-    D --> E[Validação comdados de campo 2025]
-    E --> F[📄 Protocolo demonitoramento]
+flowchart LR
+    A[🛰️ Dados de Entrada<br>Sentinel-2 · GEE] --> B[⚙️ Processamento<br>Espacial · Century]
+    B --> C[📊 Estimativa<br>de Carbono no Solo]
+    C --> D[✅ Validação · Campo 2025<br>📄 Protocolo Final]
+
 ```
 
 Para detalhes sobre os dados utilizados e os scripts desenvolvidos, consulte as seções:
