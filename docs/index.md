@@ -52,6 +52,6 @@ Acompanhamento técnico dos códigos de automação desenvolvidos em **R** (espa
 
 ![Bioma](https://img.shields.io/badge/bioma-Cerrado-green)
 ![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
-![Data](https://img.shields.io/badge/ultima%20atualizacao-2026-orange)
+![Última atualização](https://img.shields.io/badge/última%20atualização-2026--04--17-orange)
 
 *
