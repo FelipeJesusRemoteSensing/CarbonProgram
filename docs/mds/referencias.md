@@ -1,5 +1,9 @@
 # Referências
 
+> As referências estão organizadas em ordem alfabética. Estão listadas abaixo as referências utilizadas ao longo desta documentação.  
+
+---
+
 Alvarez, I. A., & Castro, P. R. D. C. (1999). Crescimento da parte aérea de cana crua e queimada. Scientia Agricola, 56, 1069-1079.
 
 Alvarez, I. A., Castro, P. R. D. C., & Nogueira, M. C. S. (2000). Crescimento de raízes de cana crua e queimada em dois ciclos. Scientia Agricola, 57, 653-659.
