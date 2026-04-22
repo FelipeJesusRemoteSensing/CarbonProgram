@@ -3,16 +3,43 @@ site_author: Felipe Jesus
 site_url: 'https://FelipeJesusRemoteSensing.github.io/CarbonProgram/'
 repo_url: 'https://github.com/FelipeJesusRemoteSensing/CarbonProgram'
 repo_name: 'CarbonProgram'
+
 theme:
-  name: readthedocs
+  name: material
+  language: pt-BR
+  palette:
+    - scheme: default
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-7
+        name: Mudar para modo escuro
+    - scheme: slate
+      primary: green
+      accent: green
+      toggle:
+        icon: material/brightness-4
+        name: Mudar para modo claro
+  features:
+    - navigation.tabs
+    - navigation.sections
+    - navigation.expand
+    - navigation.top
+    - toc.follow
 
 extra_css:
   - stylesheets/extra.css
 
+markdown_extensions:
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+          format: !!python/name:pymdownx.superfences.fence_code_format
+
 plugins:
   - search
-  - mermaid2
- 
+
 nav:
   - 'Início': 'index.md'
   - 'Contexto': 'mds/contexto.md'
