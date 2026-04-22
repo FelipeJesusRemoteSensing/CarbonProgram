@@ -17,6 +17,7 @@ O modelo é composto de três sub-modelos: vegetação, água e dinâmica de mat
 O LAPIG em parceria com UFS e TNC tem trabalhado ao longo dos últimos anos na melhoria do modelo Century na região do Cerrado Brasileiro (Santos et al., 2022, Santos et al., 2024) e na calibração do modelo para usos típicos da região. Atualmente, já possui a calibração e validação a partir de **111 sítios** distribuídos (Figura 2) na região para três usos específicos: Cerrado (**39**), pastagem (**30**) e soja (**42**). 
 
 ![Distribuição de sítios de calibração](../base_dados/images/sitios_calval.png)
+
 *Figura 2. Distribuição de 111 sítios utilizada para calibração e validação de modelo CENTURY divididos entre 3 coberturas: cerrado (39), pastagem (30) e soja (42).*
 
 A calibração do modelo requer dados de estoques de carbono, densidade, pH e granulometria do solo, além de informações sobre a vegetação. Atualmente, as amostras exibem variabilidade regional, climática e de tipos de solo. No entanto, o agrupamento dos locais de amostragem resulta em uma cobertura desigual, com algumas regiões apresentando um número reduzido de amostras.
