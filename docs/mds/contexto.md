@@ -56,7 +56,10 @@ flowchart LR
     C --> D[Validação · Campo <br> Protocolo de Verificação e Reprodução]
 
 ```
-*Figura 2. Fluxograma da abordagem metodológica do LAPIG/UFG para o monitoramento de estoques de carbono.*
+
+*Figura 2. Abordagem metodológica do LAPIG/UFG para o monitoramento de estoques de carbono.*
+
+---
 
 Para detalhes sobre os dados utilizados e os scripts desenvolvidos, consulte as seções:
 

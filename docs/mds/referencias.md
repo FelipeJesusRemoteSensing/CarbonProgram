@@ -1,6 +1,6 @@
 # Referências
 
-> As referências estão organizadas em ordem alfabética. Estão listadas abaixo as referências utilizadas ao longo desta documentação.  
+> Esta seção detalha as referências utilizadas ao longo desta documentação. Elas estão organizadas em ordem alfabética. 
 
 ---
 
@@ -131,3 +131,8 @@ Wendling, B. (2007). Carbono e Nitrogênio no solo sob diferentes usos e manejos
 Wendling, B., Jucksch, I., Mendonça, E. D. S., Almeida, R. F. D., & Alvarenga, R. C. (2014). Simulação dos estoques de Carbono e Nitrogênio pelo Modelo Century em Latossolos, no Cerrado Brasileir. Revista Ciência Agronômica, 45, 238-248.
 
 Zani, C. F., Barneze, A. S., Robertson, A. D., Keith, A. M., Cerri, C. E., McNamara, N. P., & Cerri, C. C. (2018). Vinasse application and cessation of burning in sugarcane management can have positive impact on soil carbon stocks. PeerJ, 6, e5398.
+
+---
+
+- [Início](index.md)
+- [Contexto](contexto.md)
