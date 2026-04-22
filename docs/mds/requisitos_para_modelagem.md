@@ -156,5 +156,5 @@ Os parâmetros ajustados diferem para sítios com milho simulado como safra prin
 *Figura 10. Calibração de milho safra (A) e safrinha (B) para estoques de carbono orgânico no solo para o profundidade de 0-20 cm.*
 
 ---
-- [← Referências Conceituais](referencias_conceituais.md)
+- [Referenciais Teóricos](referencias_conceituais.md)
 - [Processamento e Scripts](scripts.md)

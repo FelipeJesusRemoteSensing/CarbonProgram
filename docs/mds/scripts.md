@@ -3206,5 +3206,5 @@ flowchart LR
         
         ```
 ---
-- [← Requisitos para Modelagem](requisitos_para_modelagem.md)
-- [Referências →](referencias.md)
+- [Requisitos para Modelagem](requisitos_para_modelagem.md)
+- [Referências](referencias.md)
