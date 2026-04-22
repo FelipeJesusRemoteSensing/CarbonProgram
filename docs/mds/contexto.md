@@ -18,6 +18,16 @@ De 2019 até 2021, as duas organizações concluíram as etapas de planejamento 
 
 A implementação em escala do programa REVERTE® no Cerrado brasileiro representa um ganho duplo, tanto para conter o avanço da conversão da vegetação nativa, como ao fomento à implementação de práticas agrícolas para recuperação de solos alinhadas aos princípios da agricultura regenerativa. O desafio em questão é monitorar e reportar os diversos benefícios e impactos que o REVERTE® tem no campo. 
 
+```mermaid
+flowchart TD
+    A[🌾 Pastagens degradadas~98 Mha no Brasil] --> B[Baixa produtividade +pressão sobre vegetação nativa]
+    B --> C[Programa REVERTE®TNC + Syngenta]
+    C --> D[Boas práticas agrícolasinsumos + instrumentos financeiros]
+    D --> E[Recuperação do solo]
+    E --> F[🌱 Sequestro de carbono]
+    E --> G[🌳 Redução do desmatamento]
+```
+
 ## Desafios do Monitoramento de Carbono
 
 Parte relevante dos impactos está relacionada ao ganho ambiental associado à proteção dos remanescentes de vegetação agrícola existentes e ao potencial incremento de carbono no solo decorrente da adoção de melhores práticas da agricultura regenerativa. Entretanto, o dimensionamento desses benefícios apresenta desafios, especialmente em relação ao ganho de carbono orgânico no solo. 
@@ -28,4 +38,18 @@ Sem uma especificidade mais granular nas estimativas de armazenamento de carbono
 
 ## O Papel do LAPIG/UFG
 
-O Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federal de Goiás (LAPIG/UFG), referência quanto ao monitoramento biofísico-ambiental de paisagens naturais e antrópicas e responsável pela produção dos mapas anuais de pastagem do MapBiomas para todo o país, irá desenvolver e combinar abordagens e metodologias estabelecidas e validadas baseadas em modelagem para testar a capacidade de monitoramento específico de projetos individuais. Todo este fluxo metodológico é suportado por uma série de [scripts e rotinas de automação](scripts.md) em R, Python e GEE.
+O Laboratório de Sensoriamento Remoto e Geoprocessamento da Universidade Federal de Goiás (LAPIG/UFG), referência quanto ao monitoramento biofísico-ambiental de paisagens naturais e antrópicas e responsável pela produção dos mapas anuais de pastagem do MapBiomas para todo o país, irá desenvolver e combinar abordagens e metodologias estabelecidas e validadas baseadas em modelagem para testar a capacidade de monitoramento específico de projetos individuais.
+
+```mermaid
+flowchart TD
+    A[🛰️ Imagens Sentinel-2Google Earth Engine] --> B[Processamento espacialR]
+    B --> C[ModelagemModelo Century]
+    C --> D[Estimativa de carbonoorgânico no solo]
+    D --> E[Validação comdados de campo 2025]
+    E --> F[📄 Protocolo demonitoramento]
+```
+
+Para detalhes sobre os dados utilizados e os scripts desenvolvidos, consulte as seções:
+
+- [Requisitos para Modelagem](requisitos_para_modelagem.md)
+- [Processos (Scripts)](scripts.md)
