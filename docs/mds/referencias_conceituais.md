@@ -1,4 +1,4 @@
-# Referências Conceituais
+# Referenciais Teóricos
 
 > Esta seção apresenta a base científica do projeto: o Modelo Century, 
 > sua calibração para o Cerrado e as variáveis complementares utilizadas na modelagem.
