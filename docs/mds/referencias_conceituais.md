@@ -31,6 +31,7 @@ flowchart LR
     D -->|ajuste de parâmetros| C
     D --> E[✅ Modelo calibrado<br>para as culturas no Cerrado]
 ```
+*Figura 3. Fluxograma de calibração e validação do modelo CENTURY para as culturas do Cerrado*
 
 Para otimizar o modelo, a seleção de áreas de amostragem de solo deve considerar a distribuição atual das propriedades rurais que integram o programa REVERTE®, bem como a baixa representatividade espacial nos locais de calibração e validação. A escolha das fazendas para amostragem adicional priorizou aquelas que possibilitam a comparação entre áreas de soja e pastagens, levando em conta fatores como solo, região, dados de manejo disponíveis e o tempo decorrido desde a conversão, conforme o agrupamento das fazendas e suas variáveis específicas.
 
@@ -45,7 +46,7 @@ Além dos dados fornecidos pela Syngenta, foram levantadas as informações que 
 Para cada fazenda, é gerado um raster onde cada pixel recebe um ID sequencial único.
 
 ![Referência da Fazenda](../base_dados/images/referencia_fazenda.png)
-*Figura 3. Área de referência da fazenda utilizada para o levantamento de variáveis.*
+*Figura 4. Área de referência da fazenda utilizada para o levantamento de variáveis.*
 
 
 ### Uso e Cobertura do Solo — MapBiomas Coleção 10
@@ -53,14 +54,14 @@ Para cada fazenda, é gerado um raster onde cada pixel recebe um ID sequencial �
 Os dados de uso e cobertura do solo foram obtidos a partir da Coleção 10 do MapBiomas, com resolução espacial de **30 m** e cobertura temporal de **1985 a 2024** (40 anos).
 
 ![Uso e Cobertura do Solo](../base_dados/images/mapbiomas_fazenda.png)
-*Figura 4. Dados de Uso e Cobertura do Solo (MapBiomas) para a área da fazenda.*
+*Figura 5. Dados de Uso e Cobertura do Solo (MapBiomas) para a área da fazenda.*
 
 ### Dados Climáticos — TerraClimate
 
 Os dados climáticos mensais foram obtidos do TerraClimate, com cobertura temporal de **1958 a 2024**, resolução espacial original de **4638,3 m**, reamostrada para **30 m**. As variáveis utilizadas são temperatura máxima (tmax), temperatura mínima (tmin) e precipitação (prec). Importante: **não é aplicada a multiplicação de escala (0,1)** nos dados brutos.
 
 ![Dados Climáticos](../base_dados/images/clima_fazenda.png)
-*Figura 5. Dados climáticos do TerraClimate aplicados à fazenda.*
+*Figura 6. Dados climáticos do TerraClimate aplicados à fazenda.*
 
 
 ### Propriedades do Solo — PronaSolos/Embrapa
@@ -68,14 +69,14 @@ Os dados climáticos mensais foram obtidos do TerraClimate, com cobertura tempor
 As características edáficas foram extraídas do PronaSolos (Embrapa), com resolução espacial original de **90 m**, reamostrada para **30 m**. As variáveis extraídas foram: densidade do solo (bkd), argila (clay), areia (sand), silte (silt) e pH, para as profundidades de **0–20 cm** e **0–30 cm**. As profundidades são compostas por compensação ponderada das camadas originais (0–5 cm, 5–15 cm e 15–30 cm) e a granulometria é normalizada para não ultrapassar 1000 g/kg.
 
 ![Propriedades do Solo](../base_dados/images/solo_fazenda.png)
-*Figura 6. Características edáficas (PronaSolos/Embrapa) da fazenda.*
+*Figura 7. Características edáficas (PronaSolos/Embrapa) da fazenda.*
 
 ---
 
 Posteriormente, os dados de granulometria (argila, areia e silte) do **PronaSolos** foram substituídos pelos dados do **MapBiomas Solo**, que oferecem maior detalhamento espacial para o bioma Cerrado, permitindo a utilização de dados mais proximos ao encontrado em campo, e consequentemente estimativas mais acuradas dos estoques de carbono orgânico no solo. Os dados de pH e densidade do solo foram mantidos do PronaSolos.
 
 ![PronassolosXMapbiomas](../base_dados/images/pronaxmapbioomas.png)
-*Figura 7. Comparativo dos dados de granulometria (argila, areia e silte) do PronaSolos e MapBiomas Solo.*
+*Figura 8. Comparativo dos dados de granulometria (argila, areia e silte) do PronaSolos e MapBiomas Solo.*
 
 ---
 
