@@ -61,10 +61,10 @@ Os dados climáticos mensais foram obtidos do TerraClimate, com cobertura tempor
 
 ---
 
-> 📌 Posteriormente, os dados edáficos do PronaSolos foram substituídos pelos dados do **MapBiomas Solo**, que oferecem maior detalhamento espacial e consistência metodológica para o bioma Cerrado, permitindo estimativas mais precisas dos estoques de carbono orgânico no solo.
+> 📌 Posteriormente, os dados de granulometria (argila, areia e silte) do **PronaSolos** foram substituídos pelos dados do **MapBiomas Solo**, que oferecem maior detalhamento espacial e consistência metodológica para o bioma Cerrado, permitindo estimativas mais precisas dos estoques de carbono orgânico no solo. Os dados de pH e densidade do solo foram mantidos do PronaSolos.
 
 ![PronassolosXMapbiomas](../base_dados/images/pronaxmapbioomas.png)
-*Figura 7. Dados climáticos do TerraClimate aplicados à fazenda.*
+*Figura 7. Comparativo dos dados de granulometria (argila, areia e silte) do PronaSolos e MapBiomas Solo.*
 
 ---
 - [Contexto](contexto.md)
