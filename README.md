@@ -22,8 +22,9 @@ A documentação completa, incluindo metodologias, requisitos de modelagem e ref
 O projeto conta com scripts automatizados para processamento de dados geoespaciais e execução do modelo Century. Os principais fluxos incluem:
 
 - **Extração de Dados:** Scripts GEE para download de variáveis climáticas e uso da terra.
-- **Espacialização:** Rotinas em R para rodar o modelo Century em escala de talhão.
-- **Validação:** Ferramentas em Python para verificação de integridade do banco de dados.
+- **Modelagem para ponto amostral** Rotinas em R para rodar o modelo Century para amostra de solo.
+- **Modelagem espacializada para talhão:** Rotinas em R para rodar o modelo Century em escala de talhão.
+- **Verificação dos arquivos:** Ferramentas em Python para verificação de integridade do banco de dados.
 
 A lista detalhada e os links para cada script podem ser encontrados na página de **[Processamento e Scripts](https://FelipeJesusRemoteSensing.github.io/CarbonProgram/mds/scripts/)**.
 
