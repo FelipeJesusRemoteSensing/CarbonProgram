@@ -2,6 +2,8 @@
 
 > Esta seção apresenta o cenário que motivou o projeto: o problema da degradação de pastagens no Brasil, a resposta do programa REVERTE® e os desafios científicos do monitoramento de carbono no solo.
 
+AAA
+
 ## Panorama da Pecuária no Brasil
 
 Apesar do Brasil ser o maior exportador de carne do mundo (2.327 toneladas em 2022) (FAO, 2023), suas práticas de pecuária são predominantemente extensivas, caracterizadas pelo baixo uso de tecnologia e baixa produtividade (Oliveira et al., 2018), o que implica em grandes rebanhos distribuídos em vastas áreas de pastagens, ocupando cerca de **21%** do território nacional (Parente et al., 2017).
