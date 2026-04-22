@@ -2,6 +2,8 @@
 
 > Esta seção detalha em módulos os conjuntos de scripts desenvolvidos para o processamento de dados, modelagem do Century e automação.
 
+---
+
 ```mermaid
 flowchart LR
     A[☁️ Downloads GEE] --> B[🗂️ Prep. Imagens R]
@@ -31,8 +33,8 @@ flowchart LR
 - [**GEE - Download Lulc Mapbiomas.txt**](../base_dados/aplicacao/Scripts/Outros_Scripts/GEE%20-%20Download%20Lulc%20Mapbiomas.txt): Script para download de mapas de uso e cobertura do solo do MapBiomas.
     <br>**Principais Etapas:**
     1. Carrega os limites (rasters mascarados) das fazendas.
-    2. Importa a base do MapBiomas Coleção 9.
-    3. Itera sobre os anos históricos (1985–2023) e fazendas.
+    2. Importa a base do MapBiomas Coleção 10.
+    3. Itera sobre os anos históricos (1985–2024) e fazendas.
     4. Recorta e exporta os dados anuais de uso da terra com resolução de 30m para o Google Drive.
     ??? abstract "Ver Código-Fonte"
         ```javascript

@@ -58,6 +58,8 @@ Como resultado dessa etapa, foi gerada uma planilha síntese contendo as princip
 
 Com base na planilha síntese, foram selecionadas fazendas e talhões específicos para amostragem de carbono no solo no período de entressafra. Após o contato prévio feito pela Syngenta, a equipe entrou em contato com todas as fazendas para obter a data de colheita estimada e confirmar a acessibilidade antes de finalizar o planejamento do campo.
 
+---
+
 ## Plano Amostral
 
 O plano amostral na Figura 4 foi utilizado para toda a amostragem realizada em campo. Para cada talhão, foi realizada uma seleção aleatória de três regiões de 1 ha onde seriam coletados amostras indeformadas para estimativas de densidade, e deformados para análise de granulometria, pH e carbono. As amostras indeformadas foram retiradas do ponto central da área amostral com amostrador de impacto em camadas **0 - 5, 5 - 10, 10 - 20, e 20 - 30 cm** e transferidos para sacola para reutilização do anel kopek com volume conhecido. 
@@ -66,6 +68,8 @@ Em volta da amostra indeformada, 5 pontos entre uma distância de **3 m** do pon
 
 ![Distribuição de amostras](../base_dados/images/campo_procedimento.png){ width="100%" }
 *Figura 4. Desenho amostral das coletas das amostras de solo.*
+
+---
 
 ## Regiões de Campo
 
@@ -76,6 +80,7 @@ As fazendas selecionadas foram separadas em três regiões, especificando a rota
 | Central | GO, MT | 13 | 28 | Franco-argiloso, arenoso | 
 | Matopiba | MA, TO | 4 | 7 | Areia franca, franco-argiloso | 
 | Sul | MS | — | — | Franco-arenoso, argilo-arenoso |
+
 *Quadro 1 - Resumo das amostragens de campo realizadas nas diferentes regiões.*
 
 <!-- **Região Central:** Fazendas de Goiás e Mato Grosso constam com o maior número de regiões edafoclimáticas do Cerrado e o maior número de Fazendas e Talhões dentro do programa REVERTE® (Figura 5A). Dos 119 talhões que fazem parte do programa, 79 estão nesta região. Também incluem os usos mais frequentes, sendo soja/pousio, soja/pastagem e soja/milho. Nessa região a equipe completou a amostragem em 13 fazendas e 28 talhões ao longo de 30 dias no mês de Julho 2025. 
@@ -92,6 +97,7 @@ Os solos do Mato Grosso variam entre franco-arenoso e areia franca, e os de Goi�
 
 **Região Sul:** No estado de Mato Grosso do Sul, foram identificadas fazendas com talhões sob usos de soja/trigo, soja/pousio e soja/pastagem, com dois tipos de solo predominantes: franco-arenoso e argilo-arenoso. Por apresentar características edafoclimáticas semelhantes às das demais regiões já amostradas, essa região recebeu prioridade menor no plano amostral. A realização de coletas adicionais nessa região está condicionada à disponibilidade de recursos.
 
+---
 
 ## Coletas em Campo
 
@@ -103,6 +109,7 @@ No total, 649 amostras foram coletadas (**371 indeformadas e 278 deformadas**) n
 
 Nas amostras de campo houve grande variabilidade em textura e carbono. O carbono em áreas de pastagem variou entre 20 e 88 T ha⁻¹ considerando 0 - 30 cm de profundidade, e em áreas de cultivo varia entre **19 e 72 T ha⁻¹**.  Onde temos amostras de pasto e cultivo na mesma fazenda, observou-se que a maioria apresentou **maior estoque de carbono nas áreas cultivadas**.
 
+---
 
 ## Preparação do Modelo Century
 

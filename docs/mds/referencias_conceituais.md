@@ -3,6 +3,8 @@
 > Esta seção apresenta a base científica do projeto: o Modelo Century, 
 > sua calibração para o Cerrado e as variáveis complementares utilizadas na modelagem.
 
+---
+
 ## O Modelo Century
 
 O modelo Century é um modelo de processos biogeoquímicos utilizado para estimar a ciclagem e estoques de nutrientes críticos em ecossistemas variados. Desenvolvido pelo Colorado State University, tem ampla aplicação no Brasil e em ecossistemas tropicais (Wendling et al., 2014; Baethgen et al., 2021). O modelo permite estimar a ciclagem e estoques de Carbono, Fósforo, Nitrogênio e Enxofre, porém tem maior aplicação para Carbono e Nitrogênio.
@@ -12,6 +14,8 @@ O modelo é composto de três sub-modelos: vegetação, água e dinâmica de mat
 ![Estrutura do modelo Century](../base_dados/images/century_model.png)
 
 *Figura 1. Estrutura do modelo Century mostrando a relação entre os programas e os arquivos acessórios detalhando a agenda dos usos e eventos ao longo do tempo (EVENT100) e os detalhes de tratamento de manejo e uso como fertilização (FERT), pastejo (GRAZ), e fogo (FIRE) entre outros.*
+
+---
 
 ## Calibração e Validação no Cerrado Brasileiro
 
@@ -35,6 +39,8 @@ flowchart TD
 *Figura 3. Fluxograma de calibração e validação do modelo CENTURY para as culturas do Cerrado*
 
 Para otimizar o modelo, a seleção de áreas de amostragem de solo deve considerar a distribuição atual das propriedades rurais que integram o programa REVERTE®, bem como a baixa representatividade espacial nos locais de calibração e validação. A escolha das fazendas para amostragem adicional priorizou aquelas que possibilitam a comparação entre áreas de soja e pastagens, levando em conta fatores como solo, região, dados de manejo disponíveis e o tempo decorrido desde a conversão, conforme o agrupamento das fazendas e suas variáveis específicas.
+
+---
 
 ## Variáveis e Dados Complementares
 
