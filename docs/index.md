@@ -1,7 +1,5 @@
-![Monitoramento de Carbono](base_dados/images/IMG_20250722_095057.jpg)
-
 <p align="center">
-  <img src="..." width="700" alt="Área de pastagem monitorada no Cerrado, GO – 2025">
+  <img src="base_dados/images/IMG_20250722_095057.jpg" width="700" alt="Área de pastagem monitorada no Cerrado, GO – 2025">
   <br><em>Área de coleta amostral, Goiás, 2025.</em>
 </p>
 
