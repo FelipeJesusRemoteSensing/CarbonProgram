@@ -59,7 +59,7 @@ As características edáficas foram extraídas do PronaSolos (Embrapa), com reso
 
 ---
 
-📌 Posteriormente, os dados de granulometria (argila, areia e silte) do **PronaSolos** foram substituídos pelos dados do **MapBiomas Solo**, que oferecem maior detalhamento espacial para o bioma Cerrado, permitindo a utilização de dados mais proximos ao encontrado em campo, e consequentemente estimativas mais acuradas dos estoques de carbono orgânico no solo. Os dados de pH e densidade do solo foram mantidos do PronaSolos.
+> 📌 Posteriormente, os dados de granulometria (argila, areia e silte) do **PronaSolos** foram substituídos pelos dados do **MapBiomas Solo**, que oferecem maior detalhamento espacial para o bioma Cerrado, permitindo a utilização de dados mais proximos ao encontrado em campo, e consequentemente estimativas mais acuradas dos estoques de carbono orgânico no solo. Os dados de pH e densidade do solo foram mantidos do PronaSolos.
 
 ![PronassolosXMapbiomas](../base_dados/images/pronaxmapbioomas.png)
 *Figura 7. Comparativo dos dados de granulometria (argila, areia e silte) do PronaSolos e MapBiomas Solo.*
