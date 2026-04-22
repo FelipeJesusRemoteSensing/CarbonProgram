@@ -1,6 +1,6 @@
 <p align="center">
   <img src="base_dados/images/IMG_20250722_095057.jpg" width="700" alt="Área de pastagem monitorada no Cerrado, GO – 2025">
-  <br><em>Área de coleta, Goiás, 2025.</em>
+  <!-- <br><em>Área de coleta, Goiás, 2025.</em> -->
 </p>
 
 # Monitoramento de Carbono - Iniciativa REVERTE®
