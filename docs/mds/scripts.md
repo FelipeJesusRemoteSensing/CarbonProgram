@@ -1,6 +1,6 @@
-# Processos e Scripts
+# Processamento e Scripts
 
-Esta seção detalha em módulos os conjuntos de scripts desenvolvidos para o processamento de dados, modelagem do Century e automação.
+> Esta seção detalha em módulos os conjuntos de scripts desenvolvidos para o processamento de dados, modelagem do Century e automação.
 
 ```mermaid
 flowchart LR
@@ -9,6 +9,7 @@ flowchart LR
     C --> D[📍 Modelagem Pontual]
     C --> E[🗺️ Espacialização]
 ```
+*Figura 1. Visão geral da arquitetura de processos e automação.*
 
 ## Downloads das bases ambientais pelo Google Earth Engine
 
@@ -20,7 +21,7 @@ flowchart LR
     B[PronaSolos\nEmbrapa] --> D
     C[TerraClimate\n1958–2024] --> D
 ```
-
+*Figura 2. Extração de variáveis ambientais via Google Earth Engine.*
 
 - [**GEE - Download Lulc Mapbiomas.txt**](../base_dados/aplicacao/Scripts/Outros_Scripts/GEE%20-%20Download%20Lulc%20Mapbiomas.txt): Script para download de mapas de uso e cobertura do solo do MapBiomas.
     <br>**Principais Etapas:**
@@ -114,6 +115,7 @@ flowchart LR
     C --> D[Alinhamento espacial\nresample · máscara]
     D --> E[Rasters prontos\npor fazenda]
 ```
+*Figura 3. Fluxo de manipulação espacial e preparação de imagens no R.*
 
 - [**R - Criar imagem referencia.R**](../base_dados/aplicacao/Scripts/Outros_Scripts/R%20-%20Criar%20imagem%20referencia.R): Geração de imagem raster de referência contendo IDs únicos por pixel para a área de estudo.
     <br>**Principais Etapas:**
@@ -227,6 +229,7 @@ flowchart LR
     C --> D[CSV consolidado]
     D --> E[Gráficos · RMSE\nRanking Top 10]
 ```
+*Figura 4. Execução do modelo Century e cálculo de métricas para o ponto amostral.*
 
 A estrutura de pastas recomendada para a **Simulação por ponto** é:
 
@@ -383,6 +386,7 @@ flowchart LR
     D --> E[Rasters TIFF\nanuais por talhão]
     E --> F[Mosaico final\nSOMSC_ano.tif]
 ```
+*Figura 5. Pipeline de modelagem espacializada de carbono, da extração em blocos à elaboração de mosaicos.*
 
 A estrutura de pastas recomendada para a **Simulação espacializada** é:
 
@@ -525,6 +529,7 @@ flowchart LR
     C -->|✅ Sim| D[Pronto para\nmodelagem]
     C -->|❌ Não| E[Alerta no console\nfazenda · mês · ano]
 ```
+*Figura 6. Automação para verificação de integridade estrutural e arquivamento (Python).*
 
 - [**PY - Conferir se há arquivos faltantes nas pastas.py**](../base_dados/aplicacao/Scripts/Outros_Scripts/PY%20-%20Conferir%20se%20há%20arquivos%20faltantes%20nas%20pastas.py): Script utilitário para validação da integridade estrutural, verificando se existem arquivos faltantes nas pastas antes da execução da modelagem.
     <br>**Principais Etapas:**
