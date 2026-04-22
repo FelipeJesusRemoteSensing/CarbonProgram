@@ -5,7 +5,7 @@
 
 ---
 
-Para subsidiar as simulações do modelo Century no contexto do projeto REVERTE®, foi realizado um extenso processamento de dados geoespaciais e ambientais. Inicialmente, foi estruturado um banco de dados com informações de uso e cobertura da terra provenientes da Coleção 10 do MapBiomas (Mapbiomas, 2025), abrangendo o período de 1985 a 2024, com resolução espacial de 30 metros. Esses dados foram essenciais para caracterizar o histórico de uso da terra nas 36 fazendas participantes localizadas no Cerrado entre os estados de Goiás, Mato Grosso, Mato Grosso do Sul, Tocantins e Maranhão.
+Para subsidiar as simulações do modelo Century no contexto do projeto REVERTE®, foi realizado um extenso processamento de dados geoespaciais e ambientais. Inicialmente, foi estruturado um banco de dados com informações de uso e cobertura da terra provenientes da Coleção 10 do MapBiomas (Mapbiomas, 2025), abrangendo o período de 1985 a 2024, com resolução espacial de 30 metros. Esses dados foram essenciais para caracterizar o histórico de uso da terra nas fazendas participantes localizadas no bioma Cerrado entre os estados de Goiás, Mato Grosso, Mato Grosso do Sul, Tocantins e Maranhão.
 
 Complementarmente, foram processadas séries temporais de NDVI mensais, com o objetivo de identificar padrões sazonais de cobertura vegetal e atividades agrícolas ao longo dos anos. Também foram extraídas variáveis climáticas essenciais ao funcionamento do modelo Century, como temperatura (máxima, mínima e média mensal) e precipitação acumulada mensal. Esses dados foram obtidos a partir das bases globais CHELSA (Climatologies at High Resolution for the Earth’s Land Surface Areas), NASA POWER (Prediction Of Worldwide Energy Resources), TerraClimate and WorldClim e a base nacional BR-DWGD (Brazilian Daily Weather Gridded Data).
 
@@ -19,7 +19,7 @@ flowchart TD
     C[🌿 Séries Temporais NDVI\nMensais · Sentinel-2\nPadrões sazonais]
     D[🌦️ Variáveis Climáticas\nCHELSA · NASA POWER\nTerraClimate · BR-DWGD]
 
-    B --> E[🗄️ Banco de Dados Geoespacial\n36 fazendas · Cerrado\nGO · MT · MS · TO · MA]
+    B --> E[🗄️ Banco de Dados Geoespacial\nfazendas do Cerrado\nGO · MT · MS · TO · MA]
     C --> E
     D --> E
 
@@ -59,12 +59,12 @@ O plano amostral na Figura 3 foi utilizado para toda a amostragem realizada em c
 
 As fazendas selecionadas foram separadas em três regiões, especificando a rota, quilometragem e prioridade.
 
-| Região | Estados | Fazendas | Talhões | Solos | Status |
-|:---|:---|:---:|:---:|:---|:---|
-| Central | GO, MT | 13 | 28 | Franco-argiloso, arenoso | ✅ Concluído |
-| Matopiba | MA, TO | 4 | 7 | Areia franca, franco-argiloso | ✅ Concluído |
-| Sul | MS | — | — | Franco-arenoso, argilo-arenoso | ❌ Não realizado |
-*Quadro 1 - Resumo das amostragens de campo realizadas nas diferentes regiões*\\
+| Região | Estados | Fazendas | Talhões | Solos |
+|:---|:---|:---:|:---:|:---|
+| Central | GO, MT | 13 | 28 | Franco-argiloso, arenoso | 
+| Matopiba | MA, TO | 4 | 7 | Areia franca, franco-argiloso | 
+| Sul | MS | — | — | Franco-arenoso, argilo-arenoso |
+*Quadro 1 - Resumo das amostragens de campo realizadas nas diferentes regiões*
 
 **Região Central:** Fazendas de Goiás e Mato Grosso constam com o maior número de regiões edafoclimáticas do Cerrado e o maior número de Fazendas e Talhões dentro do programa REVERTE® (Figura 5A). Dos 119 talhões que fazem parte do programa, 79 estão nesta região. Também incluem os usos mais frequentes, sendo soja/pousio, soja/pastagem e soja/milho. Nessa região a equipe completou a amostragem em 13 fazendas e 28 talhões ao longo de 30 dias no mês de Julho 2025. A equipe percorreu mais de 5000 km e o projeto contou com um orçamento de aproximadamente R$50.000,00. Os solos do Mato Grosso variam entre franco arenoso e areia franca, e de Goiás entre franco-argiloso, arenoso e argilo-arenoso. Considerando a inexistência de amostragem atual de calibração e validação para a modelagem de soja no estado de Goiás, e a escassez de amostras para pastagens no estado de Mato Grosso, com uma distribuição geográfica limitada às proximidades da fronteira com Goiás, as amostras provenientes das talhões e fazendas REVERTE® irão aprimorar a capacidade de monitoramento da região por meio de modelagem.
 
