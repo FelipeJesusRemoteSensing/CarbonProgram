@@ -2,6 +2,13 @@
 
 Esta seção detalha em módulos os conjuntos de scripts desenvolvidos para o processamento de dados, modelagem do Century e automação.
 
+```mermaid
+flowchart LR
+    A[☁️ Downloads GEE] --> B[🗂️ Prep. Imagens R]
+    B --> C[📍 Modelagem Pontual] | D[🗺️ Espacialização]
+    D --> E[🐍 Validação Python]
+```
+
 ## Downloads das bases ambientais pelo Google Earth Engine
 
 Estão na pasta `Outros_Scripts` (Arquivos que começam com `GEE`):
