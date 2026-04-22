@@ -50,8 +50,8 @@ Acompanhamento técnico dos códigos de automação desenvolvidos em **R** (espa
 **Coordenadora Técnica:** [Maria Hunter](mailto:maria.hunter@ufg.br)  
 **Colaboradores:** [Felipe Jesus](mailto:felipejesus@discente.ufg.br), [Marcos Cardoso](mailto:marcoscardoso@discente.ufg.br), Maiara Pedral, Ana Pretto, Isabela Nogueira e Alexandre Siqueira
 
-![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Bioma](https://img.shields.io/badge/bioma-Cerrado-green)
+![Status](https://img.shields.io/badge/status-em%20desenvolvimento-yellow)
 ![Data](https://img.shields.io/badge/ultima%20atualizacao-2026-orange)
 
 *
